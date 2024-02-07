@@ -74,7 +74,18 @@ grand_ma_and_son(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), grand_so(Possi
 grand_ma_and_son(PossibleGrS,PossibleGrMa):- woman(PossibleGrMa), grand_so(PossibleGrS,PossibleGrMa).
 
 %3)
+% siblings(+PossibleSib1:atom,+PossibleSib2:atom) is det
+% True if PossibleSib1 is a sibling of PossibleSib2
 siblings(PossibleSib1,PossibleSib2):- (PossibleSib1 \== PossibleSib2),parent(CommonParent,PossibleSib1),parent(CommonParent,PossibleSib2),!.
+
+% nibling(+PossibleNib: atom, PossibleAU: atom) is det
+% True if PossibleNib is a nibling of PossibleAU
 nibling(PossibleNib,PossibleAU):- parent(NibParent,PossibleNib),siblings(NibParent,PossibleAU).
+
+% nephew(+PossibleNephew: atom, PossibleAU:atom) is det
+% True if PossibleNephew is a nephew of PossibleAU
 nephew(PossibleNephew,PossibleAU):- man(PossibleNephew),nibling(PossibleNephew,PossibleAU).
+
+% nephews(+InputPerson: atom) is failure
+% Print all nephews of InputPerson
 nephews(InputPerson):- nephew(PossibleNephew,InputPerson),print(PossibleNephew),nl,fail.
