@@ -183,6 +183,15 @@ person(maul):-
     question(military,n),
     question(traitor,n).
 
+% Get answer for question
+% query(+Prompt: atom)
+query(Prompt) :- (
+    asked(Prompt,Reply) -> true
+    ;  nl, write(Prompt), write('(y/n)'),
+    read(X), (X = y->Reply=y;Reply=n),
+    assert(asked(Prompt,Reply))
+), Reply=y.
+
 
 
 
