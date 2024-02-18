@@ -83,3 +83,8 @@ grand_da(PossibleGrDa,PossibleGrPar):- woman(PossibleGrDa), grand_par(PossibleGr
 % grand_date(+InputPerson:atom) is failure
 % Print all granddaughters of InputPerson
 grand_dats(InputPerson):- grand_da(PossibleGrDa,InputPerson),print(PossibleGrDa), nl, fail.
+
+%2)
+% grand_so(+PossibleGrS:atom, +PossibleGrPar:atom) is det
+% True, if PossibleGrS is a grandson of PossibleGrParent
+grand_so(PossibleGrS,PossibleGrPar):- man(PossibleGrS), grand_par(PossibleGrS, PossibleGrPar).
