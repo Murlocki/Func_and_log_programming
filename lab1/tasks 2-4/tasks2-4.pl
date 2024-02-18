@@ -206,6 +206,28 @@ problem(paper_jam) :-
 
 problem(out_of_paper) :-
     query('Is there out-of- paper error during printing').
+% New problems
+problem(error_screen):-query('Is there an error screen during bootup').
+problem(resolution_problem):- query('Is there broken resolution or your screen').
+problem(keyboard_input):-query('Does computer react on input from your working keyboard ').
+problem(usb_connection):-query('Is your device appear in menu after using of usb connection').
+problem(wifi_adapter):-query('Does your computer see any wifi network').
+% new objects with extra questions
+fault(easy_video_card_connection):-
+    (   problem(resolution_problem);
+    problem(blank_display)).
+fault(extra_bios_problem):-
+    problem(resolution_problem),
+    problem(keyboatd_input),
+    problem(boot_failure).
+fault(keyboard):-
+    problem(cannot_read),
+    problem(not_printin),
+    problem(missing_dots),
+    problem(usb_connections).
+fault(wifi_adapter):-problem(wifi_adapter).
+
+
 
 % new objects without extra questions
 fault(video_card_connection):-
