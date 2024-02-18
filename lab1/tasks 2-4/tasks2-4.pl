@@ -64,3 +64,7 @@ son(InputParent):- son(PossibleSon,InputParent), print(PossibleSon), nl, !.
 % True, if PossibleSister is a sister of InputPerson
 sister(PossibleSister, InputPerson):- woman(PossibleSister), \+ (PossibleSister=InputPerson), parent(CommonParent,PossibleSister),parent(CommonParent,InputPerson),nl,!.
 
+% sisters(+InputPerson:atom) is failure
+% Print all sisters of InputPerson
+sisters(InputPerson):- woman(PossibleSister),sister(PossibleSister,InputPerson), print(PossibleSister),nl, fail.
+
