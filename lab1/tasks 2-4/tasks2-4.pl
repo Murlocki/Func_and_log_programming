@@ -58,3 +58,9 @@ son(PossibleSon,PossibleParent):- man(PossibleSon), parent(PossibleParent,Possib
 % son(+InputParent:atom) is det
 % Print first found son of InputParent
 son(InputParent):- son(PossibleSon,InputParent), print(PossibleSon), nl, !.
+
+% 2.2)
+% sister(+PossibleSister: atom, +InputPerson: atom) is det
+% True, if PossibleSister is a sister of InputPerson
+sister(PossibleSister, InputPerson):- woman(PossibleSister), \+ (PossibleSister=InputPerson), parent(CommonParent,PossibleSister),parent(CommonParent,InputPerson),nl,!.
+

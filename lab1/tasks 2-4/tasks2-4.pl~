@@ -55,3 +55,6 @@ parent(zhdana,zlatomir).
 % True, if PossibleSon is a son of PossibleParent
 son(PossibleSon,PossibleParent):- man(PossibleSon), parent(PossibleParent,PossibleSon), nl.
 
+% son(+InputParent:atom) is det
+% Print first found son of InputParent
+son(InputParent):- son(PossibleSon,InputParent), print(PossibleSon), nl, !.
