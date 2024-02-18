@@ -131,3 +131,12 @@ grand_ma_and_son_p(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), man(Possible
 % grand_ma_and_son(+PossibleGrS:atom,+PossibleGrMa:atom) is det
 % True, if PossibleGrS is a grandson of grandmother PossibleGrMa
 grand_ma_and_son_p(PossibleGrS,PossibleGrMa):- woman(PossibleGrMa),  man(PossibleGrS), parent(PossibleParent,PossibleGrS),parent(PossibleGrMa,PossibleParent).
+
+%3)
+%nephew(+PossibleNephew: atom, PossibleAU:atom) is det
+% True if PossibleNephew is a nephew of PossibleAU
+nephew_p(PossibleNephew,PossibleAU):- man(PossibleNephew),parent(PossibleNephewParent,PossibleNephew),PossibleNephewParent\==PossibleAU,parent(CommonGrandparent,PossibleNephewParent),parent(CommonGrandparent,PossibleAU).
+
+% nephews(+InputPerson: atom) is failure
+% Print all nephews of InputPerson
+nephews_p(InputPerson):- parent(CommonGrpar,InputPerson),!,parent(CommonGrpar,PossibleNephewParent),InputPerson\==PossibleNephewParent, parent(PossibleNephewParent,PossibleNephew),man(PossibleNephew),print(PossibleNephew),nl,fail.
