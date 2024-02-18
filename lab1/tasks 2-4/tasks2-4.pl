@@ -122,3 +122,12 @@ grand_da_p(PossibleGrDa,PossibleGrPar):- woman(PossibleGrDa),parent(PossiblePare
 % grand_date(+InputPerson:atom) is failure
 % Print all granddaughters of InputPerson
 grand_dats_p(InputPerson):- woman(PossibleGrDa),parent(PossibleParent,PossibleGrDa), parent(InputPerson,PossibleParent),print(PossibleGrDa), nl, fail.
+
+
+%2)
+% grand_ma_and_son(+PossibleGrMa:atom,+PossibleGrs:atom) is det
+% True, if PossibleGrMa is a grandmother of grandson PossibleGrS
+grand_ma_and_son_p(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), man(PossibleGrS), parent(PossibleParent,PossibleGrS),parent(PossibleGrMa,PossibleParent).
+% grand_ma_and_son(+PossibleGrS:atom,+PossibleGrMa:atom) is det
+% True, if PossibleGrS is a grandson of grandmother PossibleGrMa
+grand_ma_and_son_p(PossibleGrS,PossibleGrMa):- woman(PossibleGrMa),  man(PossibleGrS), parent(PossibleParent,PossibleGrS),parent(PossibleGrMa,PossibleParent).
