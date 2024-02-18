@@ -94,3 +94,12 @@ grand_ma_and_son(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), grand_so(Possi
 % grand_ma_and_son(+PossibleGrS:atom,+PossibleGrMa:atom) is det
 % True, if PossibleGrS is a grandson of grandmother PossibleGrMa
 grand_ma_and_son(PossibleGrS,PossibleGrMa):- woman(PossibleGrMa), grand_so(PossibleGrS,PossibleGrMa).
+
+%3)
+% siblings(+PossibleSib1:atom,+PossibleSib2:atom) is det
+% True if PossibleSib1 is a sibling of PossibleSib2
+siblings(PossibleSib1,PossibleSib2):- (PossibleSib1 \== PossibleSib2),parent(CommonParent,PossibleSib1),parent(CommonParent,PossibleSib2),!.
+
+% nibling(+PossibleNib: atom, PossibleAU: atom) is det
+% True if PossibleNib is a nibling of PossibleAU
+nibling(PossibleNib,PossibleAU):- parent(NibParent,PossibleNib),siblings(NibParent,PossibleAU).
