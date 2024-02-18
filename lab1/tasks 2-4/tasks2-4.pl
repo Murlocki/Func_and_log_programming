@@ -68,3 +68,14 @@ sister(PossibleSister, InputPerson):- woman(PossibleSister), \+ (PossibleSister=
 % Print all sisters of InputPerson
 sisters(InputPerson):- woman(PossibleSister),sister(PossibleSister,InputPerson), print(PossibleSister),nl, fail.
 
+
+% Task 3
+
+%1)
+% grand_par(+PossibleGrCh:atom, +PossibleGrPar:atom) is det
+% True, if PossibleGrCh is a grandchild of PossibleGrPar
+grand_par(PossibleGrCh,PossibleGrPar):- parent(PossibleParent,PossibleGrCh), parent(PossibleGrPar,PossibleParent).
+
+% grand_da(+PossibleGrDa:atom, +PossibleGrPar:atom) is det
+% True, if PossibleGrDa is a granddaughter of PossibleGrPar
+grand_da(PossibleGrDa,PossibleGrPar):- woman(PossibleGrDa), grand_par(PossibleGrDa,PossibleGrPar).
