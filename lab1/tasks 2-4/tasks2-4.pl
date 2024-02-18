@@ -103,3 +103,11 @@ siblings(PossibleSib1,PossibleSib2):- (PossibleSib1 \== PossibleSib2),parent(Com
 % nibling(+PossibleNib: atom, PossibleAU: atom) is det
 % True if PossibleNib is a nibling of PossibleAU
 nibling(PossibleNib,PossibleAU):- parent(NibParent,PossibleNib),siblings(NibParent,PossibleAU).
+
+% nephew(+PossibleNephew: atom, PossibleAU:atom) is det
+% True if PossibleNephew is a nephew of PossibleAU
+nephew(PossibleNephew,PossibleAU):- man(PossibleNephew),nibling(PossibleNephew,PossibleAU).
+
+% nephews(+InputPerson: atom) is failure
+% Print all nephews of InputPerson
+nephews(InputPerson):- nephew(PossibleNephew,InputPerson),print(PossibleNephew),nl,fail.
