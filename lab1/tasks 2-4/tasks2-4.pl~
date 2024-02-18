@@ -88,3 +88,7 @@ grand_dats(InputPerson):- grand_da(PossibleGrDa,InputPerson),print(PossibleGrDa)
 % grand_so(+PossibleGrS:atom, +PossibleGrPar:atom) is det
 % True, if PossibleGrS is a grandson of PossibleGrParent
 grand_so(PossibleGrS,PossibleGrPar):- man(PossibleGrS), grand_par(PossibleGrS, PossibleGrPar).
+% grand_ma_and_son(+PossibleGrMa:atom,+PossibleGrs:atom) is det
+% True, if PossibleGrMa is a grandmother of grandson PossibleGrS
+grand_ma_and_son(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), grand_so(PossibleGrS,PossibleGrMa).
+

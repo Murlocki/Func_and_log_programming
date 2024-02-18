@@ -91,4 +91,6 @@ grand_so(PossibleGrS,PossibleGrPar):- man(PossibleGrS), grand_par(PossibleGrS, P
 % grand_ma_and_son(+PossibleGrMa:atom,+PossibleGrs:atom) is det
 % True, if PossibleGrMa is a grandmother of grandson PossibleGrS
 grand_ma_and_son(PossibleGrMa,PossibleGrS):- woman(PossibleGrMa), grand_so(PossibleGrS,PossibleGrMa).
-
+% grand_ma_and_son(+PossibleGrS:atom,+PossibleGrMa:atom) is det
+% True, if PossibleGrS is a grandson of grandmother PossibleGrMa
+grand_ma_and_son(PossibleGrS,PossibleGrMa):- woman(PossibleGrMa), grand_so(PossibleGrS,PossibleGrMa).
