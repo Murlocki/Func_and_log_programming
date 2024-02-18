@@ -210,5 +210,4 @@ query(Prompt,Answer) :-
         assert(asked(Prompt, Reply)),
         check_persons
     ),
-    (asked(Prompt,Reply))->(Reply=Answer);
-    (askFalseQuestions(1)->true).
+    Reply=Answer.
