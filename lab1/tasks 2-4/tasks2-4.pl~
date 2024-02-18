@@ -48,6 +48,9 @@ parent(duhovlad,zlatomir).
 parent(zhdana,zdislava).
 parent(zhdana,zlatomir).
 
+% Task 2
+
+% 2.1)
 % son(+PossibleSon: atom,+PossibleParent: atom) is det
 % True, if PossibleSon is a son of PossibleParent
 son(PossibleSon,PossibleParent):- man(PossibleSon), parent(PossibleParent,PossibleSon), nl.
