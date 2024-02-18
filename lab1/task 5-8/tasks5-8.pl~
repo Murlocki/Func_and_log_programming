@@ -198,16 +198,24 @@ person(random_mercenary):-
     question(politician,n),
     question(military,n).
 
+% Check if there is more than 1 person that fits to current question
+% answers
+% check_persons() is nondet
+% Always true
+check_persons:-(person(FirstPerson),person(SecondPerson),FirstPerson\==SecondPerson)->(retractall(askFalseQuestions(_)),true);true.
+
+
 % Add answers to questions and check if input answer is equal to
 % user_reply
 %  query(+Prompt:atom, +Answer:atom) is det
 %  True if Answer is equal to Reply
 query(Prompt,Answer) :-
-    (   (asked(Prompt, Reply))-> true
+    (   (asked(Prompt, Reply);askFalseQuestions(1))-> true
     ;   nl, write(Prompt), write(' (y/n)? '),
         read(X),(X = y -> Reply = y ; Reply = n),
         assert(askFalseQuestions(1)),
         assert(asked(Prompt, Reply)),
         check_persons
     ),
-    Reply=Answer.
+    (asked(Prompt,Reply))->(Reply=Answer);
+    (askFalseQuestions(1)->true).
