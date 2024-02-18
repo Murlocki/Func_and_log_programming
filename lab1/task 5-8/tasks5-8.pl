@@ -1,4 +1,22 @@
-% True, if PossibleGrS is a grandson of PossibleGrParent
+% Find person basing on answers to questions
+% main() is nondet
+% True if we find person basing on answers to questions
+main :-
+    retractall(askFalseQuestions(_)),
+    retractall(asked(_,_)),
+    person(Character),
+    !,
+    nl,
+    write('The character is '), write(Character), write(.), nl.
+% Works when we cannot find the person
+% main() is det
+main :-
+    nl,
+    write('The character cannot be recognized.'), nl.
+
+
+
+%True, if PossibleGrS is a grandson of PossibleGrParent
 % Create question for acinator
 % question(+Object: atom) is det
 % True, if query(Prompt) is true
@@ -179,3 +197,17 @@ person(random_mercenary):-
     question(positive,n),
     question(politician,n),
     question(military,n).
+
+% Add answers to questions and check if input answer is equal to
+% user_reply
+%  query(+Prompt:atom, +Answer:atom) is det
+%  True if Answer is equal to Reply
+query(Prompt,Answer) :-
+    (   (asked(Prompt, Reply))-> true
+    ;   nl, write(Prompt), write(' (y/n)? '),
+        read(X),(X = y -> Reply = y ; Reply = n),
+        assert(askFalseQuestions(1)),
+        assert(asked(Prompt, Reply)),
+        check_persons
+    ),
+    Reply=Answer.
