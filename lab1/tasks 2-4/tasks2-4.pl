@@ -111,3 +111,14 @@ nephew(PossibleNephew,PossibleAU):- man(PossibleNephew),nibling(PossibleNephew,P
 % nephews(+InputPerson: atom) is failure
 % Print all nephews of InputPerson
 nephews(InputPerson):- nephew(PossibleNephew,InputPerson),print(PossibleNephew),nl,fail.
+
+% Task 3 pure facts
+
+%1)
+% grand_da(+PossibleGrDa:atom, +PossibleGrPar:atom) is det
+% True, if PossibleGrDa is a granddaughter of PossibleGrPar
+grand_da_p(PossibleGrDa,PossibleGrPar):- woman(PossibleGrDa),parent(PossibleParent,PossibleGrDa), parent(PossibleGrPar,PossibleParent).
+
+% grand_date(+InputPerson:atom) is failure
+% Print all granddaughters of InputPerson
+grand_dats_p(InputPerson):- woman(PossibleGrDa),parent(PossibleParent,PossibleGrDa), parent(InputPerson,PossibleParent),print(PossibleGrDa), nl, fail.
