@@ -26,3 +26,10 @@ multiplt_of_three(_,Result):-Result is 0,!.
 %mult_of_3_sum_up(+InputNumber:integer,?ResultSum:integer)
 mult_of_3_sum_up(0,0):-!.
 mult_of_3_sum_up(InputNumber,ResultSum):-NewInputNumber is InputNumber div 10, mult_of_3_sum_up(NewInputNumber,PrevResult), NewDigit is InputNumber mod 10, multiplt_of_three(NewDigit,MultResult), ResultSum is PrevResult + NewDigit * MultResult.
+
+%mult_of_3_sum_call(+InputNumber:integer,?ResultSum:integer)
+mult_of_3_sum_call(InputNumber,ResultSum):-mult_of_3_sum_down(InputNumber,0,ResultSum),!.
+
+%mult_of_3_sum_down(+InputNumber:integer,+CurrentSum:integer,+ResultSum:integer)
+mult_of_3_sum_down(0,ResultSum,ResultSum):-!.
+mult_of_3_sum_down(InputNumber,CurrentSum,ResultSum):-NewDigit is InputNumber mod 10, multiplt_of_three(NewDigit,MultResult), NewResultSum is CurrentSum + NewDigit * MultResult, NewInputNumber is InputNumber div 10,mult_of_3_sum_down(NewInputNumber,NewResultSum,ResultSum).
