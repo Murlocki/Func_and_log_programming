@@ -43,6 +43,6 @@ min_elem(AvoidIndex,Tail,MinResult,NewCurrentIndex,NewResultIndex,ResultIndex).
 % If length of InputList is 1, it contains indexes 1 and -1
 main(InputList,ListOtvet):-min_elem_call(InputList,-1,FirstMinIndex),min_elem_call(InputList,FirstMinIndex,SecondMinIndex),concat([FirstMinIndex|[]],[SecondMinIndex|[]],ListOtvet),!.
 
-%task3_call
+%task3_8_call
 % Main predicate to start calc of task 3
-task3_call:-read_list(InputList),main(InputList,AnswersList),write('Indexes of two min elements'),nl,write_list(AnswersList).
+task3_8_call:-read_list(InputList),main(InputList,AnswersList),write('Indexes of two min elements'),nl,write_list(AnswersList).
