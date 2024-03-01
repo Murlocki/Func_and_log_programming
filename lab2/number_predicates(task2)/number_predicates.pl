@@ -33,3 +33,15 @@ mult_of_3_sum_call(InputNumber,ResultSum):-mult_of_3_sum_down(InputNumber,0,Resu
 %mult_of_3_sum_down(+InputNumber:integer,+CurrentSum:integer,+ResultSum:integer)
 mult_of_3_sum_down(0,ResultSum,ResultSum):-!.
 mult_of_3_sum_down(InputNumber,CurrentSum,ResultSum):-NewDigit is InputNumber mod 10, multiplt_of_three(NewDigit,MultResult), NewResultSum is CurrentSum + NewDigit * MultResult, NewInputNumber is InputNumber div 10,mult_of_3_sum_down(NewInputNumber,NewResultSum,ResultSum).
+
+%2.3
+%multiplt_of(+InputNumber:integer,+PossibleDel:integer,?Result:integer)
+multiplt_of(InputNumber,PossibleDel,Result):-0 is InputNumber mod PossibleDel, Result is 1,!.
+multiplt_of(_,_,Result):-Result is 0,!.
+
+% count_of_del_up_call(+InputNumber:integer,?CountOfDel:integer)
+count_of_del_up_call(InputNumber,CountOfDel):-count_of_del_up(InputNumber,InputNumber,CountOfDel).
+
+% count_of_del_up_call(+InputNumber:integer,+CurrentNumber:integer,?ResultCount:integer)
+count_of_del_up(_,1,1):-!.
+count_of_del_up(InputNumber,CurrentNumber,ResultCount):-NewCurrentNumber is CurrentNumber - 1, count_of_del_up(InputNumber,NewCurrentNumber,PrevResult),  multiplt_of(InputNumber,CurrentNumber,IsDel), ResultCount is PrevResult + IsDel.
