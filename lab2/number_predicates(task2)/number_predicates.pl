@@ -45,3 +45,11 @@ count_of_del_up_call(InputNumber,CountOfDel):-count_of_del_up(InputNumber,InputN
 % count_of_del_up_call(+InputNumber:integer,+CurrentNumber:integer,?ResultCount:integer)
 count_of_del_up(_,1,1):-!.
 count_of_del_up(InputNumber,CurrentNumber,ResultCount):-NewCurrentNumber is CurrentNumber - 1, count_of_del_up(InputNumber,NewCurrentNumber,PrevResult),  multiplt_of(InputNumber,CurrentNumber,IsDel), ResultCount is PrevResult + IsDel.
+
+
+% count_of_del_down_call(+InputNumber:integer,?ResultCount:integer)
+count_of_del_down_call(InputNumber,ResultCount):-count_of_del_down(InputNumber,InputNumber,0,ResultCount).
+
+% count_of_del_down_call(+InputNumber:integer,+CurrentNumber:integer,+CountOfDel:integer,?ResultCount:integer)
+count_of_del_down(_,0,ResultCount,ResultCount):-!.
+count_of_del_down(InputNumber,CurrentNumber,CountOfDel,ResultCount):-NewCurrentNumber is CurrentNumber - 1,  multiplt_of(InputNumber,CurrentNumber,IsDel), NewCountOfDel is CountOfDel + IsDel, count_of_del_down(InputNumber,NewCurrentNumber,NewCountOfDel,ResultCount).
