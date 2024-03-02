@@ -108,3 +108,61 @@ read5_8(InputNumber):-read(InputNumber),!.
 %task5_8
 %main predicate for task 5.8
 task5_8:- read5_8(InputNumber),get_del(InputNumber,ResultDel),write(ResultDel),!.
+
+
+%task6_8
+%check_if_simple(+N:integer,+CurrentDel:integer)
+%True if N is simple integer
+check_if_simple(1,_):-!,fail.
+check_if_simple(N,_):-simple(N),!.
+check_if_simple(N,1):-assert(simple(N)),!.
+check_if_simple(N,CurrentDel):-0 is N mod CurrentDel,!,fail.
+check_if_simple(N,CurrentDel):-NewCurrentDel is CurrentDel - 1,check_if_simple(N,NewCurrentDel).
+
+:-dynamic simpleToLeft/1.
+:-dynamic simpleToRight/1.
+:-dynamic simple/1.
+
+%cut_right(+N:integer)
+%True if N is always simple while it cuts on the right side
+cut_right(2):-!.
+cut_right(3):-!.
+cut_right(5):-!.
+cut_right(7):-!.
+cut_right(N):-simpleToRight(N),!.
+cut_right(N):-FirstDel is N div 2,check_if_simple(N,FirstDel),NewN is N div 10,cut_right(NewN),assert(simpleToRight(N)),!.
+
+%get_ten(+X:integer,+CurrentRes:integer,-Result:integer)
+%Result contains 10**y<X
+get_ten(X,CurrentRes,Result):-X<CurrentRes, Result is CurrentRes div 10,!.
+get_ten(X,CurrentRes,Result):-NewCurrentRes is CurrentRes * 10, get_ten(X,NewCurrentRes,Result).
+
+%cut_left(+N:integer)
+%True if N is always simple while it cuts on the left side
+cut_left(2):-!.
+cut_left(3):-!.
+cut_left(5):-!.
+cut_left(7):-!.
+cut_left(N):-simpleToLeft(N),!.
+cut_left(N):-FirstDel is N div 2,check_if_simple(N,FirstDel),get_ten(N,1,TenRes),NewN is N mod TenRes,cut_left(NewN),assert(simpleToLeft(N)),!.
+
+
+%check_noteven_numbers(+InpN:integer,N:integer,-UpdNumb:integer)
+% UpdNumber contains number with replaced the first even digit in Inp beside first integer
+
+check_noteven_numbers(InpN,N,UpdNumb):-N<10,1 is N mod 2,UpdNumb is 0,!.
+check_noteven_numbers(N,N,UpdNumb):-get_ten(N,1,TenRes),FirstN is N div TenRes,(FirstN is 2;FirstN is 5),NewN is N mod TenRes,check_noteven_numbers(N,NewN,NewUpd),UpdNumb is FirstN*TenRes+NewUpd,!.
+check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N div TenRes,0 is Digit mod 2,!,UpdNumb is (Digit + 1) * TenRes.
+check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N div TenRes,Digit is 5,!,UpdNumb is (Digit + 1) * TenRes.
+check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N  div (TenRes div 10),0 is Digit mod 2,!,UpdNumb is (Digit + 1) * (TenRes div 10).
+check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),NewN is N mod TenRes,check_noteven_numbers(InpN,NewN,PrevUpdNumb),UpdNumb is PrevUpdNumb + (N div TenRes) * TenRes.
+
+%cut(+N:integer,+Sum:integer,-ResultSum:integer)
+% ResultSum contains Sum of numbers which we can cut_left and cut_right
+cut(1000001,ResultSum,ResultSum):-!.
+cut(N,Sum,ResultSum):-check_noteven_numbers(N,N,UpdateNumber),max(N,UpdateNumber,ResNumb),cut_left(ResNumb),cut_right(ResNumb),NewSum is Sum + ResNumb,NewN is ResNumb + 2,write(ResNumb),nl, cut(NewN,NewSum,ResultSum).
+cut(N,Sum,ResultSum):-check_noteven_numbers(N,N,UpdateNumber),max(N,UpdateNumber,ResNumb),NewN is ResNumb + 2,cut(NewN,Sum,ResultSum).
+
+%main(-ResultSum:integer)
+% ResultSum contains Sum of numbers which we can cut_left and cut_right
+main(ResultSum):-retractall(simpleToLeft(_)),retractall(simpleToRight(_)),retractall(simple(_)),cut(11,0,ResultSum),!.
