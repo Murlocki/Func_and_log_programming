@@ -95,23 +95,10 @@ task3_17_call:-read_list(InputList),main_2(InputList,AnswersList),write('List wi
 
 
 %3.34
-%read_interval(-Interval:List)
-% Interval contains inputed interval of integers
 read_interval([Start|End]):- read(Start),read(End),!.
-%read_34(-InputList:List,-Interval:List)
-% InputList contains inputed list and Interval contains inputed interval
-read_34(InputList,Interval):- read_list(InputList),write('This was a list'),nl,read_interval(Interval),!.
 
-%check_values(+InputList:List,+InputInterval:List,-Result:List
-% Result contains List of InputList elements which fit InputInterval
 check_values([],_,[]):-!.
-check_values([Head|Tail],[Start|End],[Head|PrevResult]):-check_values(Tail,[Start|End],PrevResult),Head>=Start,Head=<End.
+check_values([Head|Tail],[Start|End],[Head|PrevResult]):-check_values(Tail,[Start|End],PrevResult),Head>=Start,Head<=End.
 check_values([Head|Tail],[Start|End],PrevResult):-check_values(Tail,[Start|End],PrevResult).
 
-%main_34(+InputList:List,+Interval:List,-ListOtvet:List)
-% Main work predicate for task 34
-main_34(InputList,Interval,ListOtvet):-check_values(InputList,Interval,ListOtvet),!.
-
-%task_34
-%Main predicate for task 34
-task_34:-read_34(InputList,Interval),main_34(InputList,Interval,ListOtvet),write('Elemnts in your interval'),nl,write_list(ListOtvet),!.
+main_34(InputList,Interval,ListOtvet):-!.
