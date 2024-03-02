@@ -106,7 +106,7 @@ read_34(InputList,Interval):- read_list(InputList),write('This was a list'),nl,r
 % Result contains List of InputList elements which fit InputInterval
 check_values([],_,[]):-!.
 check_values([Head|Tail],[Start|End],[Head|PrevResult]):-check_values(Tail,[Start|End],PrevResult),Head>=Start,Head=<End.
-check_values([Head|Tail],[Start|End],PrevResult):-check_values(Tail,[Start|End],PrevResult).
+check_values([_|Tail],[Start|End],PrevResult):-check_values(Tail,[Start|End],PrevResult).
 
 %main_34(+InputList:List,+Interval:List,-ListOtvet:List)
 % Main work predicate for task 34
@@ -180,4 +180,21 @@ pr_stud_from_mosc:- Students = [_,_,_,_,_],
     in_list(Students,[Name,moscow,_]),
     write(Name),!.
 
+%task 5.8.
+%vs_simple(+X:integer,+Y:integer,-Result:integer)
+%Contains 1 in Result if X and Y are Coprime integers
+%Otherwise contains 0 in Result 
+vs_simple(X,Y,1):-max(X,Y,ResultMax),min(X,Y,ResultMin),vs_simple_rec(ResultMax,ResultMin).
+vs_simple(_,_,0):-!.
+
+%vs_simple_rec(+X:integer,+Y:integer)
+% True if X and Y are Coprime integers
+vs_simple_rec(_,1):-!,true.
+vs_simple_rec(X,Y):-0 is X mod Y,!,fail.
+vs_simple_rec(X,Y):-NewY is X mod Y, NewX is Y, vs_simple_rec(NewX,NewY).
+
+%check_simple_count(+N:integer,+Del:integer,-Count:integer)
+%Count contains count of digits of N which are Coprime integers with Del
+check_simple_count(0,_,0):- !.
+check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!.  
 
