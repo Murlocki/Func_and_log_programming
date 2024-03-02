@@ -102,7 +102,7 @@ read_interval([Start|End]):- read(Start),read(End),!.
 % InputList contains inputed list and Interval contains inputed interval
 read_34(InputList,Interval):- read_list(InputList),write('This was a list'),nl,read_interval(Interval),!.
 
-%check_values(+InputList:List,+InputInterval:List,-Result:List
+%check_values(+InputList:List,+InputInterval:List,-Result:List)
 % Result contains List of InputList elements which fit InputInterval
 check_values([],_,[]):-!.
 check_values([Head|Tail],[Start|End],[Head|PrevResult]):-check_values(Tail,[Start|End],PrevResult),Head>=Start,Head=<End.
@@ -115,3 +115,69 @@ main_34(InputList,Interval,ListOtvet):-check_values(InputList,Interval,ListOtvet
 %task_34
 %Main predicate for task 34
 task_34:-read_34(InputList,Interval),main_34(InputList,Interval,ListOtvet),write('Elemnts in your interval'),nl,write_list(ListOtvet),!.
+
+%task 4
+%in_list(?InputList:List,?El:integer)
+%True if InputList contains El
+% If InputList is unbound, create return InputList with El
+% If El is unbound, start returning elements of InputList until . inputed
+in_list([El|_],El).
+in_list([_|Tail],El):-in_list(Tail,El).
+
+%in_list1(+InputList:List,+El:integer)
+%True if InputList contains El
+in_list1([El|_],El)-!.
+in_list1([_|Tail],El):-in_list1(Tail,El).
+
+% pr_girlfriends
+% write all girls shoes and dress colors
+pr_girlfriends:-Girls = [_,_,_],
+    in_list(Girls,[_,green,_]),
+    in_list(Girls,[_,blue,_]),
+    in_list(Girls,[_,white,_]),
+    in_list(Girls,[_,_,green]),
+    in_list(Girls,[_,_,blue]),
+    in_list(Girls,[_,_,white]),
+    in_list(Girls,[vali,_,_]),
+    in_list(Girls,[anna,Color1,Color1]),
+    in_list(Girls,[natasha,green,_]),
+    not(in_list(Girls,[vali,white,_])),
+    not(in_list(Girls,[vali,_,white])),
+
+    not(in_list(Girls,[vali,Color2,Color2])),
+    not(in_list(Girls,[natasha,Color3,Color3])),
+    
+    % Get and print results
+    in_list(Girls,[vali,Shoes1,Dress1]),
+    in_list(Girls,[anna,Shoes2,Dress2]),
+    in_list(Girls,[natasha,Shoes3,Dress3]),
+    write("vali:"),write(Shoes1),write(" "), write(Dress1),nl,
+    write("anna:"),write(Shoes2),write(" ") ,write(Dress2),nl,
+    write("natasha:"),write(Shoes3), write(" "),write(Dress3),nl,!.
+
+
+% task 8.8
+% pr_stud_from_mosc
+% write students from moscow
+pr_stud_from_mosc:- Students = [_,_,_,_,_],
+    in_list(Students,[_,penza,_]),
+    in_list(Students,[_,kharkov,_]),
+    in_list(Students,[_,moscow,_]),
+
+    in_list(Students,[_,_,lvov]),
+
+    in_list(Students,[leonid,LeonidMotherland,_]),
+    in_list(Students,[sergie,_,riga]),
+    in_list(Students,[boris,riga,penza]),
+    in_list(Students,[victor,_,moscow]),
+    in_list(Students,[grigori,_,kharkov]),
+    in_list(Students,[victor,lvov,_]),
+    in_list(Students,[_,penza,LeonidMotherland]),
+
+    not(in_list(Students,[_,City,City])),
+    
+    %Вывод студента из москвы
+    in_list(Students,[Name,moscow,_]),
+    write(Name),!.
+
+
