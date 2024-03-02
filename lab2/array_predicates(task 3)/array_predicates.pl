@@ -1,4 +1,4 @@
-%3.1.
+
 
 % read_list(-InputList:List)
 % InputList constains Inputed List
@@ -20,6 +20,13 @@ concat([FirstListHead|FirstListTail],SecondList,[FirstListHead|Tail]):- concat(F
 min(X,Y,Y):- X>Y,!.
 min(X,Y,X):-!.
 
+
+% max(+X:integer,+Y:integer,-Result:integer)
+% Result contains the biggest number of X and Y
+max(X,Y,Y):- X<Y,!.
+max(X,Y,X):-!.
+
+%3.1.
 % min_index(+X:integer,+Y:integer,+X_index:integer,+Y_index:integer,-ResultIndex:integer)
 % ResultIndex contains index of the smallest number of X and Y
 min_index(X,Y,_,Y_index,ResultIndex):- min(X,Y,Y), ResultIndex is Y_index,!.
@@ -46,3 +53,20 @@ main(InputList,ListOtvet):-min_elem_call(InputList,-1,FirstMinIndex),min_elem_ca
 %task3_8_call
 % Main predicate to start calc of task 3
 task3_8_call:-read_list(InputList),main(InputList,AnswersList),write('Indexes of two min elements'),nl,write_list(AnswersList).
+
+%3.2.
+% max_index(+X:integer,+Y:integer,+X_index:integer,+Y_index:integer,-ResultIndex:integer)
+% ResultIndex contains index of the biggest number of X and Y
+max_index(X,Y,_,Y_index,ResultIndex):- max(X,Y,Y), ResultIndex is Y_index,!.
+max_index(X,Y,X_index,_,ResultIndex):- max(X,Y,X), ResultIndex is X_index,!.
+
+% max_elem_call(+InputList:List-ResultIndex:integer)
+% ResultIndex contains index of the biggest number of InputList
+max_elem_call([Head|Tail],ResultIndex):- max_elem(Tail,Head,2,1,ResultIndex),!.
+
+% max_elem(+InputList:List,+CurrentMax:integer,+CurrentIndex:integer,+CurrentResultIndex:integer,-ResultIndex:integer)
+% ResultIndex contains index of the biggest number of InputList
+max_elem([],_,_,ResultIndex,ResultIndex):-!.
+max_elem([Head|Tail],CurrentMax,CurrentIndex,CurrentResultIndex,ResultIndex):- max(Head,CurrentMax,MaxResult), max_index(Head,CurrentMax,CurrentIndex,CurrentResultIndex,NewResultIndex), NewCurrentIndex is CurrentIndex + 1,
+max_elem(Tail,MaxResult,NewCurrentIndex,NewResultIndex,ResultIndex). 
+
