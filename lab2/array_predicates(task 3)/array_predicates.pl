@@ -70,3 +70,25 @@ max_elem([],_,_,ResultIndex,ResultIndex):-!.
 max_elem([Head|Tail],CurrentMax,CurrentIndex,CurrentResultIndex,ResultIndex):- max(Head,CurrentMax,MaxResult), max_index(Head,CurrentMax,CurrentIndex,CurrentResultIndex,NewResultIndex), NewCurrentIndex is CurrentIndex + 1,
 max_elem(Tail,MaxResult,NewCurrentIndex,NewResultIndex,ResultIndex). 
 
+% putElemOnIndex(+InputList:List,+IndexToPut:integer,+ElemToPut:integer,-ResultList:List)
+% Return ResultList with ElemToPut on IndexToPut position
+putElemOnIndex([Head|Tail],IndexToPut,IndexToPut,ElemToPut,[ElemToPut|Tail]):-!. 
+putElemOnIndex([Head|Tail],CurrentIndex,IndexToPut,ElemToPut,[Head|NewResultList]):- NewIndex is CurrentIndex + 1, putElemOnIndex(Tail,NewIndex,IndexToPut,ElemToPut,NewResultList).
+
+
+%findViaine(+InputList:List,+Index:Integer,-Elem:Integer)
+% Return in Elem elements with index equal to Index
+findViaInd(InputList,Index,Elem):- findViaIndRec(InputList,Index,Elem,1),!.
+
+%findViaine(+InputList:List,+Index:Integer,-Elem:Integer,+CurrentInd:integer)
+% Return in Elem elements with index equal to Index
+findViaIndRec([Head|_],Index,Head,Index):-!.
+findViaIndRec([Head|Tail],Index,Elem,CurrentInd):- NewCurrentIndex is CurrentInd + 1, findViaIndRec(Tail,Index,Elem,NewCurrentIndex).
+
+%main_2(+InputList:List,-ListOtvet:List)
+% Return list in ListOtvet with switched max and min of this list
+main_2(InputList,ListOtvet):- min_elem_call(InputList,-1,IndexMin),max_elem_call(InputList,IndexMax), findViaInd(InputList,IndexMin,MinElem),findViaInd(InputList,IndexMax,MaxElem), putElemOnIndex(InputList,1,IndexMin,MaxElem,ResultListMax),putElemOnIndex(ResultListMax,1,IndexMax,MinElem,ListOtvet),!.
+
+%task3_17_call
+% main predicate for task 3.17
+task3_17_call:-read_list(InputList),main_2(InputList,AnswersList),write('List with switched elements'),nl,write_list(AnswersList).
