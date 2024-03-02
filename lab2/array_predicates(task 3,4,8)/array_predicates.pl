@@ -198,3 +198,32 @@ vs_simple_rec(X,Y):-NewY is X mod Y, NewX is Y, vs_simple_rec(NewX,NewY).
 %Count contains count of digits of N which are Coprime integers with Del
 check_simple_count(0,_,0):- !.
 check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!. 
+
+%chose_del(+PrevCountMax:integer,+CurrentCount:integer,+CurrentDel:integer,+PrevResultDel:integer,-ResultDel:integer)
+%ResultDel contains max del based on max between PrevCountMax and CurrentCount
+chose_del(CurrentCount,CurrentCount,_,PrevResultDel,PrevResultDel):-!.
+chose_del(PrevCountMax,CurrentCount,_,PrevResultDel,ResultDel):-PrevCountMax>CurrentCount,ResultDel is PrevResultDel.
+chose_del(_,_,CurrentDel,_,ResultDel):-ResultDel is CurrentDel,!.
+
+%get_del_down(+N:integer,+CurrentDel:integer,+CurrentMaxCount:integer,+CurrentMaxDel:integer,-ResultDel:integer)
+%ResultDel contains max del of N based on count of digits of N which are Coprime Integers with this del
+get_del_down(_,1,_,ResultDel,ResultDel):-!.
+get_del_down(N,CurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel):- 0 is N mod CurrentDel,check_simple_count(N,CurrentDel,NewCount),
+    chose_del(CurrentMaxCount,NewCount,CurrentDel,CurrentMaxDel,NewMaxDel),
+    max(CurrentMaxCount,NewCount,NewMaxCount),
+    NewCurrentDel is CurrentDel - 1, get_del_down(N,NewCurrentDel,NewMaxCount,NewMaxDel,ResultDel).
+get_del_down(N,CurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel):- 
+    NewCurrentDel is CurrentDel - 1, get_del_down(N,NewCurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel).
+
+
+%get_del(+N:integer,-Del:integer)
+%Del contains max del of N based on count of digits of N which are Coprime Integers with this del
+get_del(N,Del):-get_del_down(N,N,0,-1,Del),!.
+
+%read5_8(-InputNumber:integer)
+%InputNumber contains inputed number
+read5_8(InputNumber):-read(InputNumber),!.
+
+%task5_8
+%main predicate for task 5.8
+task5_8:- read5_8(InputNumber),get_del(InputNumber,ResultDel),write(ResultDel),!.
