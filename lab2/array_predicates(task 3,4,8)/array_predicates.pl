@@ -180,6 +180,7 @@ pr_stud_from_mosc:- Students = [_,_,_,_,_],
     in_list(Students,[Name,moscow,_]),
     write(Name),!.
 
+
 %task 5.8.
 %vs_simple(+X:integer,+Y:integer,-Result:integer)
 %Contains 1 in Result if X and Y are Coprime integers
@@ -196,5 +197,4 @@ vs_simple_rec(X,Y):-NewY is X mod Y, NewX is Y, vs_simple_rec(NewX,NewY).
 %check_simple_count(+N:integer,+Del:integer,-Count:integer)
 %Count contains count of digits of N which are Coprime integers with Del
 check_simple_count(0,_,0):- !.
-check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!.  
-
+check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!. 
