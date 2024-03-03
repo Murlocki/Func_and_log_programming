@@ -126,7 +126,7 @@ in_list([_|Tail],El):-in_list(Tail,El).
 
 %in_list1(+InputList:List,+El:integer)
 %True if InputList contains El
-in_list1([El|_],El)-!.
+in_list1([El|_],El):-!.
 in_list1([_|Tail],El):-in_list1(Tail,El).
 
 % pr_girlfriends
@@ -216,3 +216,34 @@ main7_46(InputList,ResultList):-choose_negative_elements(InputList,NegativeList)
 %main predicate for task 7.46
 task7_46:-read_list(InputList),main7_46(InputList,ResultList),write_list(ResultList),!.
 
+
+% task 7.50
+% del_element(+InputList:List,+El:Integer,-NewList:List)
+% NewList contains InputList without El
+del_element([],El,[]):-!.
+del_element([El|Tail],El,Tail):-!.
+del_element([Head|Tail],El,[Head|PrevResult]):-del_element(Tail,El,PrevResult),!.
+
+%get_unique_elements(+InputList:List,-ResultList:List)
+% ResultList contains all unique elements of InputList
+get_unique_elements([],[]):-!.
+get_unique_elements([Head|Tail],PrevResultList):-get_unique_elements(Tail,PrevResultList), in_list1(PrevResultList,Head),!.
+get_unique_elements([Head|Tail],[Head|PrevResultList]):-get_unique_elements(Tail,PrevResultList),!.
+
+%concat_unique(+FirstList:List,+SecondList:List,-ResultList:List)
+%ResultList contains concatination of all unqiue elements of First and Second Lists
+concat_unique([],SecondList,SecondList):-!.
+concat_unique([Head|Tail],SecondList,PrevResultList):-in_list1(SecondList,Head),del_element(SecondList,Head,NewSecondList),concat_unique(Tail,NewSecondList,PrevResultList),!.
+concat_unique([Head|Tail],SecondList,[Head|PrevResultList]):-concat_unique(Tail,SecondList,PrevResultList),!.
+
+%read7_50(-FirstList:List,-SecondList:List)
+% Read FirstList and SecondList from user input
+read7_50(FirstList,SecondList):-read_list(FirstList),write("Input second list"),nl,read_list(SecondList),!.
+
+%main7_50(+FirstList:List,+SecondList:List,-ResultList:List)
+% ResultList contains concatination of unique elements of First and SecodList
+main7_50(FirstList,SecondList,ResultList):-get_unique_elements(FirstList,FirstUnique),get_unique_elements(SecondList,SecondUnique),concat_unique(FirstUnique,SecondUnique,ResultList),!.
+
+%task7_50
+%main predicate for 7.50 task
+task7_50:-read7_50(InputList1,InputList2),main7_50(InputList1,InputList2,ResultList),write_list(ResultList),!.
