@@ -180,3 +180,24 @@ pr_stud_from_mosc:- Students = [_,_,_,_,_],
     in_list(Students,[Name,moscow,_]),
     write(Name),!.
 
+%task 7.46
+
+%choose_negative_elements(+InputList:List,-ResultList:List)
+%ResultList contains List of negative elements of InputList
+choose_negative_elements([],[]):-!.
+choose_negative_elements([Head|Tail],[Head|NewCurResList]):-choose_negative_elements(Tail,NewCurResList),Head<0,!.
+choose_negative_elements([Head|Tail],NewCurResList):-choose_negative_elements(Tail,NewCurResList),!.
+
+%choose_positive_elements(+InputList:List,-ResultList:List)
+%ResultList contains List of positive elements of InputList
+choose_positive_elements([],[]):-!.
+choose_positive_elements([Head|Tail],[Head|NewCurResList]):-choose_positive_elements(Tail,NewCurResList),Head>0,!.
+choose_positive_elements([Head|Tail],NewCurResList):-choose_positive_elements(Tail,NewCurResList),!.
+
+%main(+InputList:List,-ResultList:List)
+%ResultList contains list with all positive elements at the start and all negative elements at the end
+main7_46(InputList,ResultList):-choose_negative_elements(InputList,NegativeList),choose_positive_elements(InputList,PositiveList),concat(PositiveList,NegativeList,ResultList),!.
+
+%task7_46
+%main predicate for task 7.46
+task7_46:-read_list(InputList),main7_46(InputList,ResultList),write_list(ResultList),!.
