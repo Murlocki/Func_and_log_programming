@@ -220,7 +220,7 @@ task7_46:-read_list(InputList),main7_46(InputList,ResultList),write_list(ResultL
 % task 7.50
 % del_element(+InputList:List,+El:Integer,-NewList:List)
 % NewList contains InputList without El
-del_element([],El,[]):-!.
+del_element([],_,[]):-!.
 del_element([El|Tail],El,Tail):-!.
 del_element([Head|Tail],El,[Head|PrevResult]):-del_element(Tail,El,PrevResult),!.
 
@@ -247,3 +247,38 @@ main7_50(FirstList,SecondList,ResultList):-get_unique_elements(FirstList,FirstUn
 %task7_50
 %main predicate for 7.50 task
 task7_50:-read7_50(InputList1,InputList2),main7_50(InputList1,InputList2,ResultList),write_list(ResultList),!.
+
+%task 7.56
+%get_srt(+ElemSum:integer,+ElemCount:integer,-Result:integer)
+%Result contains ElemSum/ElemCount
+get_sr(_,0,0):-!.
+get_sr(ElemSum,ElemCount,Result):-Result is ElemSum/ElemCount,!.
+
+%check_if_simple(+N:integer,+CurrentDel:integer)
+%True if N is simple integer
+check_if_simple(1,_):-!,fail.
+check_if_simple(N,_):-simple(N),!.
+check_if_simple(N,1):-assert(simple(N)),!.
+check_if_simple(N,CurrentDel):-0 is N mod CurrentDel,!,fail.
+check_if_simple(N,CurrentDel):-NewCurrentDel is CurrentDel - 1,check_if_simple(N,NewCurrentDel).
+
+%get_sum_of_simple(+InputList:List,-ResultSum:integer,-ResultCount:integer)
+%ResultSum and ResultCount contain Sum and count of simple elements of InputList
+get_sum_of_simple([],0,0):-!.
+get_sum_of_simple([Head|Tail],CurrentSum,CurrentCount):-get_sum_of_simple(Tail,PrevCurrentSum,PrevCurrentCount),FirstDel is Head - 1,check_if_simple(Head,FirstDel),CurrentSum is PrevCurrentSum + Head,CurrentCount is PrevCurrentCount + 1,!.
+get_sum_of_simple([_|Tail],PrevCurrentSum,PrevCurrentCount):-get_sum_of_simple(Tail,PrevCurrentSum,PrevCurrentCount),!.
+:-dynamic simple/1.
+
+%get_sum_of_not_simple(+InputList:List,+Sr:float,-ResultSum:integer,-ResultCount:integer)
+%ResultSum and ResultCount contain Sum and count of not simple elements of InputList which are larger than Sr
+get_sum_of_not_simple([],Sr,0,0):-!.
+get_sum_of_not_simple([Head|Tail],Sr,CurrentSum,CurrentCount):-get_sum_of_not_simple(Tail,Sr,PrevCurrentSum,PrevCurrentCount),FirstDel is Head - 1, not(check_if_simple(Head,FirstDel)),Head>Sr,CurrentSum is PrevCurrentSum + Head,CurrentCount is PrevCurrentCount + 1,!.
+get_sum_of_not_simple([_|Tail],Sr,PrevCurrentSum,PrevCurrentCount):-get_sum_of_not_simple(Tail,Sr,PrevCurrentSum,PrevCurrentCount),!.
+
+%main7_56(+InputList:List,-NotSimpleSr:float)
+% NotSimpleSr contains arithmethic average of not simple elements of InputList which are larger than average of simple elements
+main7_56(InputList,NotSimpleSr):-retractall(simple(_)),get_sum_of_simple(InputList,ResultSum,ResultCount),get_sr(ResultSum,ResultCount,ResultSr),get_sum_of_not_simple(InputList,ResultSr,NotSimpleSum,NotSimpleCount),get_sr(NotSimpleSum,NotSimpleCount,NotSimpleSr),!.
+
+%task7_56
+%main predicate for task 7.56
+task7_56:-read_list(InputList),main7_56(InputList,Result),write(Result),!.
