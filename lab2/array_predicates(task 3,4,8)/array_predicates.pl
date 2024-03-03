@@ -97,7 +97,7 @@ task3_17_call:-read_list(InputList),main_2(InputList,AnswersList),write('List wi
 %3.34
 %read_interval(-Interval:List)
 % Interval contains inputed interval of integers
-read_interval([Start|End]):- read(Start),read(End),!.
+read_interval([NewStart|NewEnd]):- read(Start),read(End),min(Start,End,NewStart),max(Start,End,NewEnd),!.
 %read_34(-InputList:List,-Interval:List)
 % InputList contains inputed list and Interval contains inputed interval
 read_34(InputList,Interval):- read_list(InputList),write('This was a list'),nl,read_interval(Interval),!.
@@ -180,19 +180,33 @@ pr_stud_from_mosc:- Students = [_,_,_,_,_],
     in_list(Students,[Name,moscow,_]),
     write(Name),!.
 
-%task 7.46
 
+%7.38
+%list_length(+InputList:List,-ResCount:integer)
+%ResCount contatins length of InputList list
+list_length([],0):-!.
+list_length([_|Tail],ResCount):-list_length(Tail,PrevResCount),ResCount is PrevResCount + 1,!.
+
+%main7_38(+InputList:List,+Interval:List,-ResultCount:Integer)
+%ResultCount contains count of elements of InputList which fits Interval
+main7_38(InputList,Interval,ResultCount):-main_34(InputList,Interval,ListOtvet),list_length(ListOtvet,ResultCount),!.
+
+%task7_38
+%main predicate for task 7.38
+task7_38:-read_34(InputList,Interval),main7_38(InputList,Interval,ResultCount),write(ResultCount),!.
+
+%task 7.46
 %choose_negative_elements(+InputList:List,-ResultList:List)
 %ResultList contains List of negative elements of InputList
 choose_negative_elements([],[]):-!.
 choose_negative_elements([Head|Tail],[Head|NewCurResList]):-choose_negative_elements(Tail,NewCurResList),Head<0,!.
-choose_negative_elements([Head|Tail],NewCurResList):-choose_negative_elements(Tail,NewCurResList),!.
+choose_negative_elements([_|Tail],NewCurResList):-choose_negative_elements(Tail,NewCurResList),!.
 
 %choose_positive_elements(+InputList:List,-ResultList:List)
 %ResultList contains List of positive elements of InputList
 choose_positive_elements([],[]):-!.
 choose_positive_elements([Head|Tail],[Head|NewCurResList]):-choose_positive_elements(Tail,NewCurResList),Head>0,!.
-choose_positive_elements([Head|Tail],NewCurResList):-choose_positive_elements(Tail,NewCurResList),!.
+choose_positive_elements([_|Tail],NewCurResList):-choose_positive_elements(Tail,NewCurResList),!.
 
 %main(+InputList:List,-ResultList:List)
 %ResultList contains list with all positive elements at the start and all negative elements at the end
@@ -201,3 +215,4 @@ main7_46(InputList,ResultList):-choose_negative_elements(InputList,NegativeList)
 %task7_46
 %main predicate for task 7.46
 task7_46:-read_list(InputList),main7_46(InputList,ResultList),write_list(ResultList),!.
+
