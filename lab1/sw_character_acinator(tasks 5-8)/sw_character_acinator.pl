@@ -19,8 +19,8 @@ main :-
 
 
 % Create question for acinator
-% question(+Object: atom) is det
-% True, if query(Prompt) is true
+% question(+Object: atom,+Answer:atom) is det
+% True, if query(Prompt,Answer) is true
 question(human,Answer):-query('Is character a human?',Answer).
 question(positive,Answer):-query('Is it a positive character?',Answer).
 question(force,Answer):-query('Is character force sensitive',Answer).
@@ -271,7 +271,6 @@ person(ventress):-
 
 
 % Check if there is more than 1 person that fits to current question
-% answers
 % check_persons() is nondet
 % Always true
 check_persons:-(person(FirstPerson),person(SecondPerson),FirstPerson\==SecondPerson)->(retractall(askFalseQuestions(_)),true);true.
@@ -281,6 +280,7 @@ check_persons:-(person(FirstPerson),person(SecondPerson),FirstPerson\==SecondPer
 % user_reply
 %  query(+Prompt:atom, +Answer:atom) is det
 %  True if Answer is equal to Reply
+% Otherwise true if askFalseQuestions(1) is true
 query(Prompt,Answer) :-
     (   (asked(Prompt, Reply);askFalseQuestions(1))-> true
     ;   nl, write(Prompt), write(' (y/n)? '),
