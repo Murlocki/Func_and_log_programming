@@ -51,7 +51,7 @@ parent(zhdana,zlatomir).
 % Task 2
 
 % 2.1)
-% son(+PossibleSon: atom,+PossibleParent: atom) is det
+% son(?PossibleSon: atom,+PossibleParent: atom) is det
 % True, if PossibleSon is a son of PossibleParent
 son(PossibleSon,PossibleParent):- man(PossibleSon), parent(PossibleParent,PossibleSon), nl.
 
@@ -76,7 +76,7 @@ sisters(InputPerson):- woman(PossibleSister),sister(PossibleSister,InputPerson),
 % True, if PossibleGrCh is a grandchild of PossibleGrPar
 grand_par(PossibleGrCh,PossibleGrPar):- parent(PossibleParent,PossibleGrCh), parent(PossibleGrPar,PossibleParent).
 
-% grand_da(+PossibleGrDa:atom, +PossibleGrPar:atom) is det
+% grand_da(?PossibleGrDa:atom, +PossibleGrPar:atom) is det
 % True, if PossibleGrDa is a granddaughter of PossibleGrPar
 grand_da(PossibleGrDa,PossibleGrPar):- woman(PossibleGrDa), grand_par(PossibleGrDa,PossibleGrPar).
 

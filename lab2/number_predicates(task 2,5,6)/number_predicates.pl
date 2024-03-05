@@ -11,7 +11,7 @@ max_digit_up(InputNumber,CurrentMaximumDigit):- NextInputNumber is InputNumber d
 
 
 % max_digit_call(+InputNumber:integer,-MaximumNumber:integer)
-max_digit_call(InputNumber,MaximumNumber):-max_digit_down(InputNumber,0,MaximumNumber),!. 
+max_digit_call(InputNumber,MaximumNumber):-max_digit_down(InputNumber,0,MaximumNumber),!.
 
 % max_digit_down(+CurrentNumber:integer, +CurrentMaximumDigit:integer,-ResultMaximumDigit)
 max_digit_down(0,ResultMaximumDigit,ResultMaximumDigit):-!.
@@ -65,7 +65,7 @@ min(X,_,X):-!.
 %task 5.8.
 %vs_simple(+X:integer,+Y:integer,-Result:integer)
 %Contains 1 in Result if X and Y are Coprime integers
-%Otherwise contains 0 in Result 
+%Otherwise contains 0 in Result
 vs_simple(X,Y,1):-max(X,Y,ResultMax),min(X,Y,ResultMin),vs_simple_rec(ResultMax,ResultMin).
 vs_simple(_,_,0):-!.
 
@@ -78,7 +78,7 @@ vs_simple_rec(X,Y):-NewY is X mod Y, NewX is Y, vs_simple_rec(NewX,NewY).
 %check_simple_count(+N:integer,+Del:integer,-Count:integer)
 %Count contains count of digits of N which are Coprime integers with Del
 check_simple_count(0,_,0):- !.
-check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!. 
+check_simple_count(N,Del,Count):- NewN is N div 10, check_simple_count(NewN,Del,PrevCount),NewDigit is N mod 10,vs_simple(NewDigit,Del,Result),Count is PrevCount + Result,!.
 
 %chose_del(+PrevCountMax:integer,+CurrentCount:integer,+CurrentDel:integer,+PrevResultDel:integer,-ResultDel:integer)
 %ResultDel contains max del based on max between PrevCountMax and CurrentCount
@@ -93,7 +93,7 @@ get_del_down(N,CurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel):- 0 is N mod 
     chose_del(CurrentMaxCount,NewCount,CurrentDel,CurrentMaxDel,NewMaxDel),
     max(CurrentMaxCount,NewCount,NewMaxCount),
     NewCurrentDel is CurrentDel - 1, get_del_down(N,NewCurrentDel,NewMaxCount,NewMaxDel,ResultDel).
-get_del_down(N,CurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel):- 
+get_del_down(N,CurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel):-
     NewCurrentDel is CurrentDel - 1, get_del_down(N,NewCurrentDel,CurrentMaxCount,CurrentMaxDel,ResultDel).
 
 
@@ -161,7 +161,7 @@ check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),NewN is N mod TenRes,
 % ResultSum contains Sum of numbers which we can cut_left and cut_right
 cut(1000001,ResultSum,ResultSum):-!.
 cut(N,Sum,ResultSum):-check_noteven_numbers(N,N,UpdateNumber),max(N,UpdateNumber,ResNumb),cut_left(ResNumb),cut_right(ResNumb),NewSum is Sum + ResNumb,NewN is ResNumb + 2,write(ResNumb),nl, cut(NewN,NewSum,ResultSum).
-cut(N,Sum,ResultSum):-check_noteven_numbers(N,N,UpdateNumber),max(N,UpdateNumber,ResNumb),NewN is ResNumb + 2,cut(NewN,Sum,ResultSum).
+cut(N,Sum,ResultSum):-check_noteven_numbers(N,N,UpdateNumber),max(N,UpdateNumber,ResNumb),write(ResNumb),nl,NewN is ResNumb + 2,cut(NewN,Sum,ResultSum).
 
 %main(-ResultSum:integer)
 % ResultSum contains Sum of numbers which we can cut_left and cut_right
