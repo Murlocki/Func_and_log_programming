@@ -1,4 +1,7 @@
 % Task 4
+%main
+% Main predicate for acinator
+% Print first recognized problem if it is possible
 main :-
     retractall(asked(_,_)),
     fault(Problem),
@@ -9,6 +12,8 @@ main :-
     nl,
     write('The problem cannot be recognized.'), nl.
 
+%Create problems for acinator
+% problem(+InputProblem:atom)
 problem(disc_format) :-
     query('Does the computer show error cannot format').
 
@@ -68,9 +73,13 @@ problem(resolution_problem):- query('Is there broken resolution or your screen')
 problem(keyboard_input):-query('Does computer react on input from your working keyboard ').
 problem(usb_connection):-query('Is your device appear in menu after using of usb connection').
 problem(wifi_adapter):-query('Does your computer see any wifi network').
+
+
 % new objects with extra questions
+% fault(+InputProblem:atom)
+% True if all problems are true
 fault(easy_video_card_connection):-
-    (   problem(resolution_problem);
+    (problem(resolution_problem);
     problem(blank_display)).
 fault(extra_bios_problem):-
     problem(resolution_problem),
@@ -141,7 +150,8 @@ fault(paper) :-
     problem(paper_jam),
     problem(out_of_paper).
 
-
+%query(+Prompt:atom)
+% Get answer for Prompt
 query(Prompt) :-
     (   asked(Prompt, Reply) -> true
     ;   nl, write(Prompt), write(' (y/n)? '),
