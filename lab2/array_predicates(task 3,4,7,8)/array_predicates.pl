@@ -76,11 +76,11 @@ putElemOnIndex([_|Tail],IndexToPut,IndexToPut,ElemToPut,[ElemToPut|Tail]):-!.
 putElemOnIndex([Head|Tail],CurrentIndex,IndexToPut,ElemToPut,[Head|NewResultList]):- NewIndex is CurrentIndex + 1, putElemOnIndex(Tail,NewIndex,IndexToPut,ElemToPut,NewResultList).
 
 
-%findViaine(+InputList:List,+Index:Integer,-Elem:Integer)
+%findViaInd(+InputList:List,+Index:Integer,-Elem:Integer)
 % Return in Elem elements with index equal to Index
 findViaInd(InputList,Index,Elem):- findViaIndRec(InputList,Index,Elem,1),!.
 
-%findViaine(+InputList:List,+Index:Integer,-Elem:Integer,+CurrentInd:integer)
+%findViaIndRec(+InputList:List,+Index:Integer,-Elem:Integer,+CurrentInd:integer)
 % Return in Elem elements with index equal to Index
 findViaIndRec([Head|_],Index,Head,Index):-!.
 findViaIndRec([_|Tail],Index,Elem,CurrentInd):- NewCurrentIndex is CurrentInd + 1, findViaIndRec(Tail,Index,Elem,NewCurrentIndex).
