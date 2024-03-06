@@ -10,7 +10,7 @@ read_list([]):-!.
 write_list([]):-!.
 write_list([Head|Tail]):-write(Head),nl,write_list(Tail).
 
-% concat(+FirstList:List,+SecondList:List,?ResultList:List)
+% concat(+FirstList:List,+SecondList:List,-ResultList:List)
 % ResultList contains concatination of FirstList and SecondList
 concat([],ResultList,ResultList):-!.
 concat([FirstListHead|FirstListTail],SecondList,[FirstListHead|Tail]):- concat(FirstListTail,SecondList,Tail).
