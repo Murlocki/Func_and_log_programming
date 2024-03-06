@@ -26,7 +26,7 @@ min(X,_,X):-!.
 max(X,Y,Y):- X<Y,!.
 max(X,_,X):-!.
 
-%3.1.
+%3.8.
 % min_index(+X:integer,+Y:integer,+X_index:integer,+Y_index:integer,-ResultIndex:integer)
 % ResultIndex contains index of the smallest number of X and Y
 min_index(X,Y,_,Y_index,ResultIndex):- min(X,Y,Y), ResultIndex is Y_index,!.
@@ -54,7 +54,7 @@ main(InputList,ListOtvet):-min_elem_call(InputList,-1,FirstMinIndex),min_elem_ca
 % Main predicate to start calc of task 3
 task3_8_call:-read_list(InputList),main(InputList,AnswersList),write('Indexes of two min elements'),nl,write_list(AnswersList).
 
-%3.2.
+%3.17.
 % max_index(+X:integer,+Y:integer,+X_index:integer,+Y_index:integer,-ResultIndex:integer)
 % ResultIndex contains index of the biggest number of X and Y
 max_index(X,Y,_,Y_index,ResultIndex):- max(X,Y,Y), ResultIndex is Y_index,!.
