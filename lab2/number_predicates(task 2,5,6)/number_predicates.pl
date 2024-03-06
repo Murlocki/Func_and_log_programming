@@ -1,7 +1,7 @@
 % task 2
 
 %2.1
-% max(+FirstNumber:integer,+SecondNumber:integer,?MaximumNumber:integer)
+% max(+FirstNumber:integer,+SecondNumber:integer,-MaximumNumber:integer)
 max(FirstNumber,SecondNumber,FirstNumber):- FirstNumber>SecondNumber,!.
 max(_,SecondNumber,SecondNumber).
 
