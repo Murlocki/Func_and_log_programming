@@ -147,15 +147,15 @@ cut_left(N):-simpleToLeft(N),!.
 cut_left(N):-FirstDel is N div 2,check_if_simple(N,FirstDel),get_ten(N,1,TenRes),NewN is N mod TenRes,cut_left(NewN),assert(simpleToLeft(N)),!.
 
 
-%check_noteven_numbers(+InpN:integer,N:integer,-UpdNumb:integer)
-% UpdNumber contains number with replaced the first even digit in Inp beside first integer
+%check_noteven_numbers(+InpN:integer,+CurrentN:integer,-UpdNumb:integer)
+% UpdNumber contains number with replaced the first even digit in InpN beside first integer
 
-check_noteven_numbers(InpN,N,UpdNumb):-N<10,1 is N mod 2,UpdNumb is 0,!.
-check_noteven_numbers(N,N,UpdNumb):-get_ten(N,1,TenRes),FirstN is N div TenRes,(FirstN is 2;FirstN is 5),NewN is N mod TenRes,check_noteven_numbers(N,NewN,NewUpd),UpdNumb is FirstN*TenRes+NewUpd,!.
-check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N div TenRes,0 is Digit mod 2,!,UpdNumb is (Digit + 1) * TenRes.
-check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N div TenRes,Digit is 5,!,UpdNumb is (Digit + 1) * TenRes.
-check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),Digit is N  div (TenRes div 10),0 is Digit mod 2,!,UpdNumb is (Digit + 1) * (TenRes div 10).
-check_noteven_numbers(InpN,N,UpdNumb):-get_ten(N,1,TenRes),NewN is N mod TenRes,check_noteven_numbers(InpN,NewN,PrevUpdNumb),UpdNumb is PrevUpdNumb + (N div TenRes) * TenRes.
+check_noteven_numbers(InpN,CurrentN,UpdNumb):-CurrentN<10,1 is CurrentN mod 2,UpdNumb is 0,!.
+check_noteven_numbers(InpN,InpN,UpdNumb):-get_ten(InpN,1,TenRes),FirstN is InpN div TenRes,(FirstN is 2;FirstN is 5),NewN is InpN mod TenRes,check_noteven_numbers(InpN,NewN,NewUpd),UpdNumb is FirstN*TenRes+NewUpd,!.
+check_noteven_numbers(InpN,CurrentN,UpdNumb):-get_ten(CurrentN,1,TenRes),Digit is CurrentN div TenRes,0 is Digit mod 2,!,UpdNumb is (Digit + 1) * TenRes.
+check_noteven_numbers(InpN,CurrentN,UpdNumb):-get_ten(CurrentN,1,TenRes),Digit is CurrentN div TenRes,Digit is 5,!,UpdNumb is (Digit + 1) * TenRes.
+check_noteven_numbers(InpN,CurrentN,UpdNumb):-get_ten(CurrentN,1,TenRes),Digit is CurrentN  div (TenRes div 10),0 is Digit mod 2,!,UpdNumb is (Digit + 1) * (TenRes div 10).
+check_noteven_numbers(InpN,CurrentN,UpdNumb):-get_ten(CurrentN,1,TenRes),NewN is CurrentN mod TenRes,check_noteven_numbers(InpN,NewN,PrevUpdNumb),UpdNumb is PrevUpdNumb + (CurrentN div TenRes) * TenRes.
 
 %cut(+N:integer,+Sum:integer,-ResultSum:integer)
 % ResultSum contains Sum of numbers which we can cut_left and cut_right
