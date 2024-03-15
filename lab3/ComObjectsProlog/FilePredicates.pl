@@ -83,7 +83,6 @@ main2_2(ListOfStrings):-count_str_without_space(ListOfStrings,0,Result),write('Ð
 task2_2(InputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_2(ListOfStrings),!.
 
 % task 2.3
-
 %count_of_A(+String:List,+CurrentRes:integer,-Result:Integer)
 %Result contains number of 'A' in String
 count_of_A([],Result,Result):-!.
@@ -111,3 +110,43 @@ main2_3(ListOfStrings):- count_mean_A(ListOfStrings,0,0,MeanResult),print_all_me
 %task2_3(+InputPath:String)
 %Main prediacte for task 2.3
 task2_3(InputPath):- read_strings_in_list(InputPath,ListOfStrings), main2_3(ListOfStrings),!.
+
+
+%2.4.
+%God save us for this
+
+:-dynamic wordsCount/2.
+
+%prologHashmap(Element)
+% Add Element in fact base with count 1 or set count+1 for Element
+prologHashmap(''):- !.
+prologHashmap(Element):- wordsCount(Element,Count),NewCount is Count + 1, retract(wordsCount(Element,Count)),
+    assert(wordsCount(Element,NewCount)),!.
+prologHashmap(Element):- assert(wordsCount(Element,1)),!.
+
+%getWords(+String:List,+Buffer:Atom)
+%Calc the count of words in String
+getWords([],''):-!.
+getWords([],Buffer):-prologHashmap(Buffer),!.
+getWords([Head|Tail],Buffer):- char_code(Head,NewCode), NewCode >=65,NewCode=<90, atom_concat(Buffer,Head,NewBuffer),getWords(Tail,NewBuffer),!.
+getWords([Head|Tail],Buffer):- char_code(Head,NewCode), NewCode >=97,NewCode=<122, atom_concat(Buffer,Head,NewBuffer),getWords(Tail,NewBuffer),!.
+getWords([Head|Tail],Buffer):- char_code(Head,NewCode), NewCode >=48,NewCode=<57, atom_concat(Buffer,Head,NewBuffer),getWords(Tail,NewBuffer),!.
+getWords([_|Tail],Buffer):- prologHashmap(Buffer),NewBuffer='',getWords(Tail,NewBuffer),!.
+
+%count_all_words(StringList)
+%Calc the count of all words in String List
+count_all_words([]):-!.
+count_all_words([Head|StringList]):-getWords(Head,''),count_all_words(StringList),!.
+
+%max_word(-Word:Atom)
+%Word contains word which appears at max count
+max_word(Word) :-
+    wordsCount(Word, Count), \+ (wordsCount(_, Count1), Count1 > Count).
+
+%main2_4(+ListOfStrings:List,-Word:Atom)
+%Main pred for finding max Word
+main2_4(ListOfStrings,Word):-retractall(wordsCount(_,_)),count_all_words(ListOfStrings),max_word(Word),!.
+
+%task2_4(+InputPath:String)
+%Main pred for task 2.4.
+task2_4(InputPath):-read_strings_in_list(InputPath,ListOfStrings), main2_4(ListOfStrings,Word),write(Word),!.
