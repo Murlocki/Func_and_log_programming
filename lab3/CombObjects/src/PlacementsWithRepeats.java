@@ -31,7 +31,8 @@ public class PlacementsWithRepeats {
             }
         }
     }
-
+    // Метод для получения следующего символа из алфавита
+    // Принимает текущий символ алфавита
     private char getNextSymbol(char curSymbol){
         int i=0;
         while((i<this.n)&&(this.alphabet[i]!=curSymbol)){
@@ -39,6 +40,9 @@ public class PlacementsWithRepeats {
         }
         return this.alphabet[i+1];
     }
+
+    // Метод для получения следующего по порядку размещения с повторениями
+    // Принимает текущее размещение и длину размещения
     private boolean getNextPlacement(char[] currentPlacement,int k){
         int j = k - 1;
         while((j >= 0) && (currentPlacement[j] == this.alphabet[this.n-1])){
@@ -55,6 +59,8 @@ public class PlacementsWithRepeats {
             return true;
         }
     }
+    // Не рекурсивный метод для вывода всех размещений с повторениями длины k
+    // Принимает длину размещения
     public void printAllPlacementWithRepNonRec(int k){
         char[] curPlacement=new char[k];
         Arrays.fill(curPlacement,this.alphabet[0]);
