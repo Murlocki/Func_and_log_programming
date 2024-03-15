@@ -1,4 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
+
+import static java.lang.System.arraycopy;
 
 public class CombinationsWithoutRep {
 
@@ -33,6 +36,37 @@ public class CombinationsWithoutRep {
                 curComb[curPos]=this.alphabet[i];
                 printAllCombRec(curComb,curPos+1,k);
             }
+        }
+    }
+
+    private boolean nextCombination(char[] currentComb,int k){
+        int j=k-1;
+        int i=1;
+        while((j>=0) && (currentComb[j]==this.alphabet[this.n-i])){
+            j=j-1;
+            i=i+1;
+        }
+        if(j<0){
+            return false;
+        }
+        else{
+            currentComb[j]=getNextSymbol(currentComb[j]);
+            for(i=j+1;i<k;i++){
+                currentComb[i]= getNextSymbol(currentComb[i-1]);
+            }
+            return true;
+        }
+    }
+    public void printAllCombNonRec(int k){
+        char[] comb = new char[k];
+        arraycopy(this.alphabet,0,comb,0,k);
+        for(int i=0;i<k;i++){
+            comb[i]=this.alphabet[i];
+        }
+        System.out.println(comb);
+
+        while (nextCombination(comb,k)){
+            System.out.println(comb);
         }
     }
 }

@@ -9,6 +9,8 @@ public class Main {
 //        pl.printAllPlacementWithRepNonRec(1);
 
         CombinationsWithoutRep comb = new CombinationsWithoutRep(alp);
-        comb.printAllComb(3);
+        comb.printAllComb(2);
+
+        comb.printAllCombNonRec(2);
     }
 }
