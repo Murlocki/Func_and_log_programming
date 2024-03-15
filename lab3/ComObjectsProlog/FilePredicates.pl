@@ -58,3 +58,26 @@ main2_1(ListOfStrings):-findStringMaxLength(ListOfStrings,0,ResultMax),write('М
 %task2_1(InputPath:String,OutputPath:String)
 %Main predicate for task 2.1.
 task2_1(InputPath,OutputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_1(ListOfStrings), write_to_file(OutputPath,ListOfStrings),!.
+
+
+%2.2
+
+%check_if_space(+InputString:List,-Flag:Integer)
+% Flag is 1 if InputString is without spaces
+check_if_space([],1):-!.
+check_if_space([Head|StringTail],Flag):-  char_code(Head,HeadCode), HeadCode is 32, Flag is 0,!.
+check_if_space([Head|StringTail],Flag):-  check_if_space(StringTail,Flag),!.
+
+%count_str_without_space(+StringList:List,+CurrentResult:integer,-Result:Integer)
+%Result contains number of strings without spaces from StringList
+count_str_without_space([],Result,Result):-!.
+count_str_without_space([Head|TailStringList],CurrentRes,Result):- check_if_space(Head,Res), NewCurrentRes is CurrentRes + Res,
+    count_str_without_space(TailStringList,NewCurrentRes,Result),!.
+
+%main2_2(+ListOfStrings:List)
+%main predicate for prining number of strings without spaces
+main2_2(ListOfStrings):-count_str_without_space(ListOfStrings,0,Result),write('Количество строк без пробелов:'),write(Result),!.
+
+%task2_2(+InputPath:String,+OutputPath:String)
+%Main predicate for task 2.2.
+task2_2(InputPath,OutputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_2(ListOfStrings), write_to_file(OutputPath,ListOfStrings),!.
