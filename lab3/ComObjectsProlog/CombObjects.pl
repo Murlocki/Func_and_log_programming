@@ -38,3 +38,7 @@ build_3a_words_of_k(Alphabet,K,Word):-make_pos_list(K,0,PositionList),
     comb(PositionList,PositionsOfA,3),make_3a_empty_word(K,0,PositionsOfA,OutputWord), 
     Alphabet = [a|NewAlphabet], M is K-3, razm_povt(NewAlphabet,M,[],RestWord),
     build_word(Word,OutputWord,RestWord).
+
+%build_all_3a(+Alphabet:List,+K:integer)
+%Print all words with length k and 3 'a'
+build_all_3a(Alphabet,K):-build_3a_words_of_k(Alphabet,K,Word),write(Word),nl,fail.
