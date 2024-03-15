@@ -1,23 +1,36 @@
 
-write_list_str([]):-!.
-write_list_str([H|List]):-write(H),write_list_str(List).
-
+%read_str_one(+CurrentSymbol:char,+CurrentStr:List,-ResultStr:List,-Flag:integer)
+% ResultStr contains read one str
 read_str_one(-1,CurrentStr,CurrentStr,0):-!.
 read_str_one(10,CurrentStr,CurrentStr,1):-!.
 read_str_one(26,CurrentStr,CurrentStr,0):-!.
 read_str_one(CurrentSymbol,CurrentStr,ResultStr,Flag):- char_code(ResSymbol,CurrentSymbol),append(CurrentStr,[ResSymbol],NewCurrentStr),get0(NewSymbol), read_str_one(NewSymbol,NewCurrentStr,ResultStr,Flag).
 
+%read_rest_str(-StrList:List,+CurrentList:List,-Flag:integer)
+%StrList contains list of all str read from input
 read_rest_str(CurrentList,CurrentList,0):-!.
 read_rest_str(StrList,CurrentList,_):-get0(NewSymbol), read_str_one(NewSymbol,[],ResultStr,Flag),append(CurrentList,[ResultStr],NewStrList),read_rest_str(StrList,NewStrList,Flag).
 
+%read_str_from_f(-ListOfStrings:List)
+%Main predicate for reading all str from input
 read_str_from_f(ListOfStrings):-get0(NewSymbol),read_str_one(NewSymbol,[],FirstStr,Flag),read_rest_str(ListOfStrings,[FirstStr],Flag),!.
+
+%read_strings_in_list(+FilePath:String,-ReadStrs:List)
+%ReadStrs contains all str from FilePath file
 read_strings_in_list(FilePath,ReadStrs):-see(FilePath),read_str_from_f(ReadStrs),seen.
 
-
+%write_list_of_lists(+ListOfLists:List)
+%Write all strings from ListOfLists
 write_list_of_lists([]):-!.
 write_list_of_lists([H|TailListOfLists]):-write_list_str(H),nl,write_list_of_lists(TailListOfLists),!.
 
+%write_list_str(+List:List)
+%Write List 
+write_list_str([]):-!.
+write_list_str([H|List]):-write(H),write_list_str(List).
 
+%write_to_file(+FilePath:String,+ListOfStrings:List)
+%Write ListOfStrings to Filepath File
 write_to_file(FilePath,ListOfStrings):-tell(FilePath),write_list_of_lists(ListOfStrings),told,!.
 
 %2.1.
