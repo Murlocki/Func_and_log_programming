@@ -51,7 +51,7 @@ public class CombinationsWithoutRep {
 
     // Метод для получения следующей по порядку комбинации
     // Принимает текущую комбинацию и длину комбинации
-    private boolean nextCombination(char[] currentComb,int k){
+    public boolean nextCombination(char[] currentComb,int k){
         int j=k-1;
         int i=1;
         while((j>=0) && (currentComb[j]==this.alphabet[this.n-i])){

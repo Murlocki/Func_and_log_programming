@@ -8,9 +8,12 @@ public class Main {
 //        System.out.println();
 //        pl.printAllPlacementWithRepNonRec(1);
 
-        CombinationsWithoutRep comb = new CombinationsWithoutRep(alp);
-        comb.printAllComb(2);
+        //CombinationsWithoutRep comb = new CombinationsWithoutRep(alp);
+        //comb.printAllComb(2);
 
-        comb.printAllCombNonRec(2);
+        //comb.printAllCombNonRec(2);
+
+        wordWith3a r = new wordWith3a(alp);
+        r.printWords3a(5);
     }
 }

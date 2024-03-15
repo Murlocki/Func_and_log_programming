@@ -43,7 +43,7 @@ public class PlacementsWithRepeats {
 
     // Метод для получения следующего по порядку размещения с повторениями
     // Принимает текущее размещение и длину размещения
-    private boolean getNextPlacement(char[] currentPlacement,int k){
+    public boolean getNextPlacement(char[] currentPlacement,int k){
         int j = k - 1;
         while((j >= 0) && (currentPlacement[j] == this.alphabet[this.n-1])){
             j = j - 1;
