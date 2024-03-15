@@ -22,11 +22,11 @@ read_strings_in_list(FilePath,ReadStrs):-see(FilePath),read_str_from_f(ReadStrs)
 %write_list_of_lists(+ListOfLists:List)
 %Write all strings from ListOfLists
 write_list_of_lists([]):-!.
-write_list_of_lists([H|TailListOfLists]):-write_list_str(H),nl,write_list_of_lists(TailListOfLists),!.
+write_list_of_lists([H|TailListOfLists]):-write_list_str(H),write_list_of_lists(TailListOfLists),!.
 
 %write_list_str(+List:List)
 %Write List 
-write_list_str([]):-!.
+write_list_str([]):-nl,!.
 write_list_str([H|List]):-write(H),write_list_str(List).
 
 %write_to_file(+FilePath:String,+ListOfStrings:List)
@@ -55,9 +55,9 @@ findStringMaxLength([String|TailListOfStrings],CurrentMax,ResultMax):-findLength
 %Main predicate for calculating max length
 main2_1(ListOfStrings):-findStringMaxLength(ListOfStrings,0,ResultMax),write('Максимальная длина:'),write(ResultMax),!.
 
-%task2_1(InputPath:String,OutputPath:String)
+%task2_1(InputPath:String)
 %Main predicate for task 2.1.
-task2_1(InputPath,OutputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_1(ListOfStrings), write_to_file(OutputPath,ListOfStrings),!.
+task2_1(InputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_1(ListOfStrings),!.
 
 
 %2.2
@@ -65,8 +65,8 @@ task2_1(InputPath,OutputPath):-read_strings_in_list(InputPath,ListOfStrings),wri
 %check_if_space(+InputString:List,-Flag:Integer)
 % Flag is 1 if InputString is without spaces
 check_if_space([],1):-!.
-check_if_space([Head|StringTail],Flag):-  char_code(Head,HeadCode), HeadCode is 32, Flag is 0,!.
-check_if_space([Head|StringTail],Flag):-  check_if_space(StringTail,Flag),!.
+check_if_space([Head|_],Flag):-  char_code(Head,HeadCode), HeadCode is 32, Flag is 0,!.
+check_if_space([_|StringTail],Flag):-  check_if_space(StringTail,Flag),!.
 
 %count_str_without_space(+StringList:List,+CurrentResult:integer,-Result:Integer)
 %Result contains number of strings without spaces from StringList
@@ -78,6 +78,36 @@ count_str_without_space([Head|TailStringList],CurrentRes,Result):- check_if_spac
 %main predicate for prining number of strings without spaces
 main2_2(ListOfStrings):-count_str_without_space(ListOfStrings,0,Result),write('Количество строк без пробелов:'),write(Result),!.
 
-%task2_2(+InputPath:String,+OutputPath:String)
+%task2_2(+InputPath:String)
 %Main predicate for task 2.2.
-task2_2(InputPath,OutputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_2(ListOfStrings), write_to_file(OutputPath,ListOfStrings),!.
+task2_2(InputPath):-read_strings_in_list(InputPath,ListOfStrings),write_list_of_lists(ListOfStrings),main2_2(ListOfStrings),!.
+
+% task 2.3
+
+%count_of_A(+String:List,+CurrentRes:integer,-Result:Integer)
+%Result contains number of 'A' in String
+count_of_A([],Result,Result):-!.
+count_of_A([Head|StringTail],CurrentACount,ResultCount):-char_code(Head,Code), Code is 65 ,NewCurrentCount is CurrentACount + 1, 
+    count_of_A(StringTail,NewCurrentCount,ResultCount),!.
+count_of_A([_|StringTail],CurrentACount,ResultCount):- count_of_A(StringTail,CurrentACount,ResultCount),!.
+
+%count_mean_A(+StringList:List,+CurrentSum:Integer,+CurrentCount:Integer,-Result:Float)
+%Result contains mean count of A between all strings of StringList
+count_mean_A([],0,0,0):-!.
+count_mean_A([],CurrentSum,CurrentCount,Result):-Result is CurrentSum/CurrentCount,!.
+count_mean_A([Head|StringList],CurrentSum,CurrentCount,Result):- count_of_A(Head,0,ResultA), NewSum is CurrentSum + ResultA,
+    NewCount is CurrentCount+1, count_mean_A(StringList,NewSum,NewCount,Result),!.
+
+%print_all_mean_greater(+StringList:List,+ResultMean:float)
+%Print all strings from StringList which have count of A greater than ResultMean
+print_all_mean_greater([],_):-!.
+print_all_mean_greater([Head|TailStringList],ResultMean):-count_of_A(Head,0,ResultCount), ResultCount > ResultMean, write_list_str(Head),print_all_mean_greater(TailStringList,ResultMean),!.
+print_all_mean_greater([Head|TailStringList],ResultMean):-print_all_mean_greater(TailStringList,ResultMean),!.
+
+%main2_3(+ListOfStrings:List)
+%Main predicate for printing strings
+main2_3(ListOfStrings):- count_mean_A(ListOfStrings,0,0,MeanResult),print_all_mean_greater(ListOfStrings,MeanResult),!.
+
+%task2_3(+InputPath:String)
+%Main prediacte for task 2.3
+task2_3(InputPath):- read_strings_in_list(InputPath,ListOfStrings), main2_3(ListOfStrings),!.
