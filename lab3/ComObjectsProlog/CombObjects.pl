@@ -63,3 +63,19 @@ getPlacement(Alphabet,K,[Element|PrevPl]):-in_list(Alphabet,Element),NewK is K-1
 %print_all_pl(+Alphabet:List,+K:Integer)
 %Printing all placements without rep with length k
 print_all_pl(Alphabet,K):-getPlacement(Alphabet,K,Res),write(Res),nl,fail,!.
+
+%3.2.
+
+%findLengthOfList(_InputList:List,+CurrentLen:integer,-ResultLen:integer)
+%ResultLen contains length of InputList
+findLengthOfList([],ResultLen,ResultLen):-!.
+findLengthOfList([H|Tail],CurrentLen,ResultLen):-NewLen is CurrentLen + 1,
+    findLengthOfList(Tail,NewLen,ResultLen),!.
+
+%getPerm(+Alphabet:List,-Perm:List)
+%Perm contains permutation of Alphabet
+getPerm(Alphabet,Perm):-findLengthOfList(Alphabet,0,N),getPlacement(Alphabet,N,Perm).
+
+%print_all_perm(+Alphabet:List)
+%Printing all permutations of Alphabet
+print_all_perm(Alphabet):-getPerm(Alphabet,Perm),write(Perm),nl,fail,!.
