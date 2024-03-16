@@ -1,5 +1,5 @@
 public class Permitations extends PlacementsWithoutRep{
-    public Permitations(char[] alp){
+    public Permitations(String[] alp){
         super(alp);
     }
     public void printAllPermNonRec(){

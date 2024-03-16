@@ -2,7 +2,7 @@ public class Subsets extends CombinationsWithoutRep {
 
     //Конструктор
     //Принимает алфавит элементов множества
-    public Subsets(char[] alp){
+    public Subsets(String[] alp){
         super(alp);
     }
 
