@@ -107,3 +107,54 @@ comb_with_reps([El|Alphabet],K,PrevResult):- comb_with_reps(Alphabet,K,PrevResul
 %print_all_comb_reps(+Alphabet:List,+K:integer)
 %Pringing all Combinations with reps and length K
 print_all_comb_reps(Alphabet,K):-comb_with_reps(Alphabet,K),write(Alphabet),nl,fail,!.
+
+
+%3.7.
+
+%put_symbol(+Symbol:atom,+SymbolPositions:List,+K:integer,+CurIndex:integer,-Result:List)
+%Result contains List with Symbol on SymbolPositions positions
+put_symbol(_,_,K,K,[]):-!.
+put_symbol(Symbol,[NewInd|SymbolPositions],K,SymbolInd,[Symbol|PrevWord]):-NewInd is SymbolInd + 1,put_symbol(Symbol,SymbolPositions,K,NewInd,PrevWord),!.
+put_symbol(Symbol,SymbolPositions,K,SymbolInd,[_|PrevWord]):-NewInd is SymbolInd + 1,put_symbol(Symbol,SymbolPositions,K,NewInd,PrevWord),!.
+
+%put_symbol_on_k_pos(+Alphabet:List,+WordsLen:integer,+KPos:Integer,-ResultWord:List,-NewAlphabet:List)
+%ResultWord contains word with somesymbol on KPos positions and NewAlphabet contains Alphabet without this somesymbol
+put_symbol_on_k_pos(Alphabet,WordsLen,KPos,ResultWord,NewAlphabet):-in_list(Alphabet,TwoTimesSymbol),make_pos_list(WordsLen,0,PosList), 
+    comb(PosList,TwoTimesSymbolPositions,KPos), put_symbol(TwoTimesSymbol,TwoTimesSymbolPositions,WordsLen,0,ResultWord),
+    delete_elem(Alphabet,TwoTimesSymbol,NewAlphabet).
+
+
+%place_unique_symbol(+InputWord:List,+InputPl:List,-ResultWord:List)
+%ResultWord contains InputWord with symbols from InputPl on free positions
+place_unique_symbol([],_,[]):-!.
+place_unique_symbol([El|Tail],[Symbol|InputPl],[Symbol|PrevResultWord]):-var(El), place_unique_symbol(Tail,InputPl,PrevResultWord),!.
+place_unique_symbol([El|Tail],InputPl,[El|PrevResultWord]):-nonvar(El), place_unique_symbol(Tail,InputPl,PrevResultWord),!.
+
+%main_2_1(+Alphabet:List)
+%Print all words with symbols from Alphabet with length 5 and 1 symbols repeating twice
+main_2_1(Alphabet):-put_symbol_on_k_pos(Alphabet,5,2,ResWord,ResAlp), getPlacement(ResAlp,3,ResultPl), place_unique_symbol(ResWord,ResultPl,OutputWord),write(OutputWord),nl,fail,!.
+
+%make_pos_from_list(+InputList:List,+CurrentIndex:integer,-ResultList:List).
+% ResultList contains List of all free indexes from InputList
+make_pos_from_list([],_,[]):-!.
+make_pos_from_list([Head|InputList],CurrentIndex,[CurrentIndex|PrevResultList]):-var(Head),NewIndex is CurrentIndex + 1, make_pos_from_list(InputList,NewIndex,PrevResultList),!.
+make_pos_from_list([Head|InputList],CurrentIndex,PrevResultList):-nonvar(Head),NewIndex is CurrentIndex + 1, make_pos_from_list(InputList,NewIndex,PrevResultList),!.
+
+%3.9.
+%place_symbols(+InputWord:List,+Symbol:atom,+SymbolIndexes:List,+CurrentIndex:integer,-ResultWord:List)
+%ResultWord contains InputWord with Symbol on SymbolIndexes positions
+place_symbols(Word,_,[],_,Word):-!.
+place_symbols([El|Tail],Symbol,[CurrentIndex|SymbolIndexesTail],CurrentIndex,[Symbol|PrevWord]):- NewIndex is CurrentIndex + 1,
+    place_symbols(Tail,Symbol,SymbolIndexesTail,NewIndex,PrevWord),!.
+place_symbols([El|Tail],Symbol,[Ind|SymbolIndexesTail],CurrentIndex,[El|PrevWord]):- NewIndex is CurrentIndex + 1,
+    place_symbols(Tail,Symbol,[Ind|SymbolIndexesTail],NewIndex,PrevWord),!.
+
+%put_symbol_exist_indexes(+Alphabet:List,+ExistsIndexes:List,+K:integer,-ResWord:List,-ResAlp:List)
+% ResWord contains ExistsIndexes List with some symbol on K free positions
+% ResAlp contains Alphabet without this some symbol
+put_symbol_exist_indexes(Alphabet,ExistsIndexes,K,ResWord,ResAlp):-in_list(Alphabet,Symbol),make_pos_from_list(ExistsIndexes,1,IndexResult),comb(IndexResult,SymbolPositions,K),
+    delete_elem(Alphabet,Symbol,ResAlp),place_symbols(ExistsIndexes,Symbol,SymbolPositions,1,ResWord).
+
+%main_1_2_1_3(+Alphabet:List)
+%Main predicate for printing all words with length 7 and 1 symbol repeating 2 times and 1 symbol repeating 3 times
+main_1_2_1_3(Alphabet):-put_symbol_on_k_pos(Alphabet,7,2,ResWord,ResAlp), put_symbol_exist_indexes(ResAlp,ResWord,3,ResultWord,ResultAlp),getPlacement(ResultAlp,2,Placement),place_unique_symbol(ResultWord,Placement,OutputWord),write(OutputWord),nl,fail,!.
