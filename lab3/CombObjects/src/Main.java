@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        char[] alp = new char[]{'a', 'b','c'};
+        char[] alp = new char[]{'a', 'b','c','d'};
 //        PlacementsWithRepeats pl = new PlacementsWithRepeats(alp);
 //        pl.printAllPlacementsWithRep(1);
 //        System.out.println();
@@ -13,7 +13,11 @@ public class Main {
 
         //comb.printAllCombNonRec(2);
 
-        wordWith3a r = new wordWith3a(alp);
-        r.printWords3a(5);
+//        wordWith3a r = new wordWith3a(alp);
+//        r.printWords3a(5);
+
+        Subsets s = new Subsets(alp);
+        s.PrintAllSubsetsRecCall();
+
     }
 }

@@ -15,6 +15,10 @@ public class CombinationsWithoutRep {
         this.n = alphabet.length;
     }
 
+    public char[] getAlphabet() {
+        return alphabet;
+    }
+
     // Возвращает следующий по порядку символ алфавита
     // Принимает на вход текущий символ алфавита
     private char getNextSymbol(char curSymbol){
