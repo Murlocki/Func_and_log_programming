@@ -42,3 +42,24 @@ build_3a_words_of_k(Alphabet,K,Word):-make_pos_list(K,0,PositionList),
 %build_all_3a(+Alphabet:List,+K:integer)
 %Print all words with length k and 3 'a'
 build_all_3a(Alphabet,K):-build_3a_words_of_k(Alphabet,K,Word),write(Word),nl,fail.
+
+
+%task 3
+
+%3.1.
+
+%delete_elem(+List:List,+El:atom,-Result:List)
+%Result contains List without first appearance of El
+delete_elem([],El,[]):-!.
+delete_elem([El|Tail],El,Tail):-!.
+delete_elem([Head|Tail],El,[Head|Res]):-delete_elem(Tail,El,Res),!.
+
+%getPlacement(+Alphabet:List,K:integer,-Pl:List)
+%Pl contains placement with length K
+getPlacement(_,0,[]):-!.
+getPlacement(Alphabet,K,[Element|PrevPl]):-in_list(Alphabet,Element),NewK is K-1,
+    delete_elem(Alphabet,Element,NewAlp),getPlacement(NewAlp,NewK,PrevPl).
+
+%print_all_pl(+Alphabet:List,+K:Integer)
+%Printing all placements without rep with length k
+print_all_pl(Alphabet,K):-getPlacement(Alphabet,K,Res),write(Res),nl,fail,!.
