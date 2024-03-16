@@ -150,3 +150,30 @@ main2_4(ListOfStrings,Word):-retractall(wordsCount(_,_)),count_all_words(ListOfS
 %task2_4(+InputPath:String)
 %Main pred for task 2.4.
 task2_4(InputPath):-read_strings_in_list(InputPath,ListOfStrings), main2_4(ListOfStrings,Word),write(Word),!.
+
+
+%2.5.
+%checkWord1(+String:List,+Buffer:Atom,-Res:Integer)
+%Res is 1 if any word in string appear only 1 time in input
+checkWord1([],'',1):-!.
+checkWord1([],Buffer,0):-wordsCount(Buffer,Count),Count>=2,!.
+checkWord1([],Buffer,1):-!.
+checkWord1([Head|Tail],Buffer,Res):- char_code(Head,NewCode), NewCode >=65,NewCode=<90, atom_concat(Buffer,Head,NewBuffer),checkWord1(Tail,NewBuffer,Res),!.
+checkWord1([Head|Tail],Buffer,Res):- char_code(Head,NewCode), NewCode >=97,NewCode=<122, atom_concat(Buffer,Head,NewBuffer),checkWord1(Tail,NewBuffer,Res),!.
+checkWord1([Head|Tail],Buffer,Res):- char_code(Head,NewCode), NewCode >=48,NewCode=<57, atom_concat(Buffer,Head,NewBuffer),checkWord1(Tail,NewBuffer,Res),!.
+checkWord1([_|Tail],Buffer,Res):- wordsCount(Buffer,Count),Count>=2,Res is 0,!.
+checkWord1([_|Tail],Buffer,Res):- NewBuffer='',checkWord1(Tail,NewBuffer,Res),!.
+
+%check_in_all_strings(+ListString:List)
+%Print all Strings that have unique words across all input
+check_in_all_strings([]):-!.
+check_in_all_strings([Head|TailListString]):-checkWord1(Head,'',Res),Res is 1, write_list_str(Head),check_in_all_strings(TailListString),!.
+check_in_all_strings([Head|TailListString]):-check_in_all_strings(TailListString),!.
+
+%main2_5(+ListOfStrings:List)
+%main predicate 
+main2_5(ListOfStrings):-retractall(wordsCount(_,_)),count_all_words(ListOfStrings), check_in_all_strings(ListOfStrings),!.
+
+%task2_5(+InputPath:String,+FilePath:String)
+%main predicate for task 2.5.
+task2_5(InputPath,FilePath):-read_strings_in_list(InputPath,ListOfStrings), tell(FilePath),main2_5(ListOfStrings),told,!.

@@ -1,8 +1,9 @@
 12 2 2
 2 3 
 2
-222222
-AAAAAAA
-AAAAAAA AA AA AA AA AA AA	
-	3
-A
+4
+d
+a aa
+b bb
+c cc
+4 c
