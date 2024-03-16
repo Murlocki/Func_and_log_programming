@@ -16,8 +16,16 @@ public class Main {
 //        wordWith3a r = new wordWith3a(alp);
 //        r.printWords3a(5);
 
-        Subsets s = new Subsets(alp);
-        s.PrintAllSubsetsRecCall();
+//        Subsets s = new Subsets(alp);
+//        s.PrintAllSubsetsRecCall();
+
+        PlacementsWithoutRep p = new PlacementsWithoutRep(alp);
+//        //p.printAllPlacementsRecCall(3);
+       p.printAllPlacementWithoutRepNonRec(4);
+
+//        CombWithReps c = new CombWithReps(alp);
+//        //c.printCombWithRepNonRec(4);
+//        c.printCombWithRepRecCall(4);
 
     }
 }
