@@ -79,3 +79,31 @@ getPerm(Alphabet,Perm):-findLengthOfList(Alphabet,0,N),getPlacement(Alphabet,N,P
 %print_all_perm(+Alphabet:List)
 %Printing all permutations of Alphabet
 print_all_perm(Alphabet):-getPerm(Alphabet,Perm),write(Perm),nl,fail,!.
+
+
+%3.3.
+
+%all_subsets(+Alphabet:List,+K:Integer)
+%Print all subsets with length K from 0 to K
+all_subsets(_,0):-!.
+all_subsets(Alphabet,K):- \+ (subset_K(Alphabet,K)), NewK is K - 1, all_subsets(Alphabet,NewK),!.
+
+%subset_K(+Alphabet:List,+K:Integer)
+%Print all subsets with length K
+subset_K(Alphabet,K):-comb(Alphabet,Result,K),write(Result),nl,fail,!.
+
+%print_all_subsets(+Alphabet:List)
+%print all susbsets of Alphabet with length from 0 to length of Alphabet
+print_all_subsets(Alphabet):-write([]),nl, findLengthOfList(Alphabet,0,Length), all_subsets(Alphabet,Length),!.
+
+%3.4.
+%comb_with_reps(+Alphabet:List,+K:integer,-Result:List)
+%Result contains Combination with repeats and length K
+comb_with_reps(_,0,[]):- !.
+comb_with_reps([El|Alphabet],K,[El|PrevResult]):- KNew is K - 1,
+    comb_with_reps([El|Alphabet],KNew,PrevResult).
+comb_with_reps([El|Alphabet],K,PrevResult):- comb_with_reps(Alphabet,K,PrevResult).
+
+%print_all_comb_reps(+Alphabet:List,+K:integer)
+%Pringing all Combinations with reps and length K
+print_all_comb_reps(Alphabet,K):-comb_with_reps(Alphabet,K),write(Alphabet),nl,fail,!.
