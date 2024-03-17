@@ -1,0 +1,183 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface PrintAllObjectNonRec{
+    --Methods--
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath:String)
+}
+interface PrintAllObjectRec{
+    --Methods--
+    +printAllObjectsRecCall()
+    +printAllObjectsRecCall(filePath:String)
+    +printAllObjectRec(currentK:int)
+}
+
+class SimpleCombObject{
+    -k:int
+    --Constructors--
+    +SimpleCombObject(alp:String[],k:int)
+    --Getters--
+    +getK():int
+    --Setters--
+    setK(k:int)
+}
+CombinatorObject <|-- SimpleCombObject
+
+class CombinatorObject{
+    -n:int
+    -alphabet:String[]
+    -CurrentObject:String[]
+    -filePath:String
+    -writer:FileWriter
+    --Constructors--
+    +CombinatorObject(alp:String[],startObject:String[])
+    --Getters--
+    +getWrite():FileWriter
+    +getN():int
+    +getAlphabet():String[]
+    +getCurrentObject():String[]
+    +getFilePath():String
+    --Setters--
+    +setWriter(writer:FileWriter)
+    +setCurrentObject(currentObject:String[])
+    +setCurrentObject(objToPut:String,pos:int)
+    +setAlphabet(alphabet:String[])
+    +setN(n:int)
+    +setFilePath(filePath:String)
+    --Methods--
+    +getNextSymbol(curSymbol:String):String
+    +getNextObject():boolean
+    +printIfFileSet()
+}
+class Subsets{
+    --Constructors--
+    +Subsets(alp:String[])
+    --Methods--
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectsRecCall()
+    +printAllObjectsRecCall(filePath:String)
+    +printAllObjectRec(currentk:int)
+}
+CombinationsWithoutRep <|-- Subsets
+
+
+class CombinationsWithoutRep{
+    --Constructors--
+    +CombinationsWithoutRep(alphabet:String[],k:int)
+    --Methods--
+    +printAllObjectsRecCall()
+    +printAllObjectsRecCall(filePath:String)
+    +printAllObjectRec(curPos:int)
+    +getNextObject():boolean
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath:String)
+}
+SimpleCombObject <|--CombinationsWithoutRep
+PrintAllObjectNonRec <|..CombinationsWithoutRep
+PrintAllObjectRec <|..CombinationsWithoutRep
+
+class CombWithReps{
+    --Constructors--
+    +CombWithReps(alphabet:(String[],k:int)
+    --Methods--
+    +getNextObject():boolean
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectRec(currentK:int)
+    +printAllObjectsRecCall()
+    +printAllObjectsRecCall(filePath:String)
+}
+SimpleCombObject <|-- CombWithReps
+PrintAllObjectRec <|.. CombWithReps
+PrintAllObjectNonRec <|.. CombWithReps
+
+class ComplexCombObject{
+    --Constructors--
+    +ComplexCombObject(alp:String[],startObject:String[])
+    --Methods--
+    +putOnPositions(positions:String[],symbol:String)
+    +clearWord()
+    +createPositions(k:int):String[]
+}
+CombinatorObject <|--ComplexCombObject
+
+class Permitations{
+    --Constructors--
+    +Permitations(alp:String[])
+    --Methods--
+    +printAllObjectsNonRec()
+    +printAllObjectsRecCall()
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectsRecCall(filePath:String)
+}
+PlacementsWithoutRep <|-- Permitations
+
+class PlacementsWithoutRep{
+    --Constructors--
+    +PlacementsWithoutRep(alp:String[],k:int)
+    --Methods--
+    +getNextSymbol(curSymbol:String):String
+    +findMaxSymbol(posInPl:int):String
+    +getNextObject():boolean
+    +printAllObjectsRecCall()
+    +printAllObjectsRecCall(filePath:String)
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectRec(currentK:int)
+
+}
+SimpleCombObject <|-- PlacementsWithoutRep
+PrintAllObjectNonRec <|.. PlacementsWithoutRep
+PrintAllObjectRec <|.. PlacementsWithoutRep
+
+class PlacementsWithRepeats{
+    --Constructors--
+    +PlacementsWithRepeats(inputAlphabet:String[],k:int)
+    --Methods--
+    +printAllObjectsRecCall(filePath:String)
+    +printAllObjectsRecCall()
+    +printAllObjectRec(currentK:int)
+    +getNextObject():boolean
+    +printAllObjectsNonRec()
+    +printAllObjectsNonRec(filePath):String
+}
+SimpleCombObject <|-- PlacementsWithRepeats
+PrintAllObjectNonRec <|.. PlacementsWithRepeats
+PrintAllObjectRec <|.. PlacementsWithRepeats
+
+class Word2{
+    --Constructors--
+    +Word2(alphabet:String[])
+    --Methods--
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectsNonRec()
+}
+ComplexCombObject <|-- Word2
+PrintAllObjectNonRec <|.. Word2
+
+class WordOne2One3{
+    --Constructors--
+    +WordOne2One3(alphabet:String[])
+    --Methods--
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectsNonRec()
+}
+
+ComplexCombObject <|-- WordOne2One3
+PrintAllObjectNonRec <|.. WordOne2One3
+
+class wordWith3a{
+    -k:int
+    --Constructors--
+    +wordWith3a(alphabet:String[],k:int)
+    --Methods--
+    +printAllObjectsNonRec(filePath:String)
+    +printAllObjectsNonRec()
+}
+
+ComplexCombObject <|-- wordWith3a
+PrintAllObjectNonRec <|.. wordWith3a
+
+@enduml

@@ -1,51 +1,67 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
 
 //Класс для вывода всех размещений с повторений для алфавита длиной n
-public class PlacementsWithRepeats {
-    private String[] alphabet;
-    private int n;
+public class PlacementsWithRepeats extends SimpleCombObject implements PrintAllObjectNonRec,PrintAllObjectRec{
+
 
     // Конструктор класс
-    // Принимает на вход массив символов - алфавит
-    public PlacementsWithRepeats(String[] inputAlphabet){
-        this.alphabet = inputAlphabet;
-        this.n = inputAlphabet.length;
+    // Принимает на вход массив символов - алфавит и размер размещения
+    public PlacementsWithRepeats(String[] inputAlphabet,int k){
+        super(inputAlphabet,k);
     }
-    // Метод для вызоыва рекурсивной функции вывода всех размещений с повторениями длины k
-    // Принимает длину размещения k
-    public void printAllPlacementsWithRep(int k){
-        this.printAllPlacementsWithRepRec(0,k,new String[k]);
+
+    // Метод для вызоыва рекурсивного формирования объектов
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsRecCall(String filePath){
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectRec(0);
+            getWriter().close();
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
+        }
+
+    }
+
+
+    // Метод для вызова рекурсивной функции вывода всех размещений с повторениями длины k
+    @Override
+    public void  printAllObjectsRecCall(){
+        this.setCurrentObject(new String[getK()]);
+        this.printAllObjectRec(0);
     }
 
     // Рекурсивный метод для вывода всех размещений с повторениями длины k
-    // Принимает текущую позицию в размещении, длину размещения, уже построенную часть размещения
-    private void printAllPlacementsWithRepRec(int curPos,int k,String[]placement){
-        if(curPos==k){
-            System.out.println(Arrays.toString(placement));
+    // Принимает текущую позицию в размещении
+    @Override
+    public void printAllObjectRec(int currentK){
+        if(currentK==getK()){
+            printIfFileSet();
         }
         else {
-            for(int i=0;i<this.n;i++){
-                placement[curPos]=this.alphabet[i];
-                printAllPlacementsWithRepRec(curPos+1,k,placement);
+            for(int i=0;i<getN();i++){
+                setCurrentObject(getAlphabet()[i],currentK);
+                printAllObjectRec(currentK+1);
             }
         }
     }
-    // Метод для получения следующего символа из алфавита
-    // Принимает текущий символ алфавита
-    private String getNextSymbol(String curSymbol){
-        int i=0;
-        while((i<this.n)&&(!Objects.equals(this.alphabet[i], curSymbol))){
-            i=i+1;
-        }
-        return this.alphabet[i+1];
-    }
 
     // Метод для получения следующего по порядку размещения с повторениями
-    // Принимает текущее размещение и длину размещения
-    public boolean getNextPlacement(String[] currentPlacement, int k){
+    @Override
+    public boolean getNextObject(){
+        int k = getK();
+        int n = getN();
+        String[] alphabet = getAlphabet();
+        String[] currentPlacement = getCurrentObject();
+
         int j = k - 1;
-        while((j >= 0) && (Objects.equals(currentPlacement[j], this.alphabet[this.n - 1]))){
+        while((j >= 0) && (Objects.equals(currentPlacement[j], alphabet[n - 1]))){
             j = j - 1;
         }
         if (j<0){
@@ -54,20 +70,38 @@ public class PlacementsWithRepeats {
         else{
             currentPlacement[j] = getNextSymbol(currentPlacement[j]);
             for(int i=j+1;i<k;i++){
-                currentPlacement[i]=this.alphabet[0];
+                currentPlacement[i]=alphabet[0];
             }
             return true;
         }
     }
-    // Не рекурсивный метод для вывода всех размещений с повторениями длины k
-    // Принимает длину размещения
-    public void printAllPlacementWithRepNonRec(int k){
-        String[] curPlacement=new String[k];
-        Arrays.fill(curPlacement,this.alphabet[0]);
-        System.out.println(Arrays.toString(curPlacement));
 
-        while(getNextPlacement(curPlacement,k)){
-            System.out.println(Arrays.toString(curPlacement));
+    // Не рекурсивный метод для вывода всех размещений с повторениями длины k
+    @Override
+    public void printAllObjectsNonRec(){
+        String[] curPlacement=new String[getK()];
+        Arrays.fill(curPlacement,getAlphabet()[0]);
+        setCurrentObject(curPlacement);
+
+        printIfFileSet();
+        while(getNextObject()){
+            printIfFileSet();
         }
+    }
+
+    //Не рекурсивный метод вывода объектов в файл принимает путь до файла
+    @Override
+    public void printAllObjectsNonRec(String filePath){
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectsNonRec();
+            getWriter().close();
+            setFilePath("");
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
+        }
+
     }
 }

@@ -1,34 +1,83 @@
-public class Subsets extends CombinationsWithoutRep {
+import java.io.FileWriter;
+import java.io.IOException;
 
-    //Конструктор
-    //Принимает алфавит элементов множества
+public class Subsets extends CombinationsWithoutRep implements PrintAllObjectNonRec, PrintAllObjectRec{
+
+    // Конструктор
+    // Принимает алфавит элементов множества
     public Subsets(String[] alp){
-        super(alp);
+        super(alp,alp.length);
     }
 
-    //Не рекурсивный метод вывода всех подмножеств
-    public void printAllSubsetsNonRec(){
+    // Не рекурсивный метод вывода всех подмножеств
+    @Override
+    public void printAllObjectsNonRec(){
         int k = getAlphabet().length;
         System.out.println("{}");
         for(int i=1;i<=k;i++){
-            super.printAllCombNonRec(i);
+            setK(i);
+            super.printAllObjectsNonRec();
         }
     }
-    //Рекурсивный метод вызоыва построения всех подмножеств
-    public void PrintAllSubsetsRecCall(){
+
+    // Не рекурсивный метод вывода всех подмножеств в файл
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsNonRec(String filePath){
         int k = getAlphabet().length;
-        this.printAllSubsets(k,0);
-    }
-    //Построение всех подмножеств от 0 до длины множества
-    private void printAllSubsets(int k,int currentk){
-        if(currentk==0) {System.out.println("{}");
-            currentk=currentk+1;
-            printAllSubsets(k,currentk);
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            getWriter().write("{}");
+            getWriter().write("\n");
+            for(int i=1;i<=k;i++){
+                setK(i);
+                super.printAllObjectsNonRec();
+            }
+            getWriter().close();
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
         }
-        else if(currentk<=k){
-            super.printAllComb(currentk);
+
+    }
+
+    // Метод для вызоыва рекурсивного построения всех подмножеств
+    @Override
+    public void printAllObjectsRecCall(){
+        int k = getAlphabet().length;
+        this.printAllObjectRec(0);
+    }
+
+    // Метод для вызоыва рекурсивного построения всех подмножеств в файл
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsRecCall(String filePath){
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectRec(0);
+            getWriter().close();
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
+        }
+    }
+
+    // Рекурсивный метод выова всех подмножеств от 0 до длины множества
+    // Принимает длину подмножества
+    @Override
+    public void printAllObjectRec(int currentk){
+        if(currentk==0) {
+            System.out.println("{}");
             currentk=currentk+1;
-            printAllSubsets(k,currentk);
+            printAllObjectRec(currentk);
+        }
+        else if(currentk<=getK()){
+            setK(currentk);
+            super.printAllObjectsRecCall();
+            currentk=currentk+1;
+            printAllObjectRec(currentk);
         }
     }
 }

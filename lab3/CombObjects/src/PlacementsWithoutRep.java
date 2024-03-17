@@ -1,63 +1,71 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class PlacementsWithoutRep {
-    private final String[] alphabet;
-    private final int n;
-
-    private String[] currentPlacement;
-
-    public int getN() {
-        return n;
-    }
-    public void setCurrentPlacement(String[] pl){
-        this.currentPlacement=pl;
-    }
-    public String[] getCurrentPlacement() {
-        return currentPlacement;
+public class PlacementsWithoutRep extends SimpleCombObject implements  PrintAllObjectNonRec,PrintAllObjectRec{
+    // Конструктор
+    // Принимает алфавит и размер размещения
+    public PlacementsWithoutRep(String[] alp,int k){
+        super(alp,k);
     }
 
-    public PlacementsWithoutRep(String[] alp){
-        this.alphabet=alp;
-        this.n = alp.length;
-        this.currentPlacement=null;
-    }
-
+    // Метод получения следующего символа
+    // Принимает на вход текущий символ
+    @Override
     public String getNextSymbol(String curSymbol){
         int i=0;
-        while((i<this.n)&&(!Objects.equals(this.alphabet[i], curSymbol))){
+        int n=getN();
+        String[] currentPlacement = getCurrentObject();
+        String[] alphabet=getAlphabet();
+        while((i<n)&&(!Objects.equals(alphabet[i], curSymbol))){
             i=i+1;
 
         }
         int j=i+1;
-        while(j<this.n){
-            if(!Arrays.asList(this.currentPlacement).contains(this.alphabet[j])){
+        while(j<n){
+            if(!Arrays.asList(currentPlacement).contains(alphabet[j])){
                 break;
             }
             else{
                 j++;
             }
         }
-        return this.alphabet[j];
+        return alphabet[j];
     }
 
+    // Метод поиска макисмального символа для текущего свободного алфавита
+    // Принимает позицию в объекте
     public String findMaxSymbol(int posInPl){
-        String[] open = new String[this.n-posInPl];
-        int m=0;
-        for(int i=0;i<this.n;i++){
-            if(!Arrays.asList(this.currentPlacement).contains(this.alphabet[i]) || Objects.equals(this.alphabet[i], this.currentPlacement[posInPl])){
+        int n = getN();
+        String[] currentPlacement = getCurrentObject();
+        String[] alphabet = getAlphabet();
 
-                open[m]=this.alphabet[i];
+
+        String[] open = new String[n-posInPl];
+        int m=0;
+        for(int i=0;i<n;i++){
+            if(!Arrays.asList(currentPlacement).contains(alphabet[i]) || Objects.equals(alphabet[i], currentPlacement[posInPl])){
+
+                open[m]=alphabet[i];
                 m++;
             }
         }
         return open[open.length-1];
     }
 
-    public boolean getNextPlacement(int k){
+    // Метод получения следующего объекта
+    @Override
+    public boolean getNextObject(){
+        int k = getK();
+        int n = getN();
+        String[] alphabet = this.getAlphabet();
+        String[] currentPlacement = this.getCurrentObject();
+
+
         int j=k-1;
         int i=0;
-        while(j>=0&&(Objects.equals(this.currentPlacement[i], this.alphabet[n - 1 - i]))){
+        while(j>=0&&(Objects.equals(currentPlacement[i], alphabet[n - 1 - i]))){
             j=j-1;
             i=i+1;
         }
@@ -66,54 +74,104 @@ public class PlacementsWithoutRep {
         }
         else{
             j=k-1;
-            while(j>=0&& Objects.equals(this.currentPlacement[j], findMaxSymbol(j))){
-                this.currentPlacement[j]=" ";
+            while(j>=0&& Objects.equals(currentPlacement[j], findMaxSymbol(j))){
+                currentPlacement[j]=" ";
                 j=j-1;
             }
-            this.currentPlacement[j]=getNextSymbol(this.currentPlacement[j]);
+            currentPlacement[j]=getNextSymbol(currentPlacement[j]);
 
             int p=j+1;
-            for(int m=0;m<this.n&&p<k;m++){
-                if(!Arrays.asList(this.currentPlacement).contains(this.alphabet[m])){
-                    this.currentPlacement[p]=this.alphabet[m];
+            for(int m=0;m<n&&p<k;m++){
+                if(!Arrays.asList(currentPlacement).contains(alphabet[m])){
+                    currentPlacement[p]=alphabet[m];
                     p=p+1;
                 }
             }
-
             return true;
-
         }
     }
 
-    public void printAllPlacementWithoutRepNonRec(int k){
-        this.currentPlacement=new String[k];
-        System.arraycopy(this.alphabet, 0, this.currentPlacement, 0, k);
-        System.out.println(Arrays.toString(this.currentPlacement));
+    // Метод для вызова рекурсивного вывода объектов
+    @Override
+    public void printAllObjectsRecCall() {
+        printAllObjectRec(0);
+    }
 
-        while(getNextPlacement(k)){
-            System.out.println(Arrays.toString(this.currentPlacement));
+    // Метод для вызова рекурсивного вывода объектов в файл
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsRecCall(String filePath) {
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectRec(0);
+            getWriter().close();
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
         }
     }
 
-    public void printAllPlacementsRecCall(int k){
-        printAllPlacementsRec(new String[k],0,k);
+    // Не рекурсивный метод вывода объектов
+    @Override
+    public void printAllObjectsNonRec() {
+        int k = getK();
+        String[] alphabet = getAlphabet();
+        setCurrentObject(new String[k]);
+        String[] currentPlacement = getCurrentObject();
+
+
+        System.arraycopy(alphabet, 0, currentPlacement, 0, k);
+        setCurrentObject(currentPlacement);
+
+        printIfFileSet();
+        while(getNextObject()){
+            printIfFileSet();
+        }
     }
-    public void printAllPlacementsRec(String[] currentPl,int currentK,int K){
+
+    //Не рекурсивный метод вывода объектов в файл
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsNonRec(String filePath) {
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectsNonRec();
+            getWriter().close();
+            setFilePath("");
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
+        }
+    }
+
+    // Рекурсивный метод вывода объектов
+    // Принимает текущую позицию в объекте
+    @Override
+    public void printAllObjectRec(int currentK) {
+        //Получили все нужные поля
+        int K = getK();
+        String[] currentPl = getCurrentObject();
+        int n = getN();
+        String[]alphabet = getAlphabet();
+
+
         if(currentK==K){
-            System.out.println(Arrays.toString(currentPl));
+            printIfFileSet();
         }
         else{
-            for(int i=0;i<this.n;i++){
+            for(int i=0;i<n;i++){
                 boolean flag = true;
                 for(int p=0;p<currentK;p++){
-                    if (Objects.equals(currentPl[p], this.alphabet[i])) {
+                    if (Objects.equals(currentPl[p], alphabet[i])) {
                         flag = false;
                         break;
                     }
                 }
                 if(flag){
-                    currentPl[currentK]=this.alphabet[i];
-                    printAllPlacementsRec(currentPl,currentK+1,K);
+                    currentPl[currentK]=alphabet[i];
+                    printAllObjectRec(currentK+1);
                 }
 
             }

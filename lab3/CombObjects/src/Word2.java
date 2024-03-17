@@ -1,74 +1,100 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Word2 {
-    private String[] alphabet;
-    private int n;
-    private String[]CurrentWord;
+public class Word2 extends ComplexCombObject implements PrintAllObjectNonRec{
+
+    // Конструктор
+    // Принимает алфавит
     public Word2(String[] alphabet){
-        this.alphabet=alphabet;
-        this.n=alphabet.length;
-        this.CurrentWord=new String[]{" "," "," "," "," "};
+        super(alphabet,new String[]{" "," "," "," "," "});
     }
 
-    public void putOnPositions(String[]Positions,String symbol){
-        for(int i=0;i<2;i++){
-            this.CurrentWord[Integer.parseInt(Positions[i])] = symbol;
+    //Не рекурсивный метод вывода объектов в файл
+    // Принимает путь до файла
+    @Override
+    public void printAllObjectsNonRec(String filePath){
+        setFilePath(filePath);
+        try{
+            setWriter(new FileWriter(getFilePath()));
+            printAllObjectsNonRec();
+            getWriter().close();
+            setFilePath("");
+        }catch (IOException e){
+            System.out.println("File not found");
+            setFilePath("-1");
         }
+
     }
 
-    public void printAllWords(){
+    //Не рекурсивный метод вывода всех объектов
+    @Override
+    public void printAllObjectsNonRec(){
+        String[]alphabet = getAlphabet();
+        int n = getN();
+        String[] CurrentWord = getCurrentObject();
+
         //Получили символ
-        CombinationsWithoutRep comb = new CombinationsWithoutRep(this.alphabet);
+        CombinationsWithoutRep comb = new CombinationsWithoutRep(alphabet,1);
         String[] symbol = new String[1];
+        symbol[0]=alphabet[0];
+        comb.setCurrentObject(symbol);
 
-        //Получили позиции символов
-        String[] allPositions = new String[5];
-        for(int i=0;i<allPositions.length;i++){
-            allPositions[i]= String.valueOf(i);
-        }
-        CombinationsWithoutRep symbolPositions = new CombinationsWithoutRep(allPositions);
+        //Получили все позиции символов
+        String[] allPositions = createPositions(5);
 
+        //Создали стартовые позиции для повторяющейся буквы
+        CombinationsWithoutRep symbolPositions = new CombinationsWithoutRep(allPositions,2);
         String[] positions=new String[]{"0","1"};
+        symbolPositions.setCurrentObject(positions);
 
-        symbol[0]=this.alphabet[0];
 
+        //Основной цикл вывода
         do{
+            symbol = comb.getCurrentObject();
+            symbolPositions.setCurrentObject(new String[]{"0","1"});
             do{
+                //Получили позиции повторяющегося символа
+                positions = symbolPositions.getCurrentObject();
                 putOnPositions(positions,symbol[0]);
 
-                String[] newAlp = new String[this.n-1];
+                //Получили новый алфавит
+                String[] newAlp = new String[n-1];
                 int k=0;
-                for(int i=0;i<this.n;i++)
-                    if(!Objects.equals(this.alphabet[i], symbol[0])){
-                        newAlp[k]=this.alphabet[i];
+                for(int i=0;i<n;i++)
+                    if(!Objects.equals(alphabet[i], symbol[0])){
+                        newAlp[k]=alphabet[i];
                         k=k+1;
                     }
 
-                PlacementsWithoutRep restWord = new PlacementsWithoutRep(newAlp);
+                //Формируем размещения остальных символов
+                PlacementsWithoutRep restWord = new PlacementsWithoutRep(newAlp,3);
 
                 String[] FirstPl=new String[3];
                 System.arraycopy(newAlp, 0, FirstPl, 0, 3);
-                restWord.setCurrentPlacement(FirstPl);
+                restWord.setCurrentObject(FirstPl);
+
+
                 do{
                     putOnPositions(positions,symbol[0]);
-                    String[] CurrentPl = restWord.getCurrentPlacement();
-                    System.out.println("------------");
+                    String[] CurrentPl = restWord.getCurrentObject();
                     int m=0;
                     for(int i=0;i<5;i++){
-                        if(!Objects.equals(this.CurrentWord[i], symbol[0])){
-                            this.CurrentWord[i]=CurrentPl[m];
+                        if(!Objects.equals(CurrentWord[i], symbol[0])){
+                            CurrentWord[i]=CurrentPl[m];
                             m++;
                         }
                     }
 
-                    System.out.println(Arrays.toString(this.CurrentWord));
+                    //Выводим слово
+                    printIfFileSet();
 
-                    for(int i=0;i<5;i++){
-                        this.CurrentWord[i]=" ";
-                    }
-                }while(restWord.getNextPlacement(3));
-            }while(symbolPositions.nextCombination(positions,2));
-        }while(comb.nextCombination(symbol,1));
+                    //Очищаем слово
+                    clearWord();
+
+                }while(restWord.getNextObject());
+            }while(symbolPositions.getNextObject());
+        }while(comb.getNextObject());
     }
 }
