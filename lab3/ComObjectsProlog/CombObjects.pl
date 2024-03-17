@@ -158,3 +158,23 @@ put_symbol_exist_indexes(Alphabet,ExistsIndexes,K,ResWord,ResAlp):-in_list(Alpha
 %main_1_2_1_3(+Alphabet:List)
 %Main predicate for printing all words with length 7 and 1 symbol repeating 2 times and 1 symbol repeating 3 times
 main_1_2_1_3(Alphabet):-put_symbol_on_k_pos(Alphabet,7,2,ResWord,ResAlp), put_symbol_exist_indexes(ResAlp,ResWord,3,ResultWord,ResultAlp),getPlacement(ResultAlp,2,Placement),place_unique_symbol(ResultWord,Placement,OutputWord),write(OutputWord),nl,fail,!.
+
+
+
+% task 6
+
+%create_words(+N:integer,+Fsymbol:atom,K:integer,CSymbol:atom,+M:integer)
+%Create and write all words with length N and Fsymbol repeating k and CSymbol repeating M
+create_words(N,Fsymbol,K,CSymbol,M):- make_pos_list(N,0,AllPositions), comb(AllPositions,FSymbolPositions,K),
+    put_symbol(Fsymbol,FSymbolPositions,N,0,WordWithF),
+    make_pos_from_list(WordWithF,1,PossitionsFreeOfF), comb(PossitionsFreeOfF,CSymbolPos,M), place_symbols(WordWithF,CSymbol,CSymbolPos,1,WordWithFC),
+    append([a,b,c,d,e,f],[],Alphabet), delete_elem(Alphabet,Fsymbol,AlpWithoutF),delete_elem(AlpWithoutF,CSymbol,AlpWithoutFC),
+    NewN is N - K - M, getPlacement(AlpWithoutFC,NewN,RestSymbolPl), place_unique_symbol(WordWithFC,RestSymbolPl,ResultWord),write(ResultWord),write(1),nl,fail.
+
+%read_all(-FilePath:String,-N:integer,-Fsymbol:atom,-K:integer,-CSymbol:atom,-M:integer)
+%Main predicate for reading
+read_all(FilePath,N,Fsymbol,K,CSymbol,M):-read(FilePath),read(N),read(Fsymbol),read(K),read(CSymbol),read(M),!.
+
+%main_6
+%Main predicate for task 6
+main_6:-read_all(FilePath,N,Fsymbol,K,CSymbol,M),tell(FilePath),\+ (create_words(N,Fsymbol,K,CSymbol,M)),told,!.
