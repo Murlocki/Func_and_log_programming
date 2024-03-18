@@ -108,3 +108,33 @@ read_2(Vertexes,Edges,Vert):-get_graph(Vertexes,Edges),write("Input vertex"),nl,
 %Click contains first found click
 get_click(Click):-read_2(Vertexes,Edges,Vert), delete_elem(Vertexes,Vert,RestVertexes),
    findLengthOfList(Vertexes,0,VertLen), get_click(Vert,RestVertexes,Edges,VertLen,Click).
+
+
+%task3
+
+:-dynamic vertexNumber/2.
+
+%putVertOnNumber(+Vertexes:List,+NumberList:List)
+%Adding facts about number of every vertex
+putVertOnNumber([],[]):-!.
+putVertOnNumber([Vert|TailVertexes],[Number|TailNumberList]):- assert(vertexNumber(Vert,Number)),
+    putVertOnNumber(TailVertexes,TailNumberList),!.
+
+%check_if_sort(+Edges:LiST)
+%True if for every edge we have number of vert start smaller than number of vert end 
+check_if_sort([]):- !.
+check_if_sort([[Vert1,Vert2]|EdgesTail]):- vertexNumber(Vert1,Number1),vertexNumber(Vert2,Number2),
+    Number1<Number2,check_if_sort(EdgesTail),!.
+
+%print_sort(+NumberList:List,-Vertexes:List)
+%Vertexes contains vertexes sorted according to current topoligical sort
+print_sort([],[]):-!.
+print_sort([SortHead|SortTail],[Vert|VertTail]):-vertexNumber(Vert,SortHead),
+    print_sort(SortTail,VertTail),!.
+
+%get_topological_sort(-SortedVertex:List)
+%%Vertexes contains vertexes sorted according to first found topoligical sort
+get_topological_sort(SortedVertex):- get_graph(Vertexes,Edges), findLengthOfList(Vertexes,0,VertLen),
+    make_pos_list(VertLen,0,NumberList),getPerm(NumberList,Sort),
+        retractall(vertexNumber(_,_)),putVertOnNumber(Vertexes,Sort),
+            check_if_sort(Edges),print_sort(NumberList,SortedVertex),!.
