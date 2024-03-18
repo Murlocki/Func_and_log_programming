@@ -70,3 +70,41 @@ check_way_edges_N([[_,Vert]|[[OtherVert,Vert]|Tail]]):-check_way_edges_N([[Vert,
 %main_find_euler(-Way:List)
 %Way contains euler cycle
 main_find_euler(Way):-get_graph(V,E),euler_N(E,Way).
+
+%task 2
+
+%check_all_edges_N(+CurrentVert:atom,+RestVertexes:List,+Edges:List)
+%True if CurrentVert have at least one edge with every vert from RestVertexes
+check_all_edges_N(CurrentVert,[],Edges):-!.
+check_all_edges_N(CurrentVert,[H|Tail],Edges):- in_list1(Edges,[CurrentVert,H]),
+    check_all_edges_N(CurrentVert,Tail,Edges),!.
+check_all_edges_N(CurrentVert,[H|Tail],Edges):- in_list1(Edges,[H,CurrentVert]),
+    check_all_edges_N(CurrentVert,Tail,Edges),!.
+
+%check_if_click_N(+ClickToCheck:List,+Edges:List)
+%True if ClickToCheck is Clique
+check_if_click_N([CurrentVert],_):-!.
+check_if_click_N([CurrentVert|Tail],Edges):- check_all_edges_N(CurrentVert,Tail,Edges),check_if_click_N(Tail,Edges),!.
+
+%get_max_click(+Vert:atom,+RestVertexes:List,+Edges:List,+K:integer,-ResultClick:List)
+%ResultClick contains first click of size K
+get_max_click(Vert,RestVertexes,Edges,K,ResultClick):- NewK is K - 1,comb(RestVertexes,Click,NewK),append([Vert],Click,ClickToCheck),
+    check_if_click_N(ClickToCheck,Edges), append(ClickToCheck,[],ResultClick),!.
+
+%get_click(+Vert:Input,+RestVertexes:List,+Edges:List,+CurrentClickSize:integer,-ResultClick:List)
+%ResultClick contains first click with vertext Vert
+get_click(Vert,RestVertexes,Edges,1,[Vert]):-!.
+get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):- get_max_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick),!. 
+get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):-NewClickSize is CurrentClickSize - 1, 
+    get_click(Vert,RestVertexes,Edges,NewClickSize,ResultClick),!.
+
+%read_2(-Vertexes:List,-Edges:List,-Vert:atom)
+%Vertexes contains list of read vertexes
+%Edges contains list of read edges
+%Vert contains read vert
+read_2(Vertexes,Edges,Vert):-get_graph(Vertexes,Edges),write("Input vertex"),nl,read_str(X),name(Vert,X),in_list1(Vertexes,Vert),!.
+
+%get_click(-Click:LiST)
+%Click contains first found click
+get_click(Click):-read_2(Vertexes,Edges,Vert), delete_elem(Vertexes,Vert,RestVertexes),
+   findLengthOfList(Vertexes,0,VertLen), get_click(Vert,RestVertexes,Edges,VertLen,Click).
