@@ -14,7 +14,7 @@ del_1st([_|T],T):-!.
 
 %delete_last(+InputList:List,-Result:List)
 %Result contains InputList without last element
-delete_last([H],[]):-!.
+delete_last([_],[]):-!.
 delete_last([H|T],[H|Res]):-delete_last(T,Res),!.
 
 %get_vertexes(-V:List)
@@ -69,13 +69,13 @@ check_way_edges_N([[_,Vert]|[[OtherVert,Vert]|Tail]]):-check_way_edges_N([[Vert,
 
 %main_find_euler(-Way:List)
 %Way contains euler cycle
-main_find_euler(Way):-get_graph(V,E),euler_N(E,Way).
+main_find_euler(Way):-get_graph(_,E),euler_N(E,Way).
 
 %task 2
 
 %check_all_edges_N(+CurrentVert:atom,+RestVertexes:List,+Edges:List)
 %True if CurrentVert have at least one edge with every vert from RestVertexes
-check_all_edges_N(CurrentVert,[],Edges):-!.
+check_all_edges_N(_,[],_):-!.
 check_all_edges_N(CurrentVert,[H|Tail],Edges):- in_list1(Edges,[CurrentVert,H]),
     check_all_edges_N(CurrentVert,Tail,Edges),!.
 check_all_edges_N(CurrentVert,[H|Tail],Edges):- in_list1(Edges,[H,CurrentVert]),
@@ -83,7 +83,7 @@ check_all_edges_N(CurrentVert,[H|Tail],Edges):- in_list1(Edges,[H,CurrentVert]),
 
 %check_if_click_N(+ClickToCheck:List,+Edges:List)
 %True if ClickToCheck is Clique
-check_if_click_N([CurrentVert],_):-!.
+check_if_click_N([_],_):-!.
 check_if_click_N([CurrentVert|Tail],Edges):- check_all_edges_N(CurrentVert,Tail,Edges),check_if_click_N(Tail,Edges),!.
 
 %get_max_click(+Vert:atom,+RestVertexes:List,+Edges:List,+K:integer,-ResultClick:List)
@@ -93,7 +93,7 @@ get_max_click(Vert,RestVertexes,Edges,K,ResultClick):- NewK is K - 1,comb(RestVe
 
 %get_click(+Vert:Input,+RestVertexes:List,+Edges:List,+CurrentClickSize:integer,-ResultClick:List)
 %ResultClick contains first click with vertext Vert
-get_click(Vert,RestVertexes,Edges,1,[Vert]):-!.
+get_click(Vert,_,_,1,[Vert]):-!.
 get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):- get_max_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick),!. 
 get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):-NewClickSize is CurrentClickSize - 1, 
     get_click(Vert,RestVertexes,Edges,NewClickSize,ResultClick),!.
@@ -138,3 +138,69 @@ get_topological_sort(SortedVertex):- get_graph(Vertexes,Edges), findLengthOfList
     make_pos_list(VertLen,0,NumberList),getPerm(NumberList,Sort),
         retractall(vertexNumber(_,_)),putVertOnNumber(Vertexes,Sort),
             check_if_sort(Edges),print_sort(NumberList,SortedVertex),!.
+
+
+%task 4
+
+%translate_into_edges(+Vertexes:List,+Edges:List)
+%Edges contains cycle from Vertexes as edge list
+translate_into_edges([_],[]):-!.
+translate_into_edges([V1|[V2|VertTail]],[[V1,V2]|EdgeTail]):-translate_into_edges([V2|VertTail],EdgeTail),!.
+
+%translate_into_edges_list(+VertListOfLists:List,+EdgeListofList)
+%Use translate_into_edges for every item of VertListOfLists
+translate_into_edges_list([],[]):-!.
+translate_into_edges_list([VertList|Tail],[EdgeList|EdgeTail]):-translate_into_edges(VertList,EdgeList),
+   translate_into_edges_list(Tail,EdgeTail),!. 
+
+%read_FMC(-FMC:List,+N:integer)
+%FMC contains read FMC of N cycles
+read_FMC([],0):-!. 
+read_FMC([Cycle|FMC],N):-write('Input cycle'),nl,get_vertexes([StVert|TailCycle]),append([StVert|TailCycle],[StVert],Cycle),
+    NewN is N-1,read_FMC(FMC,NewN),!. 
+
+%read_cycles(-Cycle:List,-FMC:List)
+%Cycle and FMC contain read cycle and FMC
+read_cycles(Cycle,FMC):-get_vertexes([StVert|TailCycle]),append([StVert|TailCycle],[StVert],Cycle),
+    write('Input Count of FMC'),nl,read(N),read_FMC(FMC,N),!.
+
+
+%check_cycle(+Cycle:List,+CurrentComb:List)
+%True if Cycle and CurrentComb are the same cycle
+
+check_cycle([],[]):-!.
+check_cycle(Cycle,[[CombEdgeV1,CombEdgeV2]|CombTail]):-in_list1(Cycle,[CombEdgeV1,CombEdgeV2]),delete_elem(Cycle,[CombEdgeV1,CombEdgeV2],NewCycle),
+    check_cycle(NewCycle,CombTail),!.
+check_cycle(Cycle,[[CombEdgeV1,CombEdgeV2]|CombTail]):-in_list1(Cycle,[CombEdgeV2,CombEdgeV1]),delete_elem(Cycle,[CombEdgeV2,CombEdgeV1],NewCycle),
+    check_cycle(NewCycle,CombTail),!.
+
+%appendCycleToCycle(+CycleEdgeList:List,+CurrentCycle:List,-ResultCycle:List)
+%ResultCycle contains mod 2 of CycleEdgeList
+appendCycleToCycle([],ResultCycle,ResultCycle):-!.
+appendCycleToCycle([[CycleEdgeV1,CycleEdgeV2]|CycleTail],CurrentCycle,ResultCycle):-in_list1(CurrentCycle,[CycleEdgeV1,CycleEdgeV2]),
+    delete_elem(CurrentCycle,[CycleEdgeV1,CycleEdgeV2],NewCycle),appendCycleToCycle(CycleTail,NewCycle,ResultCycle),!.
+appendCycleToCycle([[CycleEdgeV1,CycleEdgeV2]|CycleTail],CurrentCycle,ResultCycle):-in_list1(CurrentCycle,[CycleEdgeV2,CycleEdgeV1]),
+    delete_elem(CurrentCycle,[CycleEdgeV2,CycleEdgeV1],NewCycle),appendCycleToCycle(CycleTail,NewCycle,ResultCycle),!.
+appendCycleToCycle([CycleEdge|CycleTail],CurrentCycle,ResultCycle):-append(CurrentCycle,[CycleEdge],NewCycle),
+    appendCycleToCycle(CycleTail,NewCycle,ResultCycle),!.
+
+
+%getCycleFromComb(+CycleCombEdges:List,+CurrentCycle:List,-ResultCycle:List)
+%ResultCycle contains cycle that was created by mod 2 of all cycles from CycleCombEdges
+getCycleFromComb([],ResultCycle,ResultCycle):-!.
+getCycleFromComb([CycleEdge|CycleCombEdgesTail],CurrentCycle,ResultCycle):-appendCycleToCycle(CycleEdge,CurrentCycle,NewCurCycle),
+    getCycleFromComb(CycleCombEdgesTail,NewCurCycle,ResultCycle),!.
+
+%getCyclesCombs(+FMC:List,+Cycle:List,+K:integer,-CycleComb)
+%CycleComb contains combination of cycles from FMC that can create Cycle
+getCyclesCombs(FMC,Cycle,0,[]):-!,fail.
+getCyclesCombs(FMC,Cycle,K,CycleComb):-comb(FMC,CycleComb,K), translate_into_edges_list(CycleComb,CycleCombEdges),
+    getCycleFromComb(CycleCombEdges,[],ResultCycleFromComb),check_cycle(Cycle,ResultCycleFromComb),!.
+getCyclesCombs(FMC,Cycle,K,CycleComb):-NewK is K - 1,getCyclesCombs(FMC,Cycle,NewK,CycleComb),!.
+
+
+%getCycleFromFMC(-ListOfCycles:List)
+%ListOfCycles contains combination of cycles from inputed FMC that can create inputed Cycle
+getCycleFromFMC(ListOfCycles):- read_cycles(Cycle,FMC), translate_into_edges(Cycle,CycleEdge),
+    findLengthOfList(FMC,0,FMCLen),getCyclesCombs(FMC,CycleEdge,FMCLen,ListOfCycles),!.
+
