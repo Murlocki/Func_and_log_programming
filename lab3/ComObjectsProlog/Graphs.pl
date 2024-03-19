@@ -193,7 +193,7 @@ getCycleFromComb([CycleEdge|CycleCombEdgesTail],CurrentCycle,ResultCycle):-appen
 
 %getCyclesCombs(+FMC:List,+Cycle:List,+K:integer,-CycleComb)
 %CycleComb contains combination of cycles from FMC that can create Cycle
-getCyclesCombs(FMC,Cycle,0,[]):-!,fail.
+getCyclesCombs(_,_,0,[]):-!,fail.
 getCyclesCombs(FMC,Cycle,K,CycleComb):-comb(FMC,CycleComb,K), translate_into_edges_list(CycleComb,CycleCombEdges),
     getCycleFromComb(CycleCombEdges,[],ResultCycleFromComb),check_cycle(Cycle,ResultCycleFromComb),!.
 getCyclesCombs(FMC,Cycle,K,CycleComb):-NewK is K - 1,getCyclesCombs(FMC,Cycle,NewK,CycleComb),!.
@@ -204,3 +204,87 @@ getCyclesCombs(FMC,Cycle,K,CycleComb):-NewK is K - 1,getCyclesCombs(FMC,Cycle,Ne
 getCycleFromFMC(ListOfCycles):- read_cycles(Cycle,FMC), translate_into_edges(Cycle,CycleEdge),
     findLengthOfList(FMC,0,FMCLen),getCyclesCombs(FMC,CycleEdge,FMCLen,ListOfCycles),!.
 
+
+
+%task 5
+
+%get_number_val(-Result:List,+N:integer)
+%Result contains list of numbers with length N
+get_number_val([],0):-!.
+get_number_val([Val|Tail],N):-read(Val),NewN is N-1,get_number_val(Tail,NewN),!.
+
+%put_euristic(+Vertexes:List,+Euristec:List)
+%Add Euristec elements to every vertex in Vertexes
+put_euristic([],[]):-!.
+put_euristic([Vert|TailVertexes],[Euristec|EurTail]):-assert(euristec(Vert,Euristec)),put_euristic(TailVertexes,EurTail),!.
+
+:-dynamic vertLen/2.
+:-dynamic closedVert/1.
+:-dynamic euristec/2.
+:-dynamic betterWayFrom/2.
+
+%updateLenghts(+CurrentVert:atom,+CurrentWay:integer,+Edges:List,+Weights:List)
+%Update all ways according to A algorithm
+updateLenghts(_,_,[],[]):-!.
+updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[_|WeightsTail]):-closedVert(Vertex),
+    updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
+updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[W|WeightsTail]):-vertLen(Vertex,VertWayLen), euristec(Vertex,Eur),VertWayLen > CurrentWay + W + Eur, 
+    retract(vertLen(Vertex,VertWayLen)),NewWayLength is CurrentWay + W + Eur, assert(vertLen(Vertex,NewWayLength)), retract(betterWayFrom(Vertex,_)),assert(betterWayFrom(Vertex,CurrentVert)),
+    updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
+updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[_|WeightsTail]):-vertLen(Vertex,_),updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
+updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[W|WeightsTail]):-euristec(Vertex,Eur),VertWayLen is CurrentWay + W + Eur, assert(vertLen(Vertex,VertWayLen)),
+    updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),assert(betterWayFrom(Vertex,CurrentVert)),!.
+updateLenghts(CurrentVert,CurrentWay,[_|TailEdges],[_|WeightsTail]):- updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
+
+%getMinVertex(-MinVertex:atom,+CurrentMinVertex:atom,+Vertexes:List)
+%MinVertex contains vertex from Vertexes with min way
+getMinVertex(MinVertex,MinVertex,[]):-!.
+getMinVertex(MinVertex,CurrentMinVertex,[Vert|VertTail]):- vertLen(Vert,VertWayLen),vertLen(CurrentMinVertex,CurrentMinWayLen), 
+    VertWayLen < CurrentMinWayLen, NewCurrentMin is Vert,
+    getMinVertex(MinVertex,NewCurrentMin,VertTail),!.
+getMinVertex(MinVertex,CurrentMinVertex,[_|VertTail]):- getMinVertex(MinVertex,CurrentMinVertex,VertTail),!.
+
+%a_alg(+CurrentVert:atom,+Goal:atom,+Vertexes:List,+Edges:List,+Weights:List,+Euristec:List,-ShortWay:integer)
+%ShortWay contains length of shortest way
+a_alg(Goal,Goal,_,_,_,_,ShortWay):-vertLen(Goal,ShortWay),!.
+a_alg(CurrentVert,Goal,Vertexes,Edges,Weights,Euristec,ShortWay):-
+    assert(closedVert(CurrentVert)),delete_elem(Vertexes,CurrentVert,NewVert),
+    vertLen(CurrentVert,CurrentLen),updateLenghts(CurrentVert,CurrentLen,Edges,Weights),retract(vertLen(CurrentVert,CurrentLen)),
+    vertLen(RandomVert,_), getMinVertex(NextVertex,RandomVert,NewVert),
+    a_alg(NextVertex,Goal,NewVert,Edges,Weights,Euristec,ShortWay),!.
+
+%a_alg_s(+Start:atom,+Goal:atom,+Vertexes:List,+Edges:List,+Weights:List,+Euristec:List,-ShortWay:integer)
+%ShortWay contains length of shortest way
+a_alg_s(Goal,Goal,_,_,_,_,0):-!.
+a_alg_s(Start,Goal,Vertexes,Edges,Weights,Euristec,ShortWay):-
+    put_euristic(Vertexes,Euristec),
+    assert(vertLen(Start,0)),updateLenghts(Start,0,Edges,Weights),retract(vertLen(Start,0)),
+    assert(closedVert(Start)),delete_elem(Vertexes,Start,NewVert),
+    vertLen(RandomVert,_), getMinVertex(NextVertex,RandomVert,NewVert),
+    a_alg(NextVertex,Goal,NewVert,Edges,Weights,Euristec,ShortWay),!.
+
+%getData(-Vertexes:List,-Edges:List,-Weights:List,-Euristec:List,-Start:atom,-Goal:atom)
+%Vertexes contains inputed vertexes
+%Edges contains inputed Edges
+%Weights contains inputed weights
+%Euristec contains inputed euristec values
+%Start contains start vertex
+%Goal contains goal vertex
+getData(Vertexes,Edges,Weights,Euristec,Start,Goal):-write("Input graph"),nl,get_graph(Vertexes,Edges),findLengthOfList(Edges,0,N),findLengthOfList(Vertexes,0,K),
+    write("Input weights"),nl,get_number_val(Weights,N),
+    write("Input euristic"),nl,get_number_val(Euristec,K),
+    read_str(_),
+    write("Input start vert"),nl,read_str(StartCodes),name(Start,StartCodes),
+    write("Input goal vert"),nl,read_str(GoalCodes),name(Goal,GoalCodes),!.
+
+%getBackWay(+Start:atom,+Vertex:atom,-ShortWayReverse:List)
+%ShortWayReverse contains reverse shortest way
+getBackWay(Start,Start,[]):-!.
+getBackWay(Start,Vertex,[PreviousVertex|BackWayTail]):- betterWayFrom(Vertex,PreviousVertex), getBackWay(Start,PreviousVertex,BackWayTail),!.
+
+%getShortestWay(-ShortWayLength:integer,-ShortWay:List)
+%ShortWayLength contains length of shortest way
+%ShortWay contains short way
+getShortestWay(ShortWayLength,ShortWay):-retractall(euristec(_,_)),getData(Vertexes,Edges,Weights,Euristec,Start,Goal), 
+    retractall(closedVert(_)),retractall(vertLen(_,_)),retractall(betterWayFrom(_,_)),
+    a_alg_s(Start,Goal,Vertexes,Edges,Weights,Euristec,ShortWayLength),getBackWay(Start,Goal,ShortWayReverse),append([Goal],ShortWayReverse,ShortWayReverseFull),reverse(ShortWayReverseFull,ShortWay),!.
