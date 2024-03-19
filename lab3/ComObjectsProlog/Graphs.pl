@@ -288,3 +288,35 @@ getBackWay(Start,Vertex,[PreviousVertex|BackWayTail]):- betterWayFrom(Vertex,Pre
 getShortestWay(ShortWayLength,ShortWay):-retractall(euristec(_,_)),getData(Vertexes,Edges,Weights,Euristec,Start,Goal), 
     retractall(closedVert(_)),retractall(vertLen(_,_)),retractall(betterWayFrom(_,_)),
     a_alg_s(Start,Goal,Vertexes,Edges,Weights,Euristec,ShortWayLength),getBackWay(Start,Goal,ShortWayReverse),append([Goal],ShortWayReverse,ShortWayReverseFull),reverse(ShortWayReverseFull,ShortWay),!.
+
+
+%task 8
+
+:-dynamic vertexFunc/2.
+
+%placePerm(+Vertexes:List,+VertexPerm:List)
+% Create pairs of VertexPerm elements and Vertexes elements
+placePerm([],[]):-!.
+placePerm([Vert1|V1Tail],[El|PermTail]):- assert(vertexFunc(Vert1,El)), placePerm(V1Tail,PermTail),!.
+
+%check_edge_number(+Vert:atom,+Edges1:List,+Edges2:List,-NewEdges1:List,-NewEdges2:List)
+%NewEdges1 contains elements of Edges1 without equal edges from Edges2
+%NewEdges2 contains elements of Edges2 without equal edges from Edges1
+check_edge_number(Vert,[],ResultEdges2,[],ResultEdges2):-!.
+check_edge_number(Vert,[[Vert,EndVert]|Edges1Tail],Edges2,ResultEdges1,ResultEdges2):- vertexFunc(EndVert,EndVertP), vertexFunc(Vert,VertP),
+    in_list1(Edges2,[VertP,EndVertP]), delete_elem(Edges2,[VertP,EndVertP],NewEdges2),
+        check_edge_number(Vert,Edges1Tail,NewEdges2,ResultEdges1,ResultEdges2),!. 
+check_edge_number(Vert,[Edge1|Edges1Tail],Edges2,[Edge1|ResultEdges1],ResultEdges2):- check_edge_number(Vert,Edges1Tail,Edges2,ResultEdges1,ResultEdges2),!.
+
+
+%check_vertex_auto(+Vertexes:List,+Edges1:List,+Edges2:List)
+%True if current placement in vertexFunc is automorphism of graph with vertexes from Vertexes and edges from Edges1
+check_vertex_auto([],[],[]):-!.
+check_vertex_auto([Vert|VertTail],Edges1,Edges2):- check_edge_number(Vert,Edges1,Edges2,NewEdges1,NewEdges2),check_vertex_auto(VertTail,NewEdges1,NewEdges2),!.
+
+%check_if_auto
+%True if second inputed graph is automorphism of first inputed graph
+check_if_auto:-write("Input first graph"),nl,get_graph(V1,E1),
+    write("Input second graph"),nl,get_graph(V2,E2),getPerm(V2,V2Perm),
+    retractall(vertexFunc(_,_)), placePerm(V1,V2Perm),
+    check_vertex_auto(V1,E1,E2),!.
