@@ -64,6 +64,10 @@ getPlacement(Alphabet,K,[Element|PrevPl]):-in_list(Alphabet,Element),NewK is K-1
 %Printing all placements without rep with length k
 print_all_pl(Alphabet,K):-getPlacement(Alphabet,K,Res),write(Res),nl,fail,!.
 
+%print_all_pl(+Alphabet:List,+K:integer,+FilePath:String)
+%Prin all placements into file
+print_all_pl(Alphabet,K,FilePath):-tell(FilePath),\+(print_all_pl(Alphabet,K)),told,!.
+
 %3.2.
 
 %findLengthOfList(_InputList:List,+CurrentLen:integer,-ResultLen:integer)
@@ -80,6 +84,9 @@ getPerm(Alphabet,Perm):-findLengthOfList(Alphabet,0,N),getPlacement(Alphabet,N,P
 %Printing all permutations of Alphabet
 print_all_perm(Alphabet):-getPerm(Alphabet,Perm),write(Perm),nl,fail,!.
 
+%print_all_perm(+Alphabet:List,+FilePath:String)
+%Print all permutations into file
+print_all_perm(Alphabet,FilePath):-tell(FilePath),\+(print_all_perm(Alphabet)),told,!.
 
 %3.3.
 
@@ -96,6 +103,11 @@ subset_K(Alphabet,K):-comb(Alphabet,Result,K),write(Result),nl,fail,!.
 %print all susbsets of Alphabet with length from 0 to length of Alphabet
 print_all_subsets(Alphabet):-write([]),nl, findLengthOfList(Alphabet,0,Length), all_subsets(Alphabet,Length),!.
 
+%print_all_subsets(+Alphabet:List,+FilePath:String)
+%Print all subsets into file
+print_all_subsets(Alphabet,FilePath):-tell(FilePath), print_all_subsets(Alphabet),told,!.
+
+
 %3.4.
 %comb_with_reps(+Alphabet:List,+K:integer,-Result:List)
 %Result contains Combination with repeats and length K
@@ -104,10 +116,14 @@ comb_with_reps([El|Alphabet],K,[El|PrevResult]):- KNew is K - 1,
     comb_with_reps([El|Alphabet],KNew,PrevResult).
 comb_with_reps([El|Alphabet],K,PrevResult):- comb_with_reps(Alphabet,K,PrevResult).
 
+
 %print_all_comb_reps(+Alphabet:List,+K:integer)
 %Pringing all Combinations with reps and length K
-print_all_comb_reps(Alphabet,K):-comb_with_reps(Alphabet,K),write(Alphabet),nl,fail,!.
+print_all_comb_reps(Alphabet,K):-comb_with_reps(Alphabet,K,Result),write(Result),nl,fail,!.
 
+%print_all_comb_reps(+Alphabet:List,+K:integer,+FilePath:String)
+%Print all combination with reps into file
+print_all_comb_reps(Alphabet,K,FilePath):-tell(FilePath), \+(print_all_comb_reps(Alphabet,K)),told,!.
 
 %3.7.
 
@@ -134,6 +150,11 @@ place_unique_symbol([El|Tail],InputPl,[El|PrevResultWord]):-nonvar(El), place_un
 %Print all words with symbols from Alphabet with length 5 and 1 symbols repeating twice
 main_2_1(Alphabet):-put_symbol_on_k_pos(Alphabet,5,2,ResWord,ResAlp), getPlacement(ResAlp,3,ResultPl), place_unique_symbol(ResWord,ResultPl,OutputWord),write(OutputWord),nl,fail,!.
 
+%main_2_1(+Alphabet:List,+FilePath:String)
+%Print all words into file
+main_2_1(Alphabet,FilePath):-tell(FilePath), \+(main_2_1(Alphabet)),told,!.
+
+
 %make_pos_from_list(+InputList:List,+CurrentIndex:integer,-ResultList:List).
 % ResultList contains List of all free indexes from InputList
 make_pos_from_list([],_,[]):-!.
@@ -159,7 +180,9 @@ put_symbol_exist_indexes(Alphabet,ExistsIndexes,K,ResWord,ResAlp):-in_list(Alpha
 %Main predicate for printing all words with length 7 and 1 symbol repeating 2 times and 1 symbol repeating 3 times
 main_1_2_1_3(Alphabet):-put_symbol_on_k_pos(Alphabet,7,2,ResWord,ResAlp), put_symbol_exist_indexes(ResAlp,ResWord,3,ResultWord,ResultAlp),getPlacement(ResultAlp,2,Placement),place_unique_symbol(ResultWord,Placement,OutputWord),write(OutputWord),nl,fail,!.
 
-
+%main_2_1(+Alphabet:List,+FilePath:String)
+%Print all words into file
+main_1_2_1_3(Alphabet,FilePath):-tell(FilePath), \+(main_1_2_1_3(Alphabet)),told,!.
 
 % task 6
 

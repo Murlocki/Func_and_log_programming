@@ -22,7 +22,7 @@ delete_last([H|T],[H|Res]):-delete_last(T,Res),!.
 get_vertexes(V):-read(NumberOfVertexes),write("List of vertexes"),nl,N1 is NumberOfVertexes+1,get_vertex(V1,N1),del_1st(V1,V).
 
 %get_vertex(-VertexList:List,+N:integer)
-%VertexList contains list of N read vertexes 
+%VertexList contains list of N read vertexes
 get_vertex([],0):-!.
 get_vertex([H|T],N):- read_str(X),name(H,X),N1 is N-1,get_vertex(T,N1),!.
 
@@ -94,8 +94,8 @@ get_max_click(Vert,RestVertexes,Edges,K,ResultClick):- NewK is K - 1,comb(RestVe
 %get_click(+Vert:Input,+RestVertexes:List,+Edges:List,+CurrentClickSize:integer,-ResultClick:List)
 %ResultClick contains first click with vertext Vert
 get_click(Vert,_,_,1,[Vert]):-!.
-get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):- get_max_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick),!. 
-get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):-NewClickSize is CurrentClickSize - 1, 
+get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):- get_max_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick),!.
+get_click(Vert,RestVertexes,Edges,CurrentClickSize,ResultClick):-NewClickSize is CurrentClickSize - 1,
     get_click(Vert,RestVertexes,Edges,NewClickSize,ResultClick),!.
 
 %read_2(-Vertexes:List,-Edges:List,-Vert:atom)
@@ -121,7 +121,7 @@ putVertOnNumber([Vert|TailVertexes],[Number|TailNumberList]):- assert(vertexNumb
     putVertOnNumber(TailVertexes,TailNumberList),!.
 
 %check_if_sort(+Edges:LiST)
-%True if for every edge we have number of vert start smaller than number of vert end 
+%True if for every edge we have number of vert start smaller than number of vert end
 check_if_sort([]):- !.
 check_if_sort([[Vert1,Vert2]|EdgesTail]):- vertexNumber(Vert1,Number1),vertexNumber(Vert2,Number2),
     Number1<Number2,check_if_sort(EdgesTail),!.
@@ -151,13 +151,13 @@ translate_into_edges([V1|[V2|VertTail]],[[V1,V2]|EdgeTail]):-translate_into_edge
 %Use translate_into_edges for every item of VertListOfLists
 translate_into_edges_list([],[]):-!.
 translate_into_edges_list([VertList|Tail],[EdgeList|EdgeTail]):-translate_into_edges(VertList,EdgeList),
-   translate_into_edges_list(Tail,EdgeTail),!. 
+   translate_into_edges_list(Tail,EdgeTail),!.
 
 %read_FMC(-FMC:List,+N:integer)
 %FMC contains read FMC of N cycles
-read_FMC([],0):-!. 
+read_FMC([],0):-!.
 read_FMC([Cycle|FMC],N):-write('Input cycle'),nl,get_vertexes([StVert|TailCycle]),append([StVert|TailCycle],[StVert],Cycle),
-    NewN is N-1,read_FMC(FMC,NewN),!. 
+    NewN is N-1,read_FMC(FMC,NewN),!.
 
 %read_cycles(-Cycle:List,-FMC:List)
 %Cycle and FMC contain read cycle and FMC
@@ -228,7 +228,7 @@ put_euristic([Vert|TailVertexes],[Euristec|EurTail]):-assert(euristec(Vert,Euris
 updateLenghts(_,_,[],[]):-!.
 updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[_|WeightsTail]):-closedVert(Vertex),
     updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
-updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[W|WeightsTail]):-vertLen(Vertex,VertWayLen), euristec(Vertex,Eur),VertWayLen > CurrentWay + W + Eur, 
+updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[W|WeightsTail]):-vertLen(Vertex,VertWayLen), euristec(Vertex,Eur),VertWayLen > CurrentWay + W + Eur,
     retract(vertLen(Vertex,VertWayLen)),NewWayLength is CurrentWay + W + Eur, assert(vertLen(Vertex,NewWayLength)), retract(betterWayFrom(Vertex,_)),assert(betterWayFrom(Vertex,CurrentVert)),
     updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
 updateLenghts(CurrentVert,CurrentWay,[[CurrentVert,Vertex]|TailEdges],[_|WeightsTail]):-vertLen(Vertex,_),updateLenghts(CurrentVert,CurrentWay,TailEdges,WeightsTail),!.
@@ -239,7 +239,7 @@ updateLenghts(CurrentVert,CurrentWay,[_|TailEdges],[_|WeightsTail]):- updateLeng
 %getMinVertex(-MinVertex:atom,+CurrentMinVertex:atom,+Vertexes:List)
 %MinVertex contains vertex from Vertexes with min way
 getMinVertex(MinVertex,MinVertex,[]):-!.
-getMinVertex(MinVertex,CurrentMinVertex,[Vert|VertTail]):- vertLen(Vert,VertWayLen),vertLen(CurrentMinVertex,CurrentMinWayLen), 
+getMinVertex(MinVertex,CurrentMinVertex,[Vert|VertTail]):- vertLen(Vert,VertWayLen),vertLen(CurrentMinVertex,CurrentMinWayLen),
     VertWayLen < CurrentMinWayLen, NewCurrentMin is Vert,
     getMinVertex(MinVertex,NewCurrentMin,VertTail),!.
 getMinVertex(MinVertex,CurrentMinVertex,[_|VertTail]):- getMinVertex(MinVertex,CurrentMinVertex,VertTail),!.
@@ -285,7 +285,7 @@ getBackWay(Start,Vertex,[PreviousVertex|BackWayTail]):- betterWayFrom(Vertex,Pre
 %getShortestWay(-ShortWayLength:integer,-ShortWay:List)
 %ShortWayLength contains length of shortest way
 %ShortWay contains short way
-getShortestWay(ShortWayLength,ShortWay):-retractall(euristec(_,_)),getData(Vertexes,Edges,Weights,Euristec,Start,Goal), 
+getShortestWay(ShortWayLength,ShortWay):-retractall(euristec(_,_)),getData(Vertexes,Edges,Weights,Euristec,Start,Goal),
     retractall(closedVert(_)),retractall(vertLen(_,_)),retractall(betterWayFrom(_,_)),
     a_alg_s(Start,Goal,Vertexes,Edges,Weights,Euristec,ShortWayLength),getBackWay(Start,Goal,ShortWayReverse),append([Goal],ShortWayReverse,ShortWayReverseFull),reverse(ShortWayReverseFull,ShortWay),!.
 
@@ -305,7 +305,7 @@ placePerm([Vert1|V1Tail],[El|PermTail]):- assert(vertexFunc(Vert1,El)), placePer
 check_edge_number(Vert,[],ResultEdges2,[],ResultEdges2):-!.
 check_edge_number(Vert,[[Vert,EndVert]|Edges1Tail],Edges2,ResultEdges1,ResultEdges2):- vertexFunc(EndVert,EndVertP), vertexFunc(Vert,VertP),
     in_list1(Edges2,[VertP,EndVertP]), delete_elem(Edges2,[VertP,EndVertP],NewEdges2),
-        check_edge_number(Vert,Edges1Tail,NewEdges2,ResultEdges1,ResultEdges2),!. 
+        check_edge_number(Vert,Edges1Tail,NewEdges2,ResultEdges1,ResultEdges2),!.
 check_edge_number(Vert,[Edge1|Edges1Tail],Edges2,[Edge1|ResultEdges1],ResultEdges2):- check_edge_number(Vert,Edges1Tail,Edges2,ResultEdges1,ResultEdges2),!.
 
 
