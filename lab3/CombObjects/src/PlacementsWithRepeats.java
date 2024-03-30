@@ -22,6 +22,7 @@ public class PlacementsWithRepeats extends SimpleCombObject implements PrintAllO
             setWriter(new FileWriter(getFilePath()));
             printAllObjectRec(0);
             getWriter().close();
+            setFilePath("");
         }catch (IOException e){
             System.out.println("File not found");
             setFilePath("-1");
@@ -48,6 +49,7 @@ public class PlacementsWithRepeats extends SimpleCombObject implements PrintAllO
             for(int i=0;i<getN();i++){
                 setCurrentObject(getAlphabet()[i],currentK);
                 printAllObjectRec(currentK+1);
+                setCurrentObject("",currentK);
             }
         }
     }

@@ -78,6 +78,7 @@ abstract public class CombinatorObject {
         else{
             try {
                 this.writer.write(Arrays.toString(getCurrentObject()));
+                //System.out.println(Arrays.toString(getCurrentObject()));
                 this.writer.write('\n');
                 this.writer.flush();
             }catch (IOException e){

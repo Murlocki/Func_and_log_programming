@@ -57,6 +57,7 @@ public class CombinationsWithoutRep extends SimpleCombObject implements PrintAll
             for(int i=startNumber;i<=finishNumber;i++){
                 curComb[curPos]=alphabet[i];
                 printAllObjectRec(curPos+1);
+                curComb[curPos]="";
             }
         }
     }

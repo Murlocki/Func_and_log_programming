@@ -1,8 +1,8 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         String[] alp = new String[]{"a", "b","c","d","e"};
@@ -26,11 +26,11 @@ public class Main {
         Subsets s = new Subsets(alp);
         s.printAllObjectsNonRec("a.txt");
 
-        PlacementsWithoutRep p = new PlacementsWithoutRep(alp,2);
+        PlacementsWithoutRep p = new PlacementsWithoutRep(alp,3);
         p.printAllObjectsRecCall();
         System.out.println();
         p.printAllObjectsNonRec();
-        p.printAllObjectsRecCall("a.txt");
+        p.printAllObjectsRecCall("C:\\Users\\kiril\\Desktop\\Новая папка\\a.txt");
         System.out.println();
         p.printAllObjectsNonRec("b.txt");
 

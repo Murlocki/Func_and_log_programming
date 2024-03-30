@@ -201,3 +201,8 @@ read_all(FilePath,N,Fsymbol,K,CSymbol,M):-read(FilePath),read(N),read(Fsymbol),r
 %main_6
 %Main predicate for task 6
 main_6:-read_all(FilePath,N,Fsymbol,K,CSymbol,M),tell(FilePath),\+ (create_words(N,Fsymbol,K,CSymbol,M)),told,!.
+
+
+
+
+ 

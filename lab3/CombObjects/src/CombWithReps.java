@@ -76,14 +76,15 @@ public class CombWithReps extends SimpleCombObject implements PrintAllObjectNonR
             String[] currentComb = getCurrentObject();
             String[] alphabet = getAlphabet();
             for(int i=0;i<getN();i++){
-
                 if(currentK==0){
                     currentComb[currentK]=alphabet[i];
                     printAllObjectRec(currentK+1);
+                    currentComb[currentK]="";
                 }
                 else if(Arrays.asList(alphabet).indexOf(currentComb[currentK-1])<=i){
                     currentComb[currentK]=alphabet[i];
                     printAllObjectRec(currentK+1);
+                    currentComb[currentK]="";
                 }
 
             }

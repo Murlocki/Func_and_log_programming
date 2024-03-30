@@ -104,8 +104,9 @@ public class PlacementsWithoutRep extends SimpleCombObject implements  PrintAllO
         setFilePath(filePath);
         try{
             setWriter(new FileWriter(getFilePath()));
-            printAllObjectRec(0);
+            printAllObjectsRecCall();
             getWriter().close();
+            setFilePath("");
         }catch (IOException e){
             System.out.println("File not found");
             setFilePath("-1");
@@ -162,16 +163,10 @@ public class PlacementsWithoutRep extends SimpleCombObject implements  PrintAllO
         }
         else{
             for(int i=0;i<n;i++){
-                boolean flag = true;
-                for(int p=0;p<currentK;p++){
-                    if (Objects.equals(currentPl[p], alphabet[i])) {
-                        flag = false;
-                        break;
-                    }
-                }
-                if(flag){
+                if(!Arrays.asList(currentPl).contains(alphabet[i])){
                     currentPl[currentK]=alphabet[i];
                     printAllObjectRec(currentK+1);
+                    currentPl[currentK]="";
                 }
 
             }
