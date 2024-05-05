@@ -6,4 +6,5 @@ fun main() {
 
     val upRec = UpRecFunctions()
     println(upRec.maxDigitUp(897))
+    println(upRec.sum3DigitsUp(8976))
 }
