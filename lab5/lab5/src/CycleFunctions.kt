@@ -5,7 +5,7 @@ import kotlin.math.round
 class CycleFunctions {
 
     //Циклическая функция для подсчета макс цифры числа
-    fun maxdigit(n:Int): Int {
+    fun maxDigit(n:Int): Int {
         var currentN:Int = abs(n);
         var currentMax:Int=currentN%10;
         while(currentN>0){
@@ -26,8 +26,8 @@ class CycleFunctions {
         return digitSum;
     }
     //Циклическая функция для нахождения делителей целого числа
-    fun findDividersCount(n:Int):Int?{
-        if (n==0) return null
+    fun findDividersCount(n:Int):Int{
+        if (n==0) return 0
         var currentDivider = 1;
         var dividerCount = 1;
         while(currentDivider<=(abs(n)/2).toInt()){
