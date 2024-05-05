@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
-internal class FunctionsTests {
+internal class MaxDigitTests {
     //Макс цифра цикл
     @Test
     fun cycleMaxDigitPositive(){
@@ -54,5 +54,4 @@ internal class FunctionsTests {
         assertEquals(0,tailRecFuncs.maxDigitTailCall(0))
     }
 
-    
 }
