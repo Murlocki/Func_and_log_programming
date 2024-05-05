@@ -51,21 +51,21 @@ internal class DividersCountTests {
     @Test
     fun tailRecDividerCountPositive(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(5, tailRecFuncs.findDividersCountUpCall(16))
+        Assertions.assertEquals(5, tailRecFuncs.findDividersCountTailCall(16))
     }
     @Test
     fun tailRecDividerCountNegative(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(5, tailRecFuncs.findDividersCountUpCall(-16))
+        Assertions.assertEquals(5, tailRecFuncs.findDividersCountTailCall(-16))
     }
     @Test
     fun tailRecDividerCountZero(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(0, tailRecFuncs.findDividersCountUpCall(0))
+        Assertions.assertEquals(0, tailRecFuncs.findDividersCountTailCall(0))
     }
     @Test
     fun tailRecDividerCountOne(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(1, tailRecFuncs.findDividersCountUpCall(1))
+        Assertions.assertEquals(1, tailRecFuncs.findDividersCountTailCall(1))
     }
 }

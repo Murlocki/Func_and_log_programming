@@ -41,16 +41,16 @@ internal class MultOf3SumDigitsTests {
     @Test
     fun tailRecSum3DigitsPositive(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(15, tailRecFuncs.sum3DigitsUpCall(8976))
+        Assertions.assertEquals(15, tailRecFuncs.sum3DigitsTailCall(8976))
     }
     @Test
     fun tailRecSum3DigitsNegative(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(15, tailRecFuncs.sum3DigitsUpCall(-8976))
+        Assertions.assertEquals(15, tailRecFuncs.sum3DigitsTailCall(-8976))
     }
     @Test
     fun tailRecSum3DigitsZero(){
         val tailRecFuncs = TailRecFunctions()
-        Assertions.assertEquals(0, tailRecFuncs.sum3DigitsUpCall(0))
+        Assertions.assertEquals(0, tailRecFuncs.sum3DigitsTailCall(0))
     }
 }

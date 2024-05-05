@@ -8,10 +8,10 @@ class HighOrder {
     fun maxDigCyc(n:Int):Int = callDigitFunc(n){k->CycleFunctions().maxDigit(k)}
 
     fun sum3DigitCyc(n:Int):Int = callDigitFunc(n,CycleFunctions()::sum3Digits)
-    fun sum3DigitTail(n:Int):Int = callDigitFunc(n,TailRecFunctions()::sum3DigitsUpCall)
+    fun sum3DigitTail(n:Int):Int = callDigitFunc(n,TailRecFunctions()::sum3DigitsTailCall)
     fun sum3DigitRec(n:Int):Int = callDigitFunc(n,UpRecFunctions()::sum3DigitsUp)
 
     fun divierCountCyc(n:Int):Int = callDigitFunc(n,CycleFunctions()::findDividersCount)
-    fun divierCountTail(n:Int):Int = callDigitFunc(n,TailRecFunctions()::findDividersCountUpCall)
+    fun divierCountTail(n:Int):Int = callDigitFunc(n,TailRecFunctions()::findDividersCountTailCall)
     fun divierCountRec(n:Int):Int = callDigitFunc(n,UpRecFunctions()::findDividersCountUpCall)
 }
