@@ -23,6 +23,7 @@ class CycleFunctions {
         }
         return currentMax;
     }
+    //Циклическая функция для нахождения суммы цифр кратных 3
     fun sum3Digits(n:Double):Int{
         var currentN:Int = abs(shiftToInteger(n));
         var digitSum=0;
@@ -33,5 +34,15 @@ class CycleFunctions {
         }
         return digitSum;
     }
-
+    //Циклическая функция для нахождения делителей целого числа
+    fun findDividersCount(n:Int):Int?{
+        if (n==0) return null
+        var currentDivider = 1;
+        var dividerCount = 1;
+        while(currentDivider<=(abs(n)/2).toInt()){
+            dividerCount+= if(n%currentDivider==0) 1 else 0;
+            currentDivider+=1;
+        }
+        return dividerCount;
+    }
 }
