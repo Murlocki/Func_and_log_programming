@@ -10,5 +10,8 @@ class TailRecFunctions {
     tailrec fun sum3DigitsUp(n: Int,currentSum:Int):Int = if(n==0) currentSum else
         sum3DigitsUp(n/10,if(n%10%3==0) currentSum+n%10 else currentSum)
 
-   
+    //Хвостовая рекурсия для нахождения количества делителей целого числа
+    fun findDividersCountUpCall(n: Int):Int? = if(n==0) null else findDividersCountUp(abs(n),1,1)
+    tailrec fun findDividersCountUp(n: Int,currentDiv:Int,countDivs:Int):Int = if(!(currentDiv<=(n/2).toInt())) countDivs
+        else findDividersCountUp(n,currentDiv+1,if(n%currentDiv==0) countDivs+1 else countDivs);
 }
