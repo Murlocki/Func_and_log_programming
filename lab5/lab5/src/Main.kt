@@ -1,6 +1,8 @@
+import kotlin.math.log
 
 
 fun main() {
-    val c = HighOrder();
-    println(c.maxDigCyc(897))
+    val c = ProjectEuler()
+    println(c.checkIfSimpleCall(2))
+    println(c.sumOfSimpleFromLeftAndRightCall())
 }
