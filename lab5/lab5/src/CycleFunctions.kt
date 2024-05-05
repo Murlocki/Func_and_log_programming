@@ -4,18 +4,9 @@ import kotlin.math.round
 
 class CycleFunctions {
 
-    //Циклическая функция для превращение дробного числа в целое
-    fun shiftToInteger(n:Double): Int{
-        var result = n;
-        while(round(result)!=result){
-            result = result * 10;
-        }
-        return result.toInt()
-    }
-
     //Циклическая функция для подсчета макс цифры числа
-    fun maxdigit(n:Double): Int {
-        var currentN:Int = abs(shiftToInteger(n));
+    fun maxdigit(n:Int): Int {
+        var currentN:Int = abs(n);
         var currentMax:Int=currentN%10;
         while(currentN>0){
             currentMax = max(currentMax,currentN%10);
@@ -24,8 +15,8 @@ class CycleFunctions {
         return currentMax;
     }
     //Циклическая функция для нахождения суммы цифр кратных 3
-    fun sum3Digits(n:Double):Int{
-        var currentN:Int = abs(shiftToInteger(n));
+    fun sum3Digits(n:Int):Int{
+        var currentN:Int = abs(n);
         var digitSum=0;
         while(currentN>0){
             var currentDigit = currentN%10;

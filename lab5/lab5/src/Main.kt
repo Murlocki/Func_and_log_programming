@@ -1,6 +1,9 @@
 fun main() {
     val c = CycleFunctions();
-    println(c.maxdigit(897.0))
-    println(c.sum3Digits(8976.0));
+    println(c.maxdigit(897))
+    println(c.sum3Digits(8976));
     println(c.findDividersCount(0))
+
+    val upRec = UpRecFunctions()
+    println(upRec.maxDigitUp(897))
 }
