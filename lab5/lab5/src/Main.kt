@@ -11,4 +11,5 @@ fun main() {
 
     val tailRec = TailRecFunctions()
     println(tailRec.maxDigitTailCall(8979))
+    println(tailRec.sum3DigitsUpCall(-13))
 }
