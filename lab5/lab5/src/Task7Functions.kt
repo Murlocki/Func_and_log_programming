@@ -3,43 +3,45 @@ import kotlin.math.max
 import kotlin.math.min
 
 class Task7Functions {
-    //Функция подсчета нода с помощью функции высшего порядка
+    //Функция подсчета нода с помощью функции высшего порядка+
     fun nod(first:Int,second:Int):Int =
         twoArgRecursion(::nodEndCond, endResultFunc = ::returnSecondIntArg, firstArg = first, secondArg = second,
             firstArgStepFunc = ::returnSecondIntArg,
             secondArgStepFunc = ::nodStepFunc )
 
-    //Функция окончания подсчета нода
+    //Функция окончания подсчета нода+
     fun nodEndCond(first: Int,second: Int) = twoArgCond(::equalsCustom,first % second,0)
-    //Функция шага для нода
+    //Функция шага для нода+
     fun nodStepFunc(first:Int,second:Int) = first%second
 
-    //Функция вызова подсчета ножа
-    fun nodCall(first: Int,second: Int) = nod(abs(max(first,second)),abs(min(first,second)))
+    //Функция вызова подсчета ножа+
+    fun nodCall(first: Int,second: Int) = if(nodExtraCond(first,second)) max(abs(first),abs(second)) else nod((max(abs(first),abs(second))),(min(abs(first),abs(second))))
+    //Функция на доп условие экстренного выхода из рассчета нода+
+    fun nodExtraCond(first: Int,second: Int) = twoArgCond(::equalsCustom,first,0)||twoArgCond(::equalsCustom,second,0)
 
-    //Функция проверки на простоту
+    //Функция проверки на простоту+
     fun twoSimple(first: Int,second: Int):Boolean = if(twoSimpleSpecialCond(first,second)) false else
         twoArgCond(::equalsCustom,nodCall(first,second),1)
-
+    //Спец условие на досрочный выход+
     fun twoSimpleSpecialCond(first: Int,second: Int):Boolean = twoArgCond(::equalsCustom,first,0)||twoArgCond(::equalsCustom,second,0)
 
-    //Функция проверки окончания цифр числа
+    //Функция проверки окончания цифр числа+
     fun digitsEnd(n:Int):Boolean = twoArgCond(::equalsCustom,n,0)
-    //Функция шага по цифрам
+    //Функция шага по цифрам+
     fun deleteLastDigit(n:Int):Int = n/10
 
 
-    //Функция получения след делителя
+    //Функция получения след делителя+
     fun nextDel(n:Int):Int = n-1
-    //Функция проверки окончания делителей
+    //Функция проверки окончания делителей+
     fun endOfDel(n: Int):Boolean = !twoArgCond(::greaterCustom,n,1)
 
 
-    //Вызов подсчета взаимнопростых с делителем цифр числа
+    //Вызов подсчета взаимнопростых с делителем цифр числа+
     fun countSimpleDigitsCall(currentDel: Int,inputNumber:Int):Int =
         countSimpleDigits(currentDel, inputNumber,0 )
-    //Основная рекурсия для подсчета взаимнопростых с делителем цифр числа
-   tailrec fun countSimpleDigits(currentDel:Int,inputNumber:Int,currentCount:Int):Int =
+    //Основная рекурсия для подсчета взаимнопростых с делителем цифр числа+
+   fun countSimpleDigits(currentDel:Int,inputNumber:Int,currentCount:Int):Int =
        threeArgRecursion(condStopFunc = {_:Int,inpNumb:Int,_:Int->digitsEnd(inpNumb)},
            endResultFunc = {_:Int,_:Int,curCount:Int->curCount},
            firstArgStepFunc = {f:Int,_:Int,_:Int->f},
@@ -47,16 +49,16 @@ class Task7Functions {
            thirdArgStepFunc = {f:Int,s:Int,th:Int->getNextCount(th,f,s)},
            firstArg = currentDel, secondArg = inputNumber, thirdArg = currentCount)
 
-    //Получение следующего числа цифр
+    //Получение следующего числа цифр+
     fun getNextCount(currentCount: Int,currentDel: Int,inputNumber: Int):Int =
         if(getNextCountCond(currentDel,inputNumber%10))
             currentCount+1
         else
             currentCount
-    //Условие увеличения количества взаимнопростых с делителем цифр
+    //Условие увеличения количества взаимнопростых с делителем цифр+
     fun getNextCountCond(first: Int,second: Int) = twoArgCond({n:Any,m:Any->twoSimple(n.toString().toInt(),m.toString().toInt())},first,second)
 
-
+    //Поиск делителя взаимнопростого с макс количеством цифр+
     tailrec fun maxDel(inputNumber:Int,currentDel: Int,currentMaxDel:Int,currentMaxCount:Int):Int =
         if(endOfDel(currentDel)) currentMaxDel
         else
@@ -67,7 +69,9 @@ class Task7Functions {
                     checkCount(currentDel,inputNumber,currentMaxCount,currentDel,currentMaxDel),
                     checkCount(currentDel,inputNumber,currentMaxCount,countSimpleDigitsCall(currentDel,inputNumber),currentMaxCount)
                 )
-    fun maxDelCall(n:Int) = maxDel(n,n,1,0)
+    fun maxDelCall(n:Int) = maxDel(abs(n),abs(n),1,0)
+
+    //Вспомогательная функция для возврата значений по увеличению количества цифр+
     fun checkCount(currentDel: Int,inputNumber: Int,currentMaxCount: Int,result1:Int,result2:Int) =
         if(twoArgCond(::greaterCustom,countSimpleDigitsCall(currentDel,inputNumber),currentMaxCount))
             result1
@@ -78,8 +82,6 @@ class Task7Functions {
     //Функции для передачи как аргументы
     fun equalsCustom(firstArg: Any,secondArg: Any) = firstArg == secondArg
     fun greaterCustom(firstArg: Any,secondArg: Any):Boolean = firstArg.toString().toInt().compareTo(secondArg.toString().toInt()) == 1
-
-    fun returnFirstIntArg(arg1:Int,arg2:Int) = arg1
     fun returnSecondIntArg(arg1:Int,arg2:Int) = arg2
 
     //Функции высших порядков
