@@ -4,7 +4,7 @@ class HighOrder {
 
     //Примеры передачи функций????хз из задания 4 понятно целое ничего
     fun maxDigTail(n:Int):Int = callDigitFunc(n,TailRecFunctions()::maxDigitTailCall)
-    fun maxDigRec(n:Int):Int = callDigitFunc(n){ _: Int -> UpRecFunctions().maxDigitUp(n) }
+    fun maxDigRec(n:Int):Int = callDigitFunc(n){ _: Int -> UpRecFunctions().maxDigitUp(n); }
     fun maxDigCyc(n:Int):Int = callDigitFunc(n){k->CycleFunctions().maxDigit(k)}
 
     fun sum3DigitCyc(n:Int):Int = callDigitFunc(n,CycleFunctions()::sum3Digits)
