@@ -7,4 +7,8 @@ fun main(args:Array<String>) {
     val c = CycleFunctions()
     println(c.sum3Digits(0))
     println(c.findDividersCount(9))
+
+    val k = TailRecFunctions()
+    println(k.maxDigitTailCall(5))
+    println(k.sum3DigitsTailCall(13459))
 }
