@@ -49,7 +49,7 @@ class Task6Funcs {
 
     //Функция вывода ответа в файл
     fun printToFile(linesResult: String?) = linesResult?.let { File("result.txt").writeText(it) }
-    
+
 
     //Основная функция работы
     fun mainFunc(args:Array<String>){

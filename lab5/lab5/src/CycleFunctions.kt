@@ -4,36 +4,37 @@ import kotlin.math.round
 
 class CycleFunctions {
 
+    //Функция высшего порядка для обработки цифр числа
+    fun cycleDigitHighOrder(n:Int,initResult: Int,stopCondFunc:(Int)->Boolean,processFunc:(Int,Int)->Int):Int {
+        var currentN = abs(n)
+        var result = initResult
+        while(stopCondFunc(currentN)){
+            result = processFunc(result,currentN%10)
+            currentN=currentN/10
+        }
+        return result
+    }
+
     //Циклическая функция для подсчета макс цифры числа
-    fun maxDigit(n:Int): Int {
-        var currentN:Int = abs(n);
-        var currentMax:Int=currentN%10;
-        while(currentN>0){
-            currentMax = max(currentMax,currentN%10);
-            currentN /= 10;
-        }
-        return currentMax;
-    }
+    fun maxDigit(n:Int):Int = cycleDigitHighOrder(n,0,{k:Int->k>0},{k:Int,m:Int->max(k,m)})
+
     //Циклическая функция для нахождения суммы цифр кратных 3
-    fun sum3Digits(n:Int):Int{
-        var currentN:Int = abs(n);
-        var digitSum=0;
-        while(currentN>0){
-            var currentDigit = currentN%10;
-            digitSum += if(currentDigit%3==0) currentDigit else 0;
-            currentN /= 10;
-        }
-        return digitSum;
-    }
-    //Циклическая функция для нахождения делителей целого числа
-    fun findDividersCount(n:Int):Int{
+    fun sum3Digits(n: Int) = cycleDigitHighOrder(n,0,{k:Int->k>0},{k:Int,m:Int->if(m%3==0)m+k else k})
+
+
+    //Функция высшего порядка для обработки делителей
+    fun cycleDividers(n:Int,initResult:Int,stopCondFunc:(Int,Int)->Boolean,processFunc:(Int,Int,Int)->Int):Int {
         if (n==0) return 0
+        val currentN = abs(n)
         var currentDivider = 1;
-        var dividerCount = 1;
-        while(currentDivider<=(abs(n)/2).toInt()){
-            dividerCount+= if(n%currentDivider==0) 1 else 0;
+        var result = initResult;
+        while(stopCondFunc(currentN,currentDivider)){
+            result = processFunc(currentN,currentDivider,result)
             currentDivider+=1;
         }
-        return dividerCount;
+        return result;
     }
+
+    //Циклическая функция для нахождения делителей целого числа
+    fun findDividersCount(n:Int):Int = cycleDividers(n,1,{m:Int,divider:Int->divider<=(m/2).toInt()}){n:Int,divider:Int,prevResult:Int->if(n%divider==0)prevResult+1 else prevResult}
 }
