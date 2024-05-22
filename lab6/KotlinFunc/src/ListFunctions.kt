@@ -9,7 +9,7 @@ class ListFunctions {
 
     //Функция проверки содержится ли квадрат элемента в списке
     fun checkIfSqaure(element: Int,list: MutableList<Int>):Boolean = if(list.contains((Math.pow(element.toDouble(),2.0)).toInt())) true else false
-    
+
 
     //2
     //Функция высшего порядка для сортировки списков
@@ -60,34 +60,9 @@ class ListFunctions {
     tailrec fun getDividerCounter(element: Int,currentDivider:Int,counter: Int):Int = if(checkDividerCountCond(currentDivider,element))counter
         else getDividerCounter(element,getNextDIvider(currentDivider),getNextCounter(element,currentDivider,counter))
 
-    //Функция получения итератора для отсортированного списка
-    fun getIteratorForList(list:MutableList<Int>,sortFunction:(MutableList<Int>)->(List<Int>)) =
-            sortFunction(list).iterator()
-
-    //Получения итератора А
-    fun getAIterator(list:MutableList<Int>) = getIteratorForList(list,::getSortA)
-    //Получения итератора В
-    fun getBIterator(list:MutableList<Int>) = getIteratorForList(list,::getSortB)
-    //Получения итератора С
-    fun getCIterator(list:MutableList<Int>) = getIteratorForList(list,::getSortC)
 
     //Вызов функции составления списка кортеджей
     fun getTripleCall(listA:MutableList<Int>,listB:MutableList<Int>,listC:MutableList<Int>) =
-            getTriple(getAIterator(listA),getBIterator(listB),getCIterator(listC), mutableListOf())
-
-    //Функция проверки условия останова формирования кортерджей
-    fun checkTripleStopCond(iteratorA:Iterator<Int>,iteratorB:Iterator<Int>,iteratorC:Iterator<Int>) =
-            !(iteratorA.hasNext() && iteratorB.hasNext() && iteratorC.hasNext())
-
-    //Функция добавления кортеджа в список
-    fun addTripleToList(list:MutableList<Triple<Int,Int,Int>>,iteratorA:Iterator<Int>,iteratorB:Iterator<Int>,iteratorC:Iterator<Int>):
-            MutableList<Triple<Int,Int,Int>>{
-            list.add(Triple(iteratorA.next(),iteratorB.next(),iteratorC.next()))
-            return list
-    }
-
-    //Основная рекурсивная функция формирования списка кортеджей
-    tailrec fun getTriple(iteratorA:Iterator<Int>,iteratorB:Iterator<Int>,iteratorC:Iterator<Int>,result:MutableList<Triple<Int,Int,Int>>):MutableList<Triple<Int,Int,Int>> =
-        if(checkTripleStopCond(iteratorA,iteratorB,iteratorC)) result
-        else getTriple(iteratorA,iteratorB,iteratorC,addTripleToList(result,iteratorA,iteratorB,iteratorC))
+            getSortA(listA).zip(getSortB(listB)).zip(getSortC(listC)){(a,b),c->Triple(a,b,c)}
+    
 }
