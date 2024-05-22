@@ -85,5 +85,28 @@ class ArrayFunctions {
 
     }
 
+    //3.17
 
+    //Это легально
+    //Функция получения пары максимального и минимального элементов
+    fun getMaxMinValue(array: Array<Int>) = Pair(array.min(),array.max())
+    //Функции получения индексов максимального и минимального элементов
+    fun getMaxMinIndexes(array: Array<Int>, minEl:Int, maxEl:Int) = Pair(array.indexOf(minEl),array.indexOf(maxEl))
+
+    //Функция создания массива с поменямыми местами макс и мин элементами
+    fun createSwitchedArray(originalArray: Array<Int>, minMaxIndexes:Pair<Int,Int>,minMaxValues:Pair<Int,Int>): Array<Int> {
+        val newArray = arrayOf(*originalArray)
+        newArray[minMaxIndexes.first] = minMaxValues.second
+        newArray[minMaxIndexes.second] = minMaxValues.first
+        return newArray
+    }
+
+    //Основная функция создания массива с поменянемыми местами макс и мин элементами
+    fun switchMaxAndMin(array: Array<Int>): Array<Int> {
+        val (minValue,maxValue) = getMaxMinValue(array)
+        val minMaxIndexes = getMaxMinIndexes(array,minValue,maxValue)
+        return createSwitchedArray(array,minMaxIndexes,Pair(minValue,maxValue))
+    }
+    //Функция вывода массива
+    fun printArray(array: Array<Int>) = println(array.contentToString())
 }
