@@ -5,19 +5,11 @@ import kotlin.math.absoluteValue
 class ListFunctions {
 
     //Функция вызова подсчета количества элементов являющихся квадратами какого-то из элементов списка
-    fun findSquaresOfElementsCall(list: MutableList<Int>):Int =
-        findSquaresOfElements(list,list.iterator(),0)
+    fun findSquaresOfElementsCall(list: MutableList<Int>):Int = list.count { it->checkIfSqaure(it,list) }
 
     //Функция проверки содержится ли квадрат элемента в списке
     fun checkIfSqaure(element: Int,list: MutableList<Int>):Boolean = if(list.contains((Math.pow(element.toDouble(),2.0)).toInt())) true else false
-
-    //Функция увеличения количества элементов
-    fun addCounter(element: Int, list: MutableList<Int>, counter: Int) = if(checkIfSqaure(element,list)) counter+1 else counter
-
-    //Основная функция подсчета количества элементов в списке являющихся квадратами какого-то из элементов списка
-    fun findSquaresOfElements(list: MutableList<Int>,iterator: MutableIterator<Int>,counter:Int):Int =
-        if(!iterator.hasNext()) counter else
-            findSquaresOfElements(list,iterator,addCounter(iterator.next(),list,counter))
+    
 
     //2
     //Функция высшего порядка для сортировки списков
