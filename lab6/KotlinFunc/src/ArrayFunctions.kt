@@ -1,10 +1,12 @@
+import kotlin.math.min
+
 class ArrayFunctions {
 
     //Функция получения индексированного итератора массива
     fun getArrayIndexIterator(array:Array<Int>):Iterator<IndexedValue<Int>> = array.iterator().withIndex()
 
     //Проверка условия остановки пропуска элементов
-    fun checkIteratorSkipStopCond(arrayIterator: Iterator<IndexedValue<Int>>,k:Int) = !(checkArrayEndCond(arrayIterator)) or (k==0)
+    fun checkIteratorSkipStopCond(arrayIterator: Iterator<IndexedValue<Int>>,k:Int) = checkArrayEndCondIndexed(arrayIterator) or (k==0)
     //Функция пропуска элементов итератора
     fun skipKIterElements(arrayIterator: Iterator<IndexedValue<Int>>,k:Int): Iterator<IndexedValue<Int>> {
         if(checkIteratorSkipStopCond(arrayIterator,k)) return arrayIterator
@@ -15,7 +17,7 @@ class ArrayFunctions {
     }
 
     //Функция проверки окончания итератора
-    fun checkArrayEndCond(iterator: Iterator<IndexedValue<Int>>) = iterator.hasNext()
+    fun checkArrayEndCondIndexed(iterator: Iterator<IndexedValue<Int>>):Boolean = !(iterator.hasNext())
 
     //Функция вызова поиска индексов 2 наименьших элементов
     fun getTwoMinIndexesCall(array: Array<Int>) = if(array.size<2) Pair(0,0)
@@ -47,7 +49,7 @@ class ArrayFunctions {
 
     //Основная функция получения индексов 2 наим элементов
     fun getTwoMinIndexes(arrayIterator: Iterator<IndexedValue<Int>>, firstMinIndex: Int, secondMinIndex: Int, firstMin: Int, secondMin: Int): Pair<Int, Int> {
-        if (!checkArrayEndCond(arrayIterator)) return Pair(firstMinIndex, secondMinIndex)
+        if (checkArrayEndCondIndexed(arrayIterator)) return Pair(firstMinIndex, secondMinIndex)
         else {
             val (currentIndex,currentElement) = arrayIterator.next()
             val (nextFirstMin,nextFirstMinIndex,nextSecondMin,nextSecondMinIndex) = getNextTwoMins(currentElement,currentIndex,firstMinIndex,secondMinIndex,firstMin,secondMin)
@@ -60,4 +62,28 @@ class ArrayFunctions {
             )
         }
     }
+
+    //3.5.
+
+    //Ну как бы вот...
+    fun checkGlobalMinWithBuildIn(array: Array<Int>, index:Int) = array[index] == array.min()
+    //Функция проверки окончания итератора
+    fun checkArrayEndCond(iterator: Iterator<Int>):Boolean = !(iterator.hasNext())
+    //Функция получения обычного итератора массива
+    fun getArrayIterator(array: Array<Int>) = array.iterator()
+    //Функция проверки элемента на соответствие глобальность минимума
+    fun checkGlobalMin(array: Array<Int>, index: Int) = array[index] == findGlobalMinimum(getArrayIterator(array),array[0])
+    //Получение новоного минимума
+    fun getNewMin(element: Int,currentMin: Int) = min(element,currentMin)
+    //Функция нахождения глобального минимума
+    fun findGlobalMinimum(iterator: Iterator<Int>,currentMin:Int): Int {
+        if(checkArrayEndCond(iterator)) return currentMin
+        else{
+            val newMin = iterator.next()
+            return findGlobalMinimum(iterator,getNewMin(currentMin,newMin))
+        }
+
+    }
+
+
 }
