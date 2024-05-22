@@ -177,3 +177,4 @@ main2_5(ListOfStrings):-retractall(wordsCount(_,_)),count_all_words(ListOfString
 %task2_5(+InputPath:String,+FilePath:String)
 %main predicate for task 2.5.
 task2_5(InputPath,FilePath):-read_strings_in_list(InputPath,ListOfStrings), tell(FilePath),main2_5(ListOfStrings),told,!.
+

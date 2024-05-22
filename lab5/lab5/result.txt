@@ -1,3 +1,0 @@
-1239 sum3DigitsTail 12
-123 findDividersCountUp 4
-12998 maxDigitCycle 9
