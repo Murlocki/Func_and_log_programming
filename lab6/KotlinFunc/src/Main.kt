@@ -2,6 +2,8 @@ fun main() {
     val f = ListFunctions()
     println(f.noDuplicateUnionOfLists(listOf(2,3,4,5,6,1,2), listOf(2,3,2,4,3,6)))
     println(f.meanOfNotSimpleElemGreaterThanSimpleElemMean(listOf(2,3,4,5,6,6,2)))
+    println(f.getCortegesAB(100))
+
 //println(f.findSquaresOfElementsCall(mutableListOf(1,36,6,25,5)))
     //println(f.getSortC(mutableListOf(1,1,2,8,4,36,6,25,5)))
 
