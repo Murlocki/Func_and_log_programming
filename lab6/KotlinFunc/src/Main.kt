@@ -8,5 +8,6 @@ fun main() {
     println(ar.getTwoMinIndexesCall(arrayOf(-100,3,4,5,1,2,-100,4,-100)))
     //println(ar.checkGlobalMin(arrayOf(-100,10,3),1))
     //println(ar.checkGlobalMinWithBuildIn(arrayOf(-100,10,3),1))
-    ar.printArray(ar.switchMaxAndMin(arrayOf(10,10,-10)))
+    //ar.printArray(ar.switchMaxAndMin(arrayOf(10,10,-10)))
+    println(ar.getTwoMinsCall(arrayOf(-100,3,4,5,1,2)))
 }

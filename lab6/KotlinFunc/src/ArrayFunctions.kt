@@ -75,6 +75,22 @@ class ArrayFunctions {
 
 
     //3.23
+    fun getTwoMinsCall(array: Array<Int>) = if(array.size<2) Pair(array[0],array[0])
+        else getTwoMins(array)
+
+    fun findFirstMin(array: Array<Int>) = array.min()
+
+    fun findSecondMin(array: Array<Int>, firstMinIndex: Int):Int{
+        val arrayWithoutFirstMin = deleteElementViaIndexFromArray(array,firstMinIndex)
+        return arrayWithoutFirstMin.min()
+    }
+
+    fun getTwoMins(array: Array<Int>): Pair<Int, Int> {
+        val firstMin = findFirstMin(array)
+        val firstMinIndex = array.indexOf(firstMin)
+        val secondMin = findSecondMin(array,firstMinIndex)
+        return Pair(firstMin,secondMin)
+    }
 
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())
