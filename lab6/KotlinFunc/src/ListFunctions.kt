@@ -136,4 +136,15 @@ class ListFunctions {
         else getCortegesABProcess(N,getNextDIvider(currentX),processOnePair(N,currentX,resultList))
 
 
+    //7.5.
+
+    //Функция проверки простоты делителя
+    private fun checkIfSimpleDivider(N: Int,currentDivider: Int) = checkIfSimple(currentDivider)&&checkIfDivider(N,currentDivider)
+    //Функция получения списка всех простых делителей
+    private fun getListOfSimpleDividers(N: Int) = (1..N).toList().filter { checkIfSimpleDivider(N,it) }
+    //Функция проверки наличия всех простых делителей числа в списке
+    private fun checkIfAllSimpleDivInList(list: List<Int>, element: Int) =
+        list.filter { it->checkIfSimpleDivider(element,it) }.size == getListOfSimpleDividers(element).size
+    //Функция создания нового списка из элементов для которых все их простые делители есть в оригинальном списке
+    fun createListOfElemsWithAllSimpleDiv(list: List<Int>):List<Int> = list.filter {element-> checkIfAllSimpleDivInList(list,element)}
 }
