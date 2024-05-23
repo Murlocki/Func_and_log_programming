@@ -64,5 +64,5 @@ class ListFunctions {
     //Вызов функции составления списка кортеджей
     fun getTripleCall(listA:MutableList<Int>,listB:MutableList<Int>,listC:MutableList<Int>) =
             getSortA(listA).zip(getSortB(listB)).zip(getSortC(listC)){(a,b),c->Triple(a,b,c)}
-    
+
 }
