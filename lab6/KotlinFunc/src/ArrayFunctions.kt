@@ -109,6 +109,23 @@ class ArrayFunctions {
         else return null
     }
 
+
+    //6.38
+    //Количество элементов массива в отрезке от a до b
+    fun countElementsInSegment(array: Array<Int>, a: Int,b: Int):Int{
+        val arrayInSegment = findElementsInSegment(array,a,b)
+        return arrayInSegment.count()
+    }
+
+    //6.46
+    //Функция получения отсортированной копии начального массива
+    fun getSortedCopyOfArray(array: Array<Int>): Array<Int> = array.sortedArray()
+    //Функция получения реверснутой копии массива
+    fun getReversedArrayCopy(array: Array<Int>) = array.reversedArray()
+    //Функция возврата массива где сначала идут положительные элементы а затем отрицательные
+    fun printPositiveThenNegative(array: Array<Int>) = getReversedArrayCopy(getSortedCopyOfArray(array))
+
+
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())
 }
