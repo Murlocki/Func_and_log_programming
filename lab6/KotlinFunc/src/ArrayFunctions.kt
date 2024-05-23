@@ -75,16 +75,19 @@ class ArrayFunctions {
 
 
     //3.23
+    //Основная функция вызова для нахождения двух минимумов
     fun getTwoMinsCall(array: Array<Int>) = if(array.size<2) Pair(array[0],array[0])
         else getTwoMins(array)
 
+    //Функция нахождения первого минимума массива
     fun findFirstMin(array: Array<Int>) = array.min()
 
+    //Функция нахождения второго минимума массива
     fun findSecondMin(array: Array<Int>, firstMinIndex: Int):Int{
         val arrayWithoutFirstMin = deleteElementViaIndexFromArray(array,firstMinIndex)
         return arrayWithoutFirstMin.min()
     }
-
+    //Функция нахождения пары минимумов массива
     fun getTwoMins(array: Array<Int>): Pair<Int, Int> {
         val firstMin = findFirstMin(array)
         val firstMinIndex = array.indexOf(firstMin)
@@ -94,7 +97,17 @@ class ArrayFunctions {
 
 
     //3.34
+    //Функция нахождения массива элементов находящихся в отрезке
     fun findElementsInSegment(array:Array<Int>,a:Int,b:Int) = array.filter { it in a..b }.toTypedArray()
+
+    //3.25
+    fun findMaxElementInSegment(array: Array<Int>, a:Int, b: Int): Int? {
+        val arrayInSegment = findElementsInSegment(array,a,b)
+        if(arrayInSegment.size>0){
+            return arrayInSegment.max()
+        }
+        else return null
+    }
 
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())

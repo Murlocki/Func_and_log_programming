@@ -10,5 +10,6 @@ fun main() {
     //println(ar.checkGlobalMinWithBuildIn(arrayOf(-100,10,3),1))
     //ar.printArray(ar.switchMaxAndMin(arrayOf(10,10,-10)))
     //println(ar.getTwoMinsCall(arrayOf(-100,3,4,5,1,2)))
-    ar.printArray(ar.findElementsInSegment(arrayOf(-100,3,4,5,1,2,-100,4,-100),-100,2))
+    ar.printArray(ar.findElementsInSegment(arrayOf(-100,3,4,5,1,2,-100,4,-100),-1000,-100))
+    println(ar.findMaxElementInSegment(arrayOf(-100,3,4,5,1,2,-100,4,-100),-1000,-100))
 }
