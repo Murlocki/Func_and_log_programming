@@ -65,4 +65,24 @@ class ListFunctions {
     fun getTripleCall(listA:MutableList<Int>,listB:MutableList<Int>,listC:MutableList<Int>) =
             getSortA(listA).zip(getSortB(listB)).zip(getSortC(listC)){(a,b),c->Triple(a,b,c)}
 
+
+
+    //6.50
+
+    //Функция удаления дублирующихся элементов
+    fun deleteAllDuplicatesFromList(list: List<Int>) = list.filter { element->list.count(){it == element} == 1 }
+
+    //Функция получения симметрической разности для списков
+    fun getSymmetricDifForLists(firstList: List<Int>,secondList:List<Int>) = getSymmetricDifference(firstList.toSet(),secondList.toSet()).toList()
+
+    //Функция получения симметрической разности множеств
+    fun getSymmetricDifference(firstSet: Set<Int>,secondSet:Set<Int>): Set<Int> {
+        val setUnion = firstSet union secondSet
+        val setIntersect = firstSet intersect secondSet
+        return setUnion subtract setIntersect
+    }
+
+    //Функция получения объединения списков без дублирующихся элементов и элементов встречающихся в обоих списках
+    fun noDuplicateUnionOfLists(L1:List<Int>,L2:List<Int>) = getSymmetricDifForLists(deleteAllDuplicatesFromList(L1),deleteAllDuplicatesFromList(L2)).toList()
+
 }

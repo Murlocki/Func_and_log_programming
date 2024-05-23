@@ -126,6 +126,7 @@ class ArrayFunctions {
     fun printPositiveThenNegative(array: Array<Int>) = getReversedArrayCopy(getSortedCopyOfArray(array))
 
 
+
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())
 }
