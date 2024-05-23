@@ -92,6 +92,10 @@ class ArrayFunctions {
         return Pair(firstMin,secondMin)
     }
 
+
+    //3.34
+    fun findElementsInSegment(array:Array<Int>,a:Int,b:Int) = array.filter { it in a..b }.toTypedArray()
+
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())
 }
