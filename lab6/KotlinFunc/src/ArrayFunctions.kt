@@ -1,36 +1,36 @@
 import kotlin.math.min
 
 class ArrayFunctions {
-    //Функция проверки окончания итератора
 
-
+    //Функция получения массива до индекса
     fun getArrayBeforeIndex(originalArray: Array<Int>, index: Int) = originalArray.sliceArray(0..index-1)
+    //Функция получения массива после индеса
     fun getArrayAfterIndex(originalArray: Array<Int>, index: Int) = originalArray.sliceArray(index+1..originalArray.size-1)
-
+    //Функция удаления элемента по индексу
     fun deleteElementViaIndexFromArray(originalArray: Array<Int>, elementIndex: Int) =
         getArrayBeforeIndex(originalArray,elementIndex).plus(
             getArrayAfterIndex(originalArray,elementIndex))
-
-    fun updateIndex(index: Int,firstMinIndex:Int) = if(index>f)
+    //Функция нахождения индекса первого минимума
+    fun findFirstMinIndex(array: Array<Int>) = array.indexOf(array.min())
+    //Функция второго минимума массива
+    fun findSecondMinIndex(originalArray: Array<Int>, firstMinIndex:Int):Int{
+        val arrayWithoutFirstMin = deleteElementViaIndexFromArray(originalArray,firstMinIndex)
+        return originalArray.indexOfLast { it==arrayWithoutFirstMin.min() }
+    }
 
     //Функция вызова поиска индексов 2 наименьших элементов
     fun getTwoMinIndexesCall(array: Array<Int>): Pair<Int, Int> {
         if(array.size<2) return Pair(0,0)
         else{
-            val firstMinIndex = array.indexOf(array.min())
-            println(array.sliceArray(0..firstMinIndex-1).contentToString())
-            println(array.sliceArray(firstMinIndex+1..array.size-1).contentToString())
-            val arrayWithoutFirstMin = array.sliceArray(0..firstMinIndex-1).plus(
-                array.sliceArray(firstMinIndex+1..array.size-1)
-            )
-            val secondMinIndex = array.indexOf(arrayWithoutFirstMin.min())
+            val firstMinIndex = findFirstMinIndex(array)
+            val secondMinIndex = findSecondMinIndex(array,firstMinIndex)
             return Pair(firstMinIndex,secondMinIndex)
         }
     }
 
     //3.5.
-
     //Ну как бы вот...
+    //Проверка на глобальный минимум через встроенные функции
     fun checkGlobalMinWithBuildIn(array: Array<Int>, index:Int) = array[index] == array.min()
     //Функция проверки окончания итератора
     fun checkArrayEndCond(iterator: Iterator<Int>):Boolean = !(iterator.hasNext())
@@ -72,6 +72,10 @@ class ArrayFunctions {
         val minMaxIndexes = getMaxMinIndexes(array,minValue,maxValue)
         return createSwitchedArray(array,minMaxIndexes,Pair(minValue,maxValue))
     }
+
+
+    //3.23
+
     //Функция вывода массива
     fun printArray(array: Array<Int>) = println(array.contentToString())
 }
