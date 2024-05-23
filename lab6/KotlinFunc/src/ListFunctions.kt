@@ -85,4 +85,20 @@ class ListFunctions {
     //Функция получения объединения списков без дублирующихся элементов и элементов встречающихся в обоих списках
     fun noDuplicateUnionOfLists(L1:List<Int>,L2:List<Int>) = getSymmetricDifForLists(deleteAllDuplicatesFromList(L1),deleteAllDuplicatesFromList(L2)).toList()
 
+
+    //6.56
+
+    //Проверка на простоту элемента
+    fun checkIfSimple(element:Int) = getDividerCounterCall(element) == 2
+
+    //Среднее отфильтрованных элементов
+    fun meanOfFilter(list:List<Int>,filterFunc:(Int)->Boolean) = list.filter(filterFunc).average()
+
+    //Среднее простых элементов
+    fun meanOfSimpleElementsOfList(list: List<Int>) = meanOfFilter(list,::checkIfSimple)
+
+    //Среднее непростых элементов больших чем среднее простых
+    fun meanOfNotSimpleElemGreaterThanSimpleElemMean(list: List<Int>) = meanOfFilter(list) { it -> !checkIfSimple(it) && (it>meanOfSimpleElementsOfList(list)) }
+
+
 }
