@@ -5,22 +5,22 @@ import kotlin.math.absoluteValue
 class ListFunctions {
 
     //Функция вызова подсчета количества элементов являющихся квадратами какого-то из элементов списка
-    fun findSquaresOfElementsCall(list: MutableList<Int>):Int = list.count { it->checkIfSqaure(it,list) }
+    fun findCountOfSquaresOfElementsCall(list: List<Int>):Int = list.count { it->checkIfSqaure(it,list) }
 
     //Функция проверки содержится ли квадрат элемента в списке
-    private fun checkIfSqaure(element: Int,list: MutableList<Int>):Boolean = if(list.contains((Math.pow(element.toDouble(),2.0)).toInt())) true else false
+    private fun checkIfSqaure(element: Int,list: List<Int>):Boolean = if(list.contains((Math.pow(element.toDouble(),0.5)).toInt())) true else false
 
 
     //2
     //Функция высшего порядка для сортировки списков
-    private  fun getSortedList(list: MutableList<Int>, comparator: Comparator<Int>) =
+    private  fun getSortedList(list: List<Int>, comparator: Comparator<Int>) =
         list.sortedWith(comparator)
 
     //Функция для получения сортировки списка A
-    private  fun getSortA(list: MutableList<Int>) = getSortedList(list, compareBy({-it}))
+    private  fun getSortA(list: List<Int>) = getSortedList(list, compareBy({-it}))
 
     //Функция для получения сортировки списка B
-    private fun getSortB(list: MutableList<Int>) = getSortedList(list, compareBy({element->calcDigitSum(element)},{it.absoluteValue}))
+    private fun getSortB(list: List<Int>) = getSortedList(list, compareBy({element->calcDigitSum(element)},{it.absoluteValue}))
 
     //Функция вызова подсчета суммы цифр числа
     private fun calcDigitSum(element: Int):Int = calcDigitSumCount(abs(element),0)
@@ -39,7 +39,7 @@ class ListFunctions {
     private fun deleteLastDigit(element: Int) = element/10
 
     //Функция получения сортировки списка C
-    private fun getSortC(list: MutableList<Int>) = getSortedList(list, compareBy({element->-getDividerCounterCall(element)},{-it.absoluteValue}))
+    private fun getSortC(list: List<Int>) = getSortedList(list, compareBy({element->-getDividerCounterCall(element)},{-it.absoluteValue}))
 
     //Функция подсчета количества делителей числа
     private fun getDividerCounterCall(element: Int) = if(element==0) 0 else getDividerCounter(abs(element),1,1)
@@ -62,7 +62,7 @@ class ListFunctions {
 
 
     //Вызов функции составления списка кортеджей
-    fun getTripleCall(listA:MutableList<Int>,listB:MutableList<Int>,listC:MutableList<Int>) =
+    fun getTripleCall(listA:List<Int>,listB:List<Int>,listC:List<Int>) =
             getSortA(listA).zip(getSortB(listB)).zip(getSortC(listC)){(a,b),c->Triple(a,b,c)}
 
 
@@ -147,4 +147,19 @@ class ListFunctions {
         list.filter { it->checkIfSimpleDivider(element,it) }.size == getListOfSimpleDividers(element).size
     //Функция создания нового списка из элементов для которых все их простые делители есть в оригинальном списке
     fun createListOfElemsWithAllSimpleDiv(list: List<Int>):List<Int> = list.filter {element-> checkIfAllSimpleDivInList(list,element)}
+
+    //7.9.
+    private fun getAllPrevious(list: List<Int>, index: Int) = list.slice(0..index-1)
+    private fun calcSumOfAllPrevious(list: List<Int>, index:Int) = getAllPrevious(list,index).sum()
+    private fun multipleOfAllPrevious(list: List<Int>, index: Int) = getAllPrevious(list,index).all{ checkIfDivider(list[index],it)}
+    private fun countOfElementsGreaterThanInput(list: List<Int>, element: Int) = list.count{it>element}
+
+    private fun checkComplexCond(element: Int,elementIndex: Int,list: List<Int>) =
+        element>calcSumOfAllPrevious(list,elementIndex)
+                && checkIfSqaure(element,list) && multipleOfAllPrevious(list,elementIndex)
+    private fun createTriple(element: Int,elementIndex: Int,list: List<Int>) =
+        Triple(element,calcSumOfAllPrevious(list,elementIndex),countOfElementsGreaterThanInput(list,element))
+    fun createListOfCortegesElSumPrevCountGreaterElem(list: List<Int>) = list.withIndex().filter {checkComplexCond(it.value,it.index,list)}.map {
+        it->createTriple(it.value,it.index,list)}
+
 }
