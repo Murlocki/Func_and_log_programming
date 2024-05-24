@@ -1,0 +1,4 @@
+package DocumentCollection
+
+class ListDocument {
+}
