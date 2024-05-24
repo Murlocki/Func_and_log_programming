@@ -1,5 +1,5 @@
 import java.time.LocalDate
-import java.util.Date
+import java.util.*
 
 class VehiclePassport(val series:Int, val number:Int, val issueDate: LocalDate):Comparable<VehiclePassport> {
 
@@ -14,6 +14,10 @@ class VehiclePassport(val series:Int, val number:Int, val issueDate: LocalDate):
 
     override fun compareTo(other: VehiclePassport): Int {
         return this.issueDate.compareTo(other.issueDate)
+    }
+
+    override fun hashCode(): Int {
+        return Objects.hash(series, number)
     }
 
     override fun equals(other: Any?): Boolean =
