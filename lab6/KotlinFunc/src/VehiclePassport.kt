@@ -37,8 +37,18 @@ class VehiclePassport(val series:Int, val number:Int, val issueDate: LocalDate):
         fun compareBySeries(p1:VehiclePassport,p2:VehiclePassport):Int = p1.series.compareTo(p2.series)
         fun compareByNumber(p1:VehiclePassport,p2:VehiclePassport):Int = p1.number.compareTo(p2.number)
 
-        fun compareBySeriesAndNumber(p1: VehiclePassport,p2: VehiclePassport):Int{
-            val seriesComp = compareBySeries(p1,p2)
+        private fun nullComp(p1: VehiclePassport?,p2: VehiclePassport?):Int =
+            when{
+                (p1==null)&&(p2==null)->0;
+                (p1==null)->-1;
+                (p2==null)->1;
+                else->2
+            }
+
+        fun compareBySeriesAndNumber(p1: VehiclePassport?,p2: VehiclePassport?):Int{
+            if(nullComp(p1,p2)!=2) return nullComp(p1,p2)
+
+            val seriesComp = compareBySeries(p1!!,p2!!)
             if(seriesComp!=0){
                 return seriesComp
             }

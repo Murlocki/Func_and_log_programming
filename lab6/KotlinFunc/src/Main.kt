@@ -1,3 +1,4 @@
+import com.sun.source.tree.BinaryTree
 import java.time.LocalDate
 
 fun main() {
@@ -21,8 +22,5 @@ fun main() {
 //    ar.printArray(ar.printPositiveThenNegative(array))
 //    ar.printArray(array)
 
-    val passport = VehiclePassport(1234,233, LocalDate.now())
-    val passport2 = VehiclePassport(123,233, LocalDate.now())
-    println(VehiclePassport.compareByNumber(passport,passport2))
 
 }
