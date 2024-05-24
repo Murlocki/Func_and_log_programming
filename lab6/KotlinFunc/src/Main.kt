@@ -1,3 +1,4 @@
+import DocumentCollection.VehiclePassportFile
 import com.sun.source.tree.BinaryTree
 import java.time.LocalDate
 
@@ -21,6 +22,7 @@ fun main() {
 //    val array = arrayOf(-100,3,4,5,1,2,-100,4,-100)
 //    ar.printArray(ar.printPositiveThenNegative(array))
 //    ar.printArray(array)
-
+    val f = VehiclePassportFile()
+    f.timeTests()
 
 }

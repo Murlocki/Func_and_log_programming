@@ -7,7 +7,8 @@ abstract class DocumentCollection<Doc : VehiclePassport> {
 
     fun measureSearchTime(doc: Doc): Long {
         val startTime = System.currentTimeMillis()
-        searchDoc(doc)
+        val b = searchDoc(doc)
+        //println(b)
         val endTime = System.currentTimeMillis()
         return endTime - startTime
     }
