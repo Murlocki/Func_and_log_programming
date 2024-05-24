@@ -34,4 +34,16 @@ internal class VehiclePassportTests {
         Assertions.assertEquals(1,VehiclePassport.compareBySeries(passport,passport2))
         Assertions.assertEquals(-1,VehiclePassport.compareBySeries(passport2,passport))
     }
+    @Test
+    fun equalsNumberSeriesTest(){
+        val passport = VehiclePassport(1234,23, LocalDate.now())
+        val passport2 = VehiclePassport(123,233, LocalDate.now())
+        Assertions.assertEquals(false, passport == passport2)
+    }
+    @Test
+    fun equalsTrueNumberSeriesTest(){
+        val passport = VehiclePassport(123,23, LocalDate.now())
+        val passport2 = VehiclePassport(123,23, LocalDate.now())
+        Assertions.assertEquals(true, passport == passport2)
+    }
 }
