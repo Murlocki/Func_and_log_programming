@@ -149,16 +149,22 @@ class ListFunctions {
     fun createListOfElemsWithAllSimpleDiv(list: List<Int>):List<Int> = list.filter {element-> checkIfAllSimpleDivInList(list,element)}
 
     //7.9.
+    //Функция получения списка всех элементов до указанного индекса
     private fun getAllPrevious(list: List<Int>, index: Int) = list.slice(0..index-1)
+    //Функция находящая сумму всех элементов до текущего индекса
     private fun calcSumOfAllPrevious(list: List<Int>, index:Int) = getAllPrevious(list,index).sum()
+    //Функция проверяющая делится ли элемент по индексу на все предыдущие элементы
     private fun multipleOfAllPrevious(list: List<Int>, index: Int) = getAllPrevious(list,index).all{ checkIfDivider(list[index],it)}
+    //Функция подсчета количества элементов больших указанного
     private fun countOfElementsGreaterThanInput(list: List<Int>, element: Int) = list.count{it>element}
-
+    //Функция проверки сложного условия задачи 7.9
     private fun checkComplexCond(element: Int,elementIndex: Int,list: List<Int>) =
         element>calcSumOfAllPrevious(list,elementIndex)
                 && checkIfSqaure(element,list) && multipleOfAllPrevious(list,elementIndex)
+    //Функция создания триплета значений
     private fun createTriple(element: Int,elementIndex: Int,list: List<Int>) =
         Triple(element,calcSumOfAllPrevious(list,elementIndex),countOfElementsGreaterThanInput(list,element))
+    //Функция создания списка из кортеджей
     fun createListOfCortegesElSumPrevCountGreaterElem(list: List<Int>) = list.withIndex().filter {checkComplexCond(it.value,it.index,list)}.map {
         it->createTriple(it.value,it.index,list)}
 
