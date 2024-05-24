@@ -2,8 +2,14 @@ import java.time.LocalDate
 import java.util.Date
 
 class VehiclePassport(val series:Int, val number:Int, val issueDate: LocalDate):Comparable<VehiclePassport> {
+
+    init {
+        require(seriesRegex.matches(this.series.toString())) { "Invalid series: ${this.series}" }
+        require(numberRegex.matches(this.number.toString())) { "Invalid number: ${this.number}" }
+    }
+
     override fun toString(): String {
-        return "Серия:$series,Номер:$number,Дата выдачи:$issueDate"
+        return "Серия:TK $series,Номер:$number,Дата выдачи:$issueDate"
     }
 
     override fun compareTo(other: VehiclePassport): Int {
@@ -20,6 +26,10 @@ class VehiclePassport(val series:Int, val number:Int, val issueDate: LocalDate):
 
 
     companion object{
+
+        private val seriesRegex =   "^\\d{2}$".toRegex()
+        private val numberRegex =   "^\\d{6}$".toRegex()
+
         fun compareBySeries(p1:VehiclePassport,p2:VehiclePassport):Int = p1.series.compareTo(p2.series)
         fun compareByNumber(p1:VehiclePassport,p2:VehiclePassport):Int = p1.number.compareTo(p2.number)
 
