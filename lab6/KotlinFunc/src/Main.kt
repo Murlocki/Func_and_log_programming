@@ -22,6 +22,7 @@ fun main() {
 //    ar.printArray(array)
 
     val passport = VehiclePassport(1234,233, LocalDate.now())
-    println(passport)
+    val passport2 = VehiclePassport(123,233, LocalDate.now())
+    println(VehiclePassport.compareByNumber(passport,passport2))
 
 }
