@@ -119,6 +119,7 @@ class ListFunctions {
 
     //Функция обработки для составления пары
     private  fun processOnePair(N: Int,currentX: Int,resultList: MutableList<Pair<Double, Double>>): MutableList<Pair<Double, Double>> {
+
         if(checkIfDivider(N,currentX)){
             val currentNod = findNod(N/currentX,currentX)
             val pairToAdd = formPairABToAdd(N,currentX,currentNod)

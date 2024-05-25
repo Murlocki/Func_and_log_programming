@@ -7,6 +7,7 @@ class ArrayDocument(val documents:Array<VehiclePassport>): DocumentCollection<Ve
         return searchArray(doc,documents.size)
     }
 
+
     private fun checkOutOfBounds(currentIndex: Int,maxIndex: Int) = currentIndex>maxIndex
 
     private tailrec fun searchArray(doc: VehiclePassport, maxIndex:Int, currentIndex:Int = 0):VehiclePassport? =
@@ -15,4 +16,5 @@ class ArrayDocument(val documents:Array<VehiclePassport>): DocumentCollection<Ve
             (documents[currentIndex] == doc)->doc;
             else->searchArray(doc, maxIndex, currentIndex + 1)
         }
+
     }
