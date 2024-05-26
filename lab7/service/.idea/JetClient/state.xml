@@ -8,7 +8,7 @@
             <requestState>
               <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
               <option name="method" value="GET" />
-              <option name="name" value="Draft" />
+              <option name="name" value="Get authors" />
               <option name="sortWeight" value="1000000" />
               <option name="url" value=" http://127.0.0.1:8080/authors" />
             </requestState>
@@ -18,6 +18,76 @@
               <option name="name" value="getClients" />
               <option name="sortWeight" value="2000000" />
               <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres" />
+            </requestState>
+            <requestState>
+              <option name="id" value="bec0e6f9-c600-45d8-b9b0-035443ff5b23" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get item types" />
+              <option name="sortWeight" value="4000000" />
+              <option name="url" value="http://127.0.0.1:8080/itemTypes" />
+            </requestState>
+            <requestState>
+              <option name="id" value="1b620f2c-3e55-402b-8c9c-ed825652a7d7" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get item in library" />
+              <option name="sortWeight" value="5000000" />
+              <option name="url" value="http://127.0.0.1:8080/itemsInLibrary" />
+            </requestState>
+            <requestState>
+              <option name="id" value="ce83f20e-75c3-4761-b167-02ccce437ddd" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get record items" />
+              <option name="sortWeight" value="6000000" />
+              <option name="url" value="http://127.0.0.1:8080/recordItems" />
+            </requestState>
+            <requestState>
+              <option name="id" value="3b59bf94-43e1-4c39-9f9a-57cf5d279382" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update authors" />
+              <option name="sortWeight" value="7000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateAuthors" />
+            </requestState>
+            <requestState>
+              <option name="id" value="dde502c9-b46b-42fd-8b80-38080ad3abfd" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update clients" />
+              <option name="sortWeight" value="8000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateClients" />
+            </requestState>
+            <requestState>
+              <option name="id" value="59164a30-8851-4a15-8b12-8af9157049f7" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update genres" />
+              <option name="sortWeight" value="9000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateGenres" />
+            </requestState>
+            <requestState>
+              <option name="id" value="ddb273d2-d02f-4a7d-8813-81ab56afa419" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update item types" />
+              <option name="sortWeight" value="10000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateItemTypes" />
+            </requestState>
+            <requestState>
+              <option name="id" value="4d2cf425-75d1-497c-bde9-c81c54e1621f" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update items in library" />
+              <option name="sortWeight" value="11000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateItemsInLibrary" />
+            </requestState>
+            <requestState>
+              <option name="id" value="9fdc6339-a441-4ece-8e5e-235d94f8ff12" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update records" />
+              <option name="sortWeight" value="12000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateRecordItems" />
             </requestState>
           </list>
         </option>

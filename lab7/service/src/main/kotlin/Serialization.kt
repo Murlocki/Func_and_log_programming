@@ -9,48 +9,48 @@ class Serialization {
 
     companion object {
         //Сериализация itemType
-        fun serializeItemTypes(list: List<ItemType>) = serializeData(list,
+        fun serializeItemTypes(list: List<ItemType>) = serializeData(list.toSet().toList(),
             ListSerializer(ItemType.serializer()),"src\\main\\resources\\itemTypes.json")
 
-        fun deserializeItemTypes(): List<ItemType> = deserializeData("src\\main\\resources\\itemTypes.json",ListSerializer(ItemType.serializer()))
+        fun deserializeItemTypes(): MutableList<ItemType> = deserializeData("src\\main\\resources\\itemTypes.json",ListSerializer(ItemType.serializer())).toMutableList()
 
         //Сериализация жанров
-        fun serializeGenres(list: List<Genre>) = serializeData(list,
+        fun serializeGenres(list: List<Genre>) = serializeData(list.toSet().toList(),
             ListSerializer(Genre.serializer()),"src\\main\\resources\\genres.json")
 
-        fun deserializeGenres(): List<Genre> = deserializeData("src\\main\\resources\\genres.json",ListSerializer(Genre.serializer()))
+        fun deserializeGenres(): MutableList<Genre> = deserializeData("src\\main\\resources\\genres.json",ListSerializer(Genre.serializer())).toMutableList()
 
         //Сериализация содержимого библиотеки
-        fun serializeItemInLibrary(list: List<ItemInLibrary>) = serializeData(list,
+        fun serializeItemInLibrary(list: List<ItemInLibrary>) = serializeData(list.toSet().toList(),
             ListSerializer(ItemInLibrary.serializer()),"src\\main\\resources\\itemInLibrary.json")
 
-        fun deserializeItemInLibrary(): List<ItemInLibrary> = deserializeData(
+        fun deserializeItemInLibrary(): MutableList<ItemInLibrary> = deserializeData(
             "src\\main\\resources\\itemInLibrary.json",
-            ListSerializer(ItemInLibrary.serializer()))
+            ListSerializer(ItemInLibrary.serializer())).toMutableList()
 
         //Сериализация Клиентов
-        fun serializeClients(list: List<Client>) = serializeData(list,
+        fun serializeClients(list: List<Client>) = serializeData(list.toSet().toList(),
             ListSerializer(Client.serializer()),"src\\main\\resources\\clients.json")
 
-        fun deserializeClients(): List<Client> = deserializeData(
+        fun deserializeClients(): MutableList<Client> = deserializeData(
             "src\\main\\resources\\clients.json",
-            ListSerializer(Client.serializer()))
+            ListSerializer(Client.serializer())).toMutableList()
 
         //Сериализация авторов
-        fun serializeAuthors(list: List<Author>) = serializeData(list,
+        fun serializeAuthors(list: List<Author>) = serializeData(list.toSet().toList(),
             ListSerializer(Author.serializer()),"src\\main\\resources\\authors.json")
 
-        fun deserializeAuthors(): List<Author> = deserializeData(
+        fun deserializeAuthors(): MutableList<Author> = deserializeData(
             "src\\main\\resources\\authors.json",
-            ListSerializer(Author.serializer()))
+            ListSerializer(Author.serializer())).toMutableList()
 
         //Сериализация записей журналов
-        fun serializeRecords(list: List<RecordItem>) = serializeData(list,
+        fun serializeRecords(list: List<RecordItem>) = serializeData(list.toSet().toList(),
             ListSerializer(RecordItem.serializer()),"src\\main\\resources\\records.json")
 
         fun deserializeRecords(): List<RecordItem> = deserializeData(
             "src\\main\\resources\\records.json",
-            ListSerializer(RecordItem.serializer()))
+            ListSerializer(RecordItem.serializer())).toMutableList()
         private fun <T> serializeData(list: List<T>, serializationStrategy: SerializationStrategy<List<T>>, filename: String) {
             val json = Json { prettyPrint = true }
             val jsonString = json.encodeToString(serializationStrategy,list)
@@ -58,10 +58,10 @@ class Serialization {
         }
 
         //Функция извлечения объектов из Json
-        private fun <T> deserializeData(filename: String,deserialization: KSerializer<List<T>>): List<T> {
+        private fun <T> deserializeData(filename: String,deserialization: KSerializer<List<T>>): MutableList<T> {
             val json = Json { prettyPrint = true }
             val jsonData = File(filename).readText()
-            return json.decodeFromString(deserialization,jsonData)
+            return json.decodeFromString(deserialization,jsonData).toMutableList()
         }
     }
 
