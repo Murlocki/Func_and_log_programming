@@ -1,4 +1,50 @@
 package org.example
 
-class Models {
+import kotlinx.serialization.Serializable
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.util.Date
+
+
+@Serializable
+data class Genre(val id:Int, val name:String)
+
+@Serializable
+data class ItemType(val id:Int, val name:String)
+
+@Serializable
+data class itemInLibrary(val id:Int, val name:String,val itemType: ItemType, val genres:List<Genre>, val authors: List<Author>)
+
+@Serializable
+sealed class Person {
+    abstract val id: Int
+    abstract val name: String
+    abstract val surname: String
+    abstract val patronymic: String?
 }
+
+@Serializable
+data class Client(
+    override val id: Int,
+    val phoneNumber: String,
+    override val name: String,
+    override val surname: String,
+    override val patronymic: String? = null,
+): Person()
+
+@Serializable
+data class Author(
+    override val id: Int,
+    val phoneNumber: String,
+    override val name: String,
+    override val surname: String,
+    override val patronymic: String? = null,
+): Person()
+
+@Serializable
+data class Records(
+    val client: Client,
+    val itemInLibrary: itemInLibrary,
+    val startDate: String,
+    val endDate: String
+)
