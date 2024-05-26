@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1,
+        "client": {
+            "id": 1,
+            "phoneNumber": "+7(953)-877-98-98",
+            "name": "Июуй",
+            "surname": "Хуанг"
+        },
+        "itemInLibrary": {
+            "id": 4,
+            "name": "Брошюра о независимости США",
+            "itemType": {
+                "id": 4,
+                "name": "Брошюра"
+            },
+            "genres": [
+                {
+                    "id": 3,
+                    "name": "Историческая проза"
+                }
+            ],
+            "authors": [
+                {
+                    "id": 1,
+                    "name": "Чан",
+                    "surname": "Хуано"
+                }
+            ]
+        },
+        "startDate": "12.09.2034",
+        "endDate": "13.10.2034"
+    },
+    {
+        "id": 2,
+        "client": {
+            "id": 1,
+            "phoneNumber": "+7(953)-877-98-98",
+            "name": "Июуй",
+            "surname": "Хуанг"
+        },
+        "itemInLibrary": {
+            "id": 5,
+            "name": "Библия",
+            "itemType": {
+                "id": 1,
+                "name": "Книга"
+            },
+            "genres": [
+                {
+                    "id": 5,
+                    "name": "Религия"
+                }
+            ]
+        },
+        "startDate": "12.09.2034",
+        "endDate": "13.11.2044"
+    },
+    {
+        "id": 3,
+        "client": {
+            "id": 3,
+            "phoneNumber": "+7(953)-877-93-98",
+            "name": "Егор",
+            "surname": "Либерти",
+            "patronymic": "Егоревыч"
+        },
+        "itemInLibrary": {
+            "id": 5,
+            "name": "Библия",
+            "itemType": {
+                "id": 1,
+                "name": "Книга"
+            },
+            "genres": [
+                {
+                    "id": 5,
+                    "name": "Религия"
+                }
+            ]
+        },
+        "startDate": "14.12.2034",
+        "endDate": "15.12.2034"
+    },
+    {
+        "id": 4,
+        "client": {
+            "id": 1,
+            "phoneNumber": "+7(953)-877-98-98",
+            "name": "Июуй",
+            "surname": "Хуанг"
+        },
+        "itemInLibrary": {
+            "id": 4,
+            "name": "Брошюра о независимости США",
+            "itemType": {
+                "id": 4,
+                "name": "Брошюра"
+            },
+            "genres": [
+                {
+                    "id": 3,
+                    "name": "Историческая проза"
+                }
+            ],
+            "authors": [
+                {
+                    "id": 1,
+                    "name": "Чан",
+                    "surname": "Хуано"
+                }
+            ]
+        },
+        "startDate": "12.09.2034",
+        "endDate": "13.10.2034"
+    },
+    {
+        "id": 1,
+        "client": {
+            "id": 5,
+            "phoneNumber": "+7(953)-877-91-98",
+            "name": "Иуда",
+            "surname": "Искариот"
+        },
+        "itemInLibrary": {
+            "id": 4,
+            "name": "Брошюра о независимости США",
+            "itemType": {
+                "id": 4,
+                "name": "Брошюра"
+            },
+            "genres": [
+                {
+                    "id": 3,
+                    "name": "Историческая проза"
+                }
+            ],
+            "authors": [
+                {
+                    "id": 1,
+                    "name": "Чан",
+                    "surname": "Хуано"
+                }
+            ]
+        },
+        "startDate": "12.09.2034",
+        "endDate": "13.10.2034"
+    }
+]
