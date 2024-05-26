@@ -784,6 +784,753 @@
           </option>
           <option name="workspaceId" value="drafts" />
         </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745018655" />
+          <option name="id" value="137cb93d-d028-4974-9b53-b30ef4700e3a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="137cb93d-d028-4974-9b53-b30ef4700e3a" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="240" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745043925" />
+          <option name="id" value="d90e8979-a8bd-411f-94ba-89516324c0d3" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="d90e8979-a8bd-411f-94ba-89516324c0d3" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="245" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745093714" />
+          <option name="id" value="d880f31d-eaa4-4b6e-ae8d-b727356ed52b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="d880f31d-eaa4-4b6e-ae8d-b727356ed52b" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="255" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745138908" />
+          <option name="id" value="c94d85ba-196e-4285-9194-f747ded3929a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/mostPopularItem" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c94d85ba-196e-4285-9194-f747ded3929a" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="234" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745179176" />
+          <option name="id" value="e0c0e7ea-05b4-4038-8fe7-e194c01f418a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/mostPopularItem" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="e0c0e7ea-05b4-4038-8fe7-e194c01f418a" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="272" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745508096" />
+          <option name="id" value="d54a5c07-af80-403c-bac8-bdc83361b221" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="d54a5c07-af80-403c-bac8-bdc83361b221" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="448" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745927135" />
+          <option name="id" value="13752727-cf44-41c8-ad68-7e10f965dd22" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ae9261df-1e7c-4872-b496-afa7c578fbf7" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most all clients of item" />
+              <option name="sortWeight" value="14000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-item-clients/7" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="W10=" />
+              <option name="bodyString" value="[]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="2" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="13752727-cf44-41c8-ad68-7e10f965dd22" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[]" />
+              <option name="size" value="2" />
+              <option name="time" value="268" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716745975655" />
+          <option name="id" value="5e41de04-0f2b-4203-b14a-949508c1e467" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ae9261df-1e7c-4872-b496-afa7c578fbf7" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most all clients of item" />
+              <option name="sortWeight" value="14000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-item-clients/4" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="116" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="5e41de04-0f2b-4203-b14a-949508c1e467" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  }&#10;]" />
+              <option name="size" value="116" />
+              <option name="time" value="11" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716746012057" />
+          <option name="id" value="194086de-1a77-45c4-b302-21eaf2af1ae4" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ae9261df-1e7c-4872-b496-afa7c578fbf7" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most all clients of item" />
+              <option name="sortWeight" value="14000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-item-clients/4" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="236" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="194086de-1a77-45c4-b302-21eaf2af1ae4" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="236" />
+              <option name="time" value="302" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716751736650" />
+          <option name="id" value="ff2f57e5-d21a-40c6-b096-aa7d4ec795d5" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-all-client-items/4" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="W10=" />
+              <option name="bodyString" value="[]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="2" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="ff2f57e5-d21a-40c6-b096-aa7d4ec795d5" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[]" />
+              <option name="size" value="2" />
+              <option name="time" value="298" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716751742028" />
+          <option name="id" value="6db5db65-2a51-449e-b9cd-52119b261fed" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-all-client-items/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="W10=" />
+              <option name="bodyString" value="[]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="2" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="6db5db65-2a51-449e-b9cd-52119b261fed" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[]" />
+              <option name="size" value="2" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716751768869" />
+          <option name="id" value="2193bbf5-b7f7-41ce-b6c2-c00396f29fe5" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQkdC40LHQu9C40Y8iLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiAxLAogICAgICAibmFtZSI6ICLQmtC90LjQs9CwIgogICAgfSwKICAgICJnZW5yZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiA1LAogICAgICAgICJuYW1lIjogItCg0LXQu9C40LPQuNGPIgogICAgICB9CiAgICBdCiAgfQpd" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="591" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2193bbf5-b7f7-41ce-b6c2-c00396f29fe5" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="591" />
+              <option name="time" value="15" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716751791966" />
+          <option name="id" value="0bfbecad-928c-4b37-8f52-e8f186b71af9" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-all-client-items/3" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQkdC40LHQu9C40Y8iLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiAxLAogICAgICAibmFtZSI6ICLQmtC90LjQs9CwIgogICAgfSwKICAgICJnZW5yZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiA1LAogICAgICAgICJuYW1lIjogItCg0LXQu9C40LPQuNGPIgogICAgICB9CiAgICBdCiAgfQpd" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="207" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0bfbecad-928c-4b37-8f52-e8f186b71af9" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="207" />
+              <option name="time" value="3" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716751798329" />
+          <option name="id" value="680b0592-9aae-4e73-9a1b-777b0f15210e" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080//get-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQkdC40LHQu9C40Y8iLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiAxLAogICAgICAibmFtZSI6ICLQmtC90LjQs9CwIgogICAgfSwKICAgICJnZW5yZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiA1LAogICAgICAgICJuYW1lIjogItCg0LXQu9C40LPQuNGPIgogICAgICB9CiAgICBdCiAgfQpd" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="591" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="680b0592-9aae-4e73-9a1b-777b0f15210e" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="591" />
+              <option name="time" value="3" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716752500475" />
+          <option name="id" value="2bec106c-a2c3-4723-86a4-dc0df4673659" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="fafcdaf9-0a2d-4943-bae6-2a80dc7083fd" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get most popular genre" />
+              <option name="sortWeight" value="16000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-most-popular-genre" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="74" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2bec106c-a2c3-4723-86a4-dc0df4673659" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  }&#10;]" />
+              <option name="size" value="74" />
+              <option name="time" value="278" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716752507015" />
+          <option name="id" value="2e6347ad-c1d2-45da-9137-54e0f5b55a21" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQkdC40LHQu9C40Y8iLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiAxLAogICAgICAibmFtZSI6ICLQmtC90LjQs9CwIgogICAgfSwKICAgICJnZW5yZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiA1LAogICAgICAgICJuYW1lIjogItCg0LXQu9C40LPQuNGPIgogICAgICB9CiAgICBdCiAgfQpd" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="591" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2e6347ad-c1d2-45da-9137-54e0f5b55a21" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Библия&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 1,&#10;      &quot;name&quot;: &quot;Книга&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 5,&#10;        &quot;name&quot;: &quot;Религия&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="591" />
+              <option name="time" value="14" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716753152696" />
+          <option name="id" value="787cb176-2ebc-4e80-98da-551f41c83554" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="89fa52c6-030b-4e07-bbb6-8f251b5cdc09" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works" />
+              <option name="sortWeight" value="17000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-all-author-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="787cb176-2ebc-4e80-98da-551f41c83554" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="230" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716753329663" />
+          <option name="id" value="c0ff637e-d256-4fa6-88e4-384aba54ba6e" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="89fa52c6-030b-4e07-bbb6-8f251b5cdc09" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works" />
+              <option name="sortWeight" value="17000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-all-author-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c0ff637e-d256-4fa6-88e4-384aba54ba6e" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="318" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
       </list>
     </option>
   </component>

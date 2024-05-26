@@ -22,7 +22,6 @@ fun Application.module(){
     val itemTypes = Serialization.deserializeItemTypes()
     val itemsInLibrary = Serialization.deserializeItemInLibrary()
     val recordItems = Serialization.deserializeRecords()
-
     routing {
         //Запросы для получения текущего содержания коллекции
         get("/authors"){
@@ -71,7 +70,55 @@ fun Application.module(){
             call.respond(HttpStatusCode.Accepted)
         }
 
-        
+        //Осмысленные 5 запросов
+
+        //Самый популярный предмет в библиотеке
+        get("/get-most-popular-item"){
+            call.respond(listOf(itemsInLibrary.maxBy({recordItems.count{ el->el.itemInLibrary==it}})))
+        }
+        //Записи о всех клиентах взявших книгу по Id
+        get("/get-item-clients/{itemId}"){
+            val itemId = call.parameters["itemId"]?.toIntOrNull()
+            val clientsList = itemId?.let { recordItems.filter { it.itemInLibrary.id==itemId }.map{it.client}.distinct()}
+            if(clientsList!=null){
+                call.respond(clientsList)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
+        //Все книги какого-либо из клиентов
+        get("/get-all-client-items/{clientId}"){
+            val clientId = call.parameters["clientId"]?.toIntOrNull()
+            val itemsList = clientId?.let { recordItems.filter { it.client.id==clientId }.map { it.itemInLibrary }.distinct()}
+            if(itemsList!=null){
+                call.respond(itemsList)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
+        //Самый популярный жанр
+        get("/get-most-popular-genre"){
+            if(recordItems.size==0){
+                call.respond(HttpStatusCode.NoContent)
+            }
+            val maxGenre = genres.maxBy { recordItems.count{ el->el.itemInLibrary.genres.contains(it)} }
+            call.respond(listOf(maxGenre))
+        }
+        //Все книги с участием автора
+        get("/get-all-author-items/{authorId}"){
+            val authorId = call.parameters["authorId"]?.toIntOrNull()
+            val itemsList = authorId?.let { itemsInLibrary.filter {
+                it.authors?.any { el -> el.id == authorId } ?: false
+            }}
+            if(itemsList!=null){
+                call.respond(itemsList)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
     }
 }
 

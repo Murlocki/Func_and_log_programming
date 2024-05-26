@@ -141,7 +141,7 @@ internal class SerializeTests {
             "12.09.2034",
             "13.10.2034"
         )
-        val item5 = RecordItem(1,
+        val item5 = RecordItem(5,
             Client(5,"+7(953)-877-91-98","Иуда","Искариот"),
             ItemInLibrary(4,"Брошюра о независимости США",
                 ItemType(4,"Брошюра"),

@@ -89,6 +89,41 @@
               <option name="sortWeight" value="12000000" />
               <option name="url" value="http://127.0.0.1:8080/updateRecordItems" />
             </requestState>
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-most-popular-item" />
+            </requestState>
+            <requestState>
+              <option name="id" value="ae9261df-1e7c-4872-b496-afa7c578fbf7" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all clients of item" />
+              <option name="sortWeight" value="14000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-item-clients/4" />
+            </requestState>
+            <requestState>
+              <option name="id" value="f9d30883-1433-43fd-94dd-c1ea9f23d858" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all items of clients" />
+              <option name="sortWeight" value="15000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-all-client-items/1" />
+            </requestState>
+            <requestState>
+              <option name="id" value="fafcdaf9-0a2d-4943-bae6-2a80dc7083fd" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get most popular genre" />
+              <option name="sortWeight" value="16000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-most-popular-genre" />
+            </requestState>
+            <requestState>
+              <option name="id" value="89fa52c6-030b-4e07-bbb6-8f251b5cdc09" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works" />
+              <option name="sortWeight" value="17000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-all-author-items/1" />
+            </requestState>
           </list>
         </option>
       </draftsState>
