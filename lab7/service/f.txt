@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Вл",
+        "itemType": {
+            "id": 1,
+            "name": "Книга"
+        },
+        "genres": [],
+        "authors": []
+    },
+    {
+        "id": 1,
+        "name": "Вл",
+        "itemType": {
+            "id": 1,
+            "name": "Книга"
+        },
+        "genres": [],
+        "authors": []
+    }
+]
