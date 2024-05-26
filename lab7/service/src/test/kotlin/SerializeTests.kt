@@ -7,68 +7,63 @@ import org.junit.jupiter.api.Test
 internal class SerializeTests {
     @Test
     fun testItemTypeSerDer(){
-        val ser = Serialization()
         val item1 = ItemType(1,"Книга")
         val item2 = ItemType(2,"Журнал")
         val item3 = ItemType(3,"Статья")
         val item4 = ItemType(4,"Брошюра")
         val item5 = ItemType(5,"Комикс")
-        ser.serializeItemTypes(listOf(item1,item2,item3,item4,item5))
+        Serialization.serializeItemTypes(listOf(item1,item2,item3,item4,item5))
 
 
         Assertions.assertEquals("[ItemType(id=1, name=Книга), ItemType(id=2, name=Журнал), ItemType(id=3, name=Статья), ItemType(id=4, name=Брошюра), ItemType(id=5, name=Комикс)]",
-            ser.deserializeItemTypes().toString())
+            Serialization.deserializeItemTypes().toString())
     }
 
     @Test
     fun testGenresSerDer(){
-        val ser = Serialization()
         val genre1 = Genre(1,"Научная фантастика")
         val genre2 = Genre(2,"Фентези")
         val genre3 = Genre(3,"Историческая проза")
         val genre4 = Genre(4,"Супергерои")
         val genre5 = Genre(5,"Религия")
-        ser.serializeGenres(listOf(genre1,genre2,genre3,genre4,genre5))
+        Serialization.serializeGenres(listOf(genre1,genre2,genre3,genre4,genre5))
 
 
         Assertions.assertEquals("[Genre(id=1, name=Научная фантастика), Genre(id=2, name=Фентези), Genre(id=3, name=Историческая проза), Genre(id=4, name=Супергерои), Genre(id=5, name=Религия)]",
-            ser.deserializeGenres().toString())
+            Serialization.deserializeGenres().toString())
     }
 
     @Test
     fun testClientsSerDer(){
-        val ser = Serialization()
         val client1 = Client(1,"+7(953)-877-98-98","Июуй","Хуанг")
         val client2 = Client(2,"+7(953)-877-95-98","Иван","Абрамович","Абрамсович")
         val client3 = Client(3,"+7(953)-877-93-98","Егор","Либерти","Егоревыч")
         val client4 = Client(4,"+7(953)-877-92-98","Чан","Кайши")
         val client5 = Client(5,"+7(953)-877-91-98","Иуда","Искариот")
-        ser.serializeClients(listOf(client1,client2,client3,client4,client5))
+        Serialization.serializeClients(listOf(client1,client2,client3,client4,client5))
 
         Assertions.assertEquals(
             listOf(client1,client2,client3,client4,client5),
-            ser.deserializeClients())
+            Serialization.deserializeClients())
     }
 
     @Test
     fun testAuthorsSerDer(){
-        val ser = Serialization()
         val author1 = Author(1,"Чан","Хуано")
         val author2 = Author(2,"Владимир","Абрамович","Зюганов")
         val author3 = Author(3,"Володимир","Минька","Егоревыч")
         val author4 = Author(4,"Канто","Иш")
         val author5 = Author(5,"Толкиен","Джон Рональд Руэл")
-        ser.serializeAuthors(listOf(author1,author2,author3,author4,author5))
+        Serialization.serializeAuthors(listOf(author1,author2,author3,author4,author5))
 
 
         Assertions.assertEquals(
             listOf(author1,author2,author3,author4,author5),
-            ser.deserializeAuthors())
+            Serialization.deserializeAuthors())
     }
 
     @Test
     fun testItemsInLibrarySerDer(){
-        val ser = Serialization()
         val item1 = ItemInLibrary(1,"Властелин Колец", ItemType(1,"Книга"), listOf(Genre(2,"Фентези")), listOf(Author(5,"Толкиен","Джон Рональд Руэл")))
         val item2 = ItemInLibrary(2,"Марск и Маркс",ItemType(1,"Книга"),listOf(Genre(3,"Историческая проза")),listOf(Author(2,"Владимир","Абрамович","Зюганов")) )
         val item3 = ItemInLibrary(3,"Китайские мифы",
@@ -92,15 +87,14 @@ internal class SerializeTests {
                 Genre(5,"Религия")
             ),
         )
-        ser.serializeItemInLibrary(listOf(item1,item2,item3,item4,item5))
+        Serialization.serializeItemInLibrary(listOf(item1,item2,item3,item4,item5))
         Assertions.assertEquals(
             listOf(item1,item2,item3,item4,item5),
-            ser.deserializeItemInLibrary())
+            Serialization.deserializeItemInLibrary())
     }
 
     @Test
     fun testRecordItemSerDer(){
-        val ser = Serialization()
         val item1 = RecordItem(1,
             Client(1,"+7(953)-877-98-98","Июуй","Хуанг"),
             ItemInLibrary(4,"Брошюра о независимости США",
@@ -159,9 +153,9 @@ internal class SerializeTests {
             "12.09.2034",
             "13.10.2034"
         )
-        ser.serializeRecords(listOf(item1,item2,item3,item4,item5))
+        Serialization.serializeRecords(listOf(item1,item2,item3,item4,item5))
         Assertions.assertEquals(
             listOf(item1,item2,item3,item4,item5),
-            ser.deserializeRecords())
+            Serialization.deserializeRecords())
     }
 }

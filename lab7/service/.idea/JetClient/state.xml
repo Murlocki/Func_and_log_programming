@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="id" value="7d759245-8351-4cd0-9c64-d56ccea7c9df" />
+    <option name="version" value="2" />
+  </component>
+</project>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="History">
+    <option name="requestHistoryStates">
+      <list>
+        <requestHistoryState>
+          <option name="dateTime" value="1716742113118" />
+          <option name="id" value="c9c8ff8e-43fd-4c08-b47a-e3ad15c5c0d9" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0KXQ==" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="496" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c9c8ff8e-43fd-4c08-b47a-e3ad15c5c0d9" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
+              <option name="size" value="496" />
+              <option name="time" value="285" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716742171631" />
+          <option name="id" value="62f402fe-83e5-40bc-ad2d-1e6db2c4d027" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0KXQ==" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="496" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="62f402fe-83e5-40bc-ad2d-1e6db2c4d027" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
+              <option name="size" value="496" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716742276387" />
+          <option name="id" value="01964a54-bfed-444b-8125-a53f1adac4ca" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="01964a54-bfed-444b-8125-a53f1adac4ca" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="8" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716742302653" />
+          <option name="id" value="18e3ba4d-4080-4bc0-a8de-9f2302bb43b3" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTUtOTgiLAogICAgIm5hbWUiOiAi0JjQstCw0L0iLAogICAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAgICJwYXRyb255bWljIjogItCQ0LHRgNCw0LzRgdC+0LLQuNGHIgogIH0sCiAgewogICAgImlkIjogMywKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05My05OCIsCiAgICAibmFtZSI6ICLQldCz0L7RgCIsCiAgICAic3VybmFtZSI6ICLQm9C40LHQtdGA0YLQuCIsCiAgICAicGF0cm9ueW1pYyI6ICLQldCz0L7RgNC10LLRi9GHIgogIH0sCiAgewogICAgImlkIjogNCwKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05Mi05OCIsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0JrQsNC50YjQuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="668" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="18e3ba4d-4080-4bc0-a8de-9f2302bb43b3" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="668" />
+              <option name="time" value="294" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+      </list>
+    </option>
+  </component>
+</project>

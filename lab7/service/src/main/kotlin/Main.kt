@@ -10,7 +10,7 @@ data class Data(val a: Int, val b: String)
 
 
 fun main() {
-
+    startServer()
 //    val i = ItemInLibrary(1,"Вл", listOf<Genre>(), listOf<Author>())
 
 //    val json = Json.encodeToString(ItemInLibrary.serializer(),i)
