@@ -124,6 +124,41 @@
               <option name="sortWeight" value="17000000" />
               <option name="url" value="http://127.0.0.1:8080/get-all-author-items/1" />
             </requestState>
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular item" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+            <requestState>
+              <option name="id" value="d87e1b56-7422-429d-9a4e-303756a6031d" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all client items" />
+              <option name="sortWeight" value="19000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-client-items/1" />
+            </requestState>
+            <requestState>
+              <option name="id" value="eb24ef5a-9e2d-43c3-acac-7cccadbc892c" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all item clients" />
+              <option name="sortWeight" value="20000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-item-clients/1" />
+            </requestState>
+            <requestState>
+              <option name="id" value="22aee33c-8e9a-4c3b-804a-ac45eb28ea83" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular genre" />
+              <option name="sortWeight" value="21000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-genre" />
+            </requestState>
+            <requestState>
+              <option name="id" value="67c437f0-4e37-4580-84fe-f00a5e96efd5" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all author works" />
+              <option name="sortWeight" value="22000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-author-items/1" />
+            </requestState>
           </list>
         </option>
       </draftsState>

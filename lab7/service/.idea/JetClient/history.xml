@@ -1531,6 +1531,917 @@
           </option>
           <option name="workspaceId" value="drafts" />
         </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716755872195" />
+          <option name="id" value="492594fe-fb5d-4bbc-bdc6-05fab7e3c1ae" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="492594fe-fb5d-4bbc-bdc6-05fab7e3c1ae" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="18" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716757137046" />
+          <option name="id" value="40809dc5-d3c8-4d2e-83f9-129145ca27bd" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="405" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="40809dc5-d3c8-4d2e-83f9-129145ca27bd" />
+              <option name="message" value="Method Not Allowed" />
+              <option name="time" value="267" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716757369078" />
+          <option name="id" value="3591446a-7683-484b-8c79-d2e34e8d47f1" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="405" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="3591446a-7683-484b-8c79-d2e34e8d47f1" />
+              <option name="message" value="Method Not Allowed" />
+              <option name="time" value="305" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716757372203" />
+          <option name="id" value="adfd27fa-419d-4c34-8788-5dd9ecc6ead0" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="405" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="adfd27fa-419d-4c34-8788-5dd9ecc6ead0" />
+              <option name="message" value="Method Not Allowed" />
+              <option name="time" value="6" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716757744462" />
+          <option name="id" value="ee0308b4-171d-4b08-80f0-a9def10d5b44" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="405" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="ee0308b4-171d-4b08-80f0-a9def10d5b44" />
+              <option name="message" value="Method Not Allowed" />
+              <option name="time" value="255" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758116975" />
+          <option name="id" value="0b9f093f-7a7a-4cdf-9d7b-ed390c41820a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="00a28a3c-5446-4dfb-b07a-99703c51ed1f" />
+              <option name="method" value="GET" />
+              <option name="name" value="Most popular item in library" />
+              <option name="sortWeight" value="13000000" />
+              <option name="url" value="http://127.0.0.1:8080/get-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0b9f093f-7a7a-4cdf-9d7b-ed390c41820a" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="429" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758124337" />
+          <option name="id" value="826f8208-8851-47f3-9fb9-9a360789f09a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="826f8208-8851-47f3-9fb9-9a360789f09a" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="899" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758137999" />
+          <option name="id" value="849d86a7-c592-474c-a876-cc79f0dbb36f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="849d86a7-c592-474c-a876-cc79f0dbb36f" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="35" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758171896" />
+          <option name="id" value="16a41c24-b874-4485-9e60-8e86ac777d92" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="16a41c24-b874-4485-9e60-8e86ac777d92" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="952" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758179731" />
+          <option name="id" value="1dc32d53-da05-4490-a8d9-9683a46da486" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="1dc32d53-da05-4490-a8d9-9683a46da486" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="31" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758202371" />
+          <option name="id" value="601ee790-a035-423a-a98a-084e26842639" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Get all authours works 1" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="601ee790-a035-423a-a98a-084e26842639" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="31" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758752314" />
+          <option name="id" value="ca503f36-0065-465f-9624-85864f3dcd6f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="d87e1b56-7422-429d-9a4e-303756a6031d" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all client items" />
+              <option name="sortWeight" value="19000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="ca503f36-0065-465f-9624-85864f3dcd6f" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="1123" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758786865" />
+          <option name="id" value="776a543e-6a3a-4a62-8345-7b224d04e10b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular item" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="776a543e-6a3a-4a62-8345-7b224d04e10b" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="33" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758835473" />
+          <option name="id" value="14ac1859-b768-40c7-8372-a92c28687576" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular item" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="14ac1859-b768-40c7-8372-a92c28687576" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="37" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716758842420" />
+          <option name="id" value="40c2aca2-fdb2-4afa-b814-b23cf55f5600" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="d87e1b56-7422-429d-9a4e-303756a6031d" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all client items" />
+              <option name="sortWeight" value="19000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="40c2aca2-fdb2-4afa-b814-b23cf55f5600" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="30" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716759270391" />
+          <option name="id" value="152d785e-96a1-4525-b0b7-1d8121a4546b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="eb24ef5a-9e2d-43c3-acac-7cccadbc892c" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all item clients" />
+              <option name="sortWeight" value="20000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-item-clients/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="152d785e-96a1-4525-b0b7-1d8121a4546b" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="1076" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716759341160" />
+          <option name="id" value="3b219f49-e9fa-46ec-b987-1e1fe3b9488f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="eb24ef5a-9e2d-43c3-acac-7cccadbc892c" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all item clients" />
+              <option name="sortWeight" value="20000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-item-clients/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="3b219f49-e9fa-46ec-b987-1e1fe3b9488f" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="31" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760568064" />
+          <option name="id" value="8637ee21-873d-4437-9cb7-c42e8db7896f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="67c437f0-4e37-4580-84fe-f00a5e96efd5" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all author works" />
+              <option name="sortWeight" value="22000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-author-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCDQviDQvdC10LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQodCo0JAiLAogICAgIml0ZW1UeXBlIjogewogICAgICAiaWQiOiA0LAogICAgICAibmFtZSI6ICLQkdGA0L7RiNGO0YDQsCIKICAgIH0sCiAgICAiZ2VucmVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMywKICAgICAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICAgICAgfQogICAgXSwKICAgICJhdXRob3JzIjogWwogICAgICB7CiAgICAgICAgImlkIjogMSwKICAgICAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgICAgICJzdXJuYW1lIjogItCl0YPQsNC90L4iCiAgICAgIH0KICAgIF0KICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="386" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8637ee21-873d-4437-9cb7-c42e8db7896f" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Брошюра о независимости США&quot;,&#10;    &quot;itemType&quot;: {&#10;      &quot;id&quot;: 4,&#10;      &quot;name&quot;: &quot;Брошюра&quot;&#10;    },&#10;    &quot;genres&quot;: [&#10;      {&#10;        &quot;id&quot;: 3,&#10;        &quot;name&quot;: &quot;Историческая проза&quot;&#10;      }&#10;    ],&#10;    &quot;authors&quot;: [&#10;      {&#10;        &quot;id&quot;: 1,&#10;        &quot;name&quot;: &quot;Чан&quot;,&#10;        &quot;surname&quot;: &quot;Хуано&quot;&#10;      }&#10;    ]&#10;  }&#10;]" />
+              <option name="size" value="386" />
+              <option name="time" value="1072" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760612287" />
+          <option name="id" value="63a44bad-00fe-46ee-b1da-d2ddfd904649" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="67c437f0-4e37-4580-84fe-f00a5e96efd5" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all author works" />
+              <option name="sortWeight" value="22000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-author-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="63a44bad-00fe-46ee-b1da-d2ddfd904649" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="1735" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760645994" />
+          <option name="id" value="c337670e-a151-44ff-af5e-856a83f13206" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="0969089b-adc7-45fc-b3c6-185565128667" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular item" />
+              <option name="sortWeight" value="18000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-item" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c337670e-a151-44ff-af5e-856a83f13206" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="31" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760648867" />
+          <option name="id" value="40a38b1d-afac-4351-8dea-846d25a3d7b9" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="d87e1b56-7422-429d-9a4e-303756a6031d" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all client items" />
+              <option name="sortWeight" value="19000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-client-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="40a38b1d-afac-4351-8dea-846d25a3d7b9" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="31" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760651342" />
+          <option name="id" value="54cd2ab6-4a9f-4f45-b656-785f11e86e70" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="eb24ef5a-9e2d-43c3-acac-7cccadbc892c" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all item clients" />
+              <option name="sortWeight" value="20000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-item-clients/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="54cd2ab6-4a9f-4f45-b656-785f11e86e70" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="27" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760654023" />
+          <option name="id" value="e30f0074-468c-4a02-9f63-8074d6222b0b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="22aee33c-8e9a-4c3b-804a-ac45eb28ea83" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel the most popular genre" />
+              <option name="sortWeight" value="21000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-most-popular-genre" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="e30f0074-468c-4a02-9f63-8074d6222b0b" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="27" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760655971" />
+          <option name="id" value="9ab24ab8-71b4-4aa8-8d07-501b90ad190b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="67c437f0-4e37-4580-84fe-f00a5e96efd5" />
+              <option name="method" value="POST" />
+              <option name="name" value="Post to excel all author works" />
+              <option name="sortWeight" value="22000000" />
+              <option name="url" value="http://127.0.0.1:8080/save-all-author-items/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="9ab24ab8-71b4-4aa8-8d07-501b90ad190b" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="26" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716760812883" />
+          <option name="id" value="71552c11-1309-48ce-aaa6-6ff31dbd8ea2" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTUtOTgiLAogICAgIm5hbWUiOiAi0JjQstCw0L0iLAogICAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAgICJwYXRyb255bWljIjogItCQ0LHRgNCw0LzRgdC+0LLQuNGHIgogIH0sCiAgewogICAgImlkIjogMywKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05My05OCIsCiAgICAibmFtZSI6ICLQldCz0L7RgCIsCiAgICAic3VybmFtZSI6ICLQm9C40LHQtdGA0YLQuCIsCiAgICAicGF0cm9ueW1pYyI6ICLQldCz0L7RgNC10LLRi9GHIgogIH0sCiAgewogICAgImlkIjogNCwKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05Mi05OCIsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0JrQsNC50YjQuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="668" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="71552c11-1309-48ce-aaa6-6ff31dbd8ea2" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="668" />
+              <option name="time" value="376" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
       </list>
     </option>
   </component>

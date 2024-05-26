@@ -8,6 +8,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.contentnegotiation.*
 
+
 //Вызываем специальную функцию для конфигурации приложения
 fun Application.module(){
     install(ContentNegotiation) {
@@ -73,13 +74,19 @@ fun Application.module(){
         //Осмысленные 5 запросов
 
         //Самый популярный предмет в библиотеке
+
+        fun getMostPopularItem() = itemsInLibrary.maxBy({recordItems.count{ el->el.itemInLibrary==it}})
+
         get("/get-most-popular-item"){
-            call.respond(listOf(itemsInLibrary.maxBy({recordItems.count{ el->el.itemInLibrary==it}})))
+            call.respond(listOf(getMostPopularItem()))
         }
         //Записи о всех клиентах взявших книгу по Id
+
+        fun getAllClientsOfItem(itemId:Int) = recordItems.filter { it.itemInLibrary.id==itemId }.map{it.client}.distinct()
+
         get("/get-item-clients/{itemId}"){
             val itemId = call.parameters["itemId"]?.toIntOrNull()
-            val clientsList = itemId?.let { recordItems.filter { it.itemInLibrary.id==itemId }.map{it.client}.distinct()}
+            val clientsList = itemId?.let { getAllClientsOfItem(itemId) }
             if(clientsList!=null){
                 call.respond(clientsList)
             }
@@ -88,9 +95,11 @@ fun Application.module(){
             }
         }
         //Все книги какого-либо из клиентов
+        fun getAllClientItem(clientId:Int) = recordItems.filter { it.client.id==clientId }.map { it.itemInLibrary }.distinct()
+
         get("/get-all-client-items/{clientId}"){
             val clientId = call.parameters["clientId"]?.toIntOrNull()
-            val itemsList = clientId?.let { recordItems.filter { it.client.id==clientId }.map { it.itemInLibrary }.distinct()}
+            val itemsList = clientId?.let { getAllClientItem(clientId)}
             if(itemsList!=null){
                 call.respond(itemsList)
             }
@@ -99,21 +108,86 @@ fun Application.module(){
             }
         }
         //Самый популярный жанр
+
+        fun getMostPopularGenre() = genres.maxBy { recordItems.count{ el->el.itemInLibrary.genres.contains(it)} }
+
         get("/get-most-popular-genre"){
             if(recordItems.size==0){
                 call.respond(HttpStatusCode.NoContent)
             }
-            val maxGenre = genres.maxBy { recordItems.count{ el->el.itemInLibrary.genres.contains(it)} }
+            val maxGenre = getMostPopularGenre()
             call.respond(listOf(maxGenre))
         }
         //Все книги с участием автора
+        fun getAllAuthorsBooks(authorId:Int) = itemsInLibrary.filter {
+            it.authors?.any {
+                el -> el.id == authorId
+            } ?:
+            false
+        }
+
         get("/get-all-author-items/{authorId}"){
             val authorId = call.parameters["authorId"]?.toIntOrNull()
-            val itemsList = authorId?.let { itemsInLibrary.filter {
-                it.authors?.any { el -> el.id == authorId } ?: false
-            }}
+            val itemsList = authorId?.let { it1 -> getAllAuthorsBooks(it1) }
             if(itemsList!=null){
                 call.respond(itemsList)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
+
+
+        //Api для вывода в excel
+        //Сохранение самого популярного объекта
+        post("/save-most-popular-item"){
+            val mostPopularItem = listOf(getMostPopularItem())
+            ExcelReport.generateReportItems(mostPopularItem,"src\\main\\resources\\ExcelReports\\mostPopulartItem.xlsx")
+            call.respond(HttpStatusCode.Accepted)
+        }
+        //Сохранение объектов 1 клиента
+        post("/save-all-client-items/{clientId}"){
+            val clientId = call.parameters["clientId"]?.toIntOrNull()
+            val itemsList = clientId?.let { it1 -> getAllClientItem(it1) }
+            if(itemsList!=null){
+                ExcelReport.generateReportItems(itemsList,"src\\main\\resources\\ExcelReports\\allClientItems.xlsx")
+                call.respond(HttpStatusCode.Accepted)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
+
+        //Сохранение клиентов 1 объекта
+        post("/save-all-item-clients/{itemId}"){
+            val itemId = call.parameters["itemId"]?.toIntOrNull()
+            val itemsList = itemId?.let { getAllClientsOfItem(itemId) }
+            if(itemsList!=null){
+                ExcelReport.generateReportClient(itemsList,"src\\main\\resources\\ExcelReports\\allItemClients.xlsx")
+                call.respond(HttpStatusCode.Accepted)
+            }
+            else{
+                call.respond(HttpStatusCode.NoContent)
+            }
+        }
+
+        //Самый популярный жанр
+        post("/save-most-popular-genre"){
+            if(recordItems.size==0){
+                call.respond(HttpStatusCode.NoContent)
+            }
+            val maxGenre = getMostPopularGenre()
+            ExcelReport.generateReportGenre(listOf(getMostPopularGenre()),"src\\main\\resources\\ExcelReports\\mostPopulartGenre.xlsx")
+            call.respond(HttpStatusCode.Accepted)
+        }
+
+        //Все работы автора
+        post("/save-all-author-items/{authorId}"){
+            val authorId = call.parameters["authorId"]?.toIntOrNull()
+            val itemsList = authorId?.let { it1 -> getAllAuthorsBooks(it1) }
+            if(itemsList!=null){
+                ExcelReport.generateReportItems(itemsList,"src\\main\\resources\\ExcelReports\\allAuthorItems.xlsx")
+                call.respond(HttpStatusCode.Accepted)
             }
             else{
                 call.respond(HttpStatusCode.NoContent)
