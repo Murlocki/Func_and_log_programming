@@ -142,7 +142,7 @@ fun Application.module(){
         //Сохранение самого популярного объекта
         post("/save-most-popular-item"){
             val mostPopularItem = listOf(getMostPopularItem())
-            ExcelReport.generateReportItems(mostPopularItem,"src\\main\\resources\\ExcelReports\\mostPopulartItem.xlsx")
+            ExcelReport.generateReportItems(mostPopularItem,"src/main/resources/ExcelReports/mostPopulartItem.xlsx")
             call.respond(HttpStatusCode.Accepted)
         }
         //Сохранение объектов 1 клиента
@@ -150,7 +150,7 @@ fun Application.module(){
             val clientId = call.parameters["clientId"]?.toIntOrNull()
             val itemsList = clientId?.let { it1 -> getAllClientItem(it1) }
             if(itemsList!=null){
-                ExcelReport.generateReportItems(itemsList,"src\\main\\resources\\ExcelReports\\allClientItems.xlsx")
+                ExcelReport.generateReportItems(itemsList,"src/main/resources/ExcelReports/allClientItems.xlsx")
                 call.respond(HttpStatusCode.Accepted)
             }
             else{
@@ -163,7 +163,7 @@ fun Application.module(){
             val itemId = call.parameters["itemId"]?.toIntOrNull()
             val itemsList = itemId?.let { getAllClientsOfItem(itemId) }
             if(itemsList!=null){
-                ExcelReport.generateReportClient(itemsList,"src\\main\\resources\\ExcelReports\\allItemClients.xlsx")
+                ExcelReport.generateReportClient(itemsList,"src/main/resources/ExcelReports/allItemClients.xlsx")
                 call.respond(HttpStatusCode.Accepted)
             }
             else{
@@ -177,7 +177,7 @@ fun Application.module(){
                 call.respond(HttpStatusCode.NoContent)
             }
             val maxGenre = getMostPopularGenre()
-            ExcelReport.generateReportGenre(listOf(getMostPopularGenre()),"src\\main\\resources\\ExcelReports\\mostPopulartGenre.xlsx")
+            ExcelReport.generateReportGenre(listOf(getMostPopularGenre()),"src/main/resources/ExcelReports/mostPopulartGenre.xlsx")
             call.respond(HttpStatusCode.Accepted)
         }
 
@@ -186,7 +186,7 @@ fun Application.module(){
             val authorId = call.parameters["authorId"]?.toIntOrNull()
             val itemsList = authorId?.let { it1 -> getAllAuthorsBooks(it1) }
             if(itemsList!=null){
-                ExcelReport.generateReportItems(itemsList,"src\\main\\resources\\ExcelReports\\allAuthorItems.xlsx")
+                ExcelReport.generateReportItems(itemsList,"src/main/resources/ExcelReports/allAuthorItems.xlsx")
                 call.respond(HttpStatusCode.Accepted)
             }
             else{
