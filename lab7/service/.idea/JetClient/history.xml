@@ -4,94 +4,6 @@
     <option name="requestHistoryStates">
       <list>
         <requestHistoryState>
-          <option name="dateTime" value="1716742113118" />
-          <option name="id" value="c9c8ff8e-43fd-4c08-b47a-e3ad15c5c0d9" />
-          <option name="request">
-            <requestState>
-              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
-              <option name="method" value="GET" />
-              <option name="name" value="Draft" />
-              <option name="sortWeight" value="1000000" />
-              <option name="url" value=" http://127.0.0.1:8080/authors" />
-            </requestState>
-          </option>
-          <option name="response">
-            <responseState>
-              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0KXQ==" />
-              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
-              <option name="code" value="200" />
-              <option name="contentType" value="application/json" />
-              <option name="headers">
-                <list>
-                  <headerState>
-                    <option name="key" value="Content-Length" />
-                    <option name="value" value="496" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Content-Type" />
-                    <option name="value" value="application/json" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Connection" />
-                    <option name="value" value="keep-alive" />
-                  </headerState>
-                </list>
-              </option>
-              <option name="id" value="c9c8ff8e-43fd-4c08-b47a-e3ad15c5c0d9" />
-              <option name="message" value="OK" />
-              <option name="prettyResponseType" value="JSON" />
-              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
-              <option name="size" value="496" />
-              <option name="time" value="285" />
-            </responseState>
-          </option>
-          <option name="workspaceId" value="drafts" />
-        </requestHistoryState>
-        <requestHistoryState>
-          <option name="dateTime" value="1716742171631" />
-          <option name="id" value="62f402fe-83e5-40bc-ad2d-1e6db2c4d027" />
-          <option name="request">
-            <requestState>
-              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
-              <option name="method" value="GET" />
-              <option name="name" value="Draft" />
-              <option name="sortWeight" value="1000000" />
-              <option name="url" value=" http://127.0.0.1:8080/authors" />
-            </requestState>
-          </option>
-          <option name="response">
-            <responseState>
-              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0KXQ==" />
-              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
-              <option name="code" value="200" />
-              <option name="contentType" value="application/json" />
-              <option name="headers">
-                <list>
-                  <headerState>
-                    <option name="key" value="Content-Length" />
-                    <option name="value" value="496" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Content-Type" />
-                    <option name="value" value="application/json" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Connection" />
-                    <option name="value" value="keep-alive" />
-                  </headerState>
-                </list>
-              </option>
-              <option name="id" value="62f402fe-83e5-40bc-ad2d-1e6db2c4d027" />
-              <option name="message" value="OK" />
-              <option name="prettyResponseType" value="JSON" />
-              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  }&#10;]" />
-              <option name="size" value="496" />
-              <option name="time" value="4" />
-            </responseState>
-          </option>
-          <option name="workspaceId" value="drafts" />
-        </requestHistoryState>
-        <requestHistoryState>
           <option name="dateTime" value="1716742276387" />
           <option name="id" value="01964a54-bfed-444b-8125-a53f1adac4ca" />
           <option name="request">
@@ -382,50 +294,6 @@
           <option name="workspaceId" value="drafts" />
         </requestHistoryState>
         <requestHistoryState>
-          <option name="dateTime" value="1716743725184" />
-          <option name="id" value="88cf6ae3-7ce2-4b87-82ca-4fa640073389" />
-          <option name="request">
-            <requestState>
-              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
-              <option name="method" value="GET" />
-              <option name="name" value="Get authors" />
-              <option name="sortWeight" value="1000000" />
-              <option name="url" value=" http://127.0.0.1:8080/authors" />
-            </requestState>
-          </option>
-          <option name="response">
-            <responseState>
-              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0sCiAgewogICAgImlkIjogMSwKICAgICJuYW1lIjogImFhYWEiLAogICAgInN1cm5hbWUiOiAiYmJiYiIKICB9Cl0=" />
-              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
-              <option name="code" value="200" />
-              <option name="contentType" value="application/json" />
-              <option name="headers">
-                <list>
-                  <headerState>
-                    <option name="key" value="Content-Length" />
-                    <option name="value" value="560" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Content-Type" />
-                    <option name="value" value="application/json" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Connection" />
-                    <option name="value" value="keep-alive" />
-                  </headerState>
-                </list>
-              </option>
-              <option name="id" value="88cf6ae3-7ce2-4b87-82ca-4fa640073389" />
-              <option name="message" value="OK" />
-              <option name="prettyResponseType" value="JSON" />
-              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
-              <option name="size" value="560" />
-              <option name="time" value="315" />
-            </responseState>
-          </option>
-          <option name="workspaceId" value="drafts" />
-        </requestHistoryState>
-        <requestHistoryState>
           <option name="dateTime" value="1716743733330" />
           <option name="id" value="0cbb1ef8-a6ac-41db-9f1c-1dd80cb8bcac" />
           <option name="request">
@@ -456,50 +324,6 @@
               <option name="id" value="0cbb1ef8-a6ac-41db-9f1c-1dd80cb8bcac" />
               <option name="message" value="Accepted" />
               <option name="time" value="28" />
-            </responseState>
-          </option>
-          <option name="workspaceId" value="drafts" />
-        </requestHistoryState>
-        <requestHistoryState>
-          <option name="dateTime" value="1716743741425" />
-          <option name="id" value="b514a531-8f3d-428f-8900-83ac9c18d8fe" />
-          <option name="request">
-            <requestState>
-              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
-              <option name="method" value="GET" />
-              <option name="name" value="Get authors" />
-              <option name="sortWeight" value="1000000" />
-              <option name="url" value=" http://127.0.0.1:8080/authors" />
-            </requestState>
-          </option>
-          <option name="response">
-            <responseState>
-              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0sCiAgewogICAgImlkIjogMSwKICAgICJuYW1lIjogImFhYWEiLAogICAgInN1cm5hbWUiOiAiYmJiYiIKICB9Cl0=" />
-              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
-              <option name="code" value="200" />
-              <option name="contentType" value="application/json" />
-              <option name="headers">
-                <list>
-                  <headerState>
-                    <option name="key" value="Content-Length" />
-                    <option name="value" value="560" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Content-Type" />
-                    <option name="value" value="application/json" />
-                  </headerState>
-                  <headerState>
-                    <option name="key" value="Connection" />
-                    <option name="value" value="keep-alive" />
-                  </headerState>
-                </list>
-              </option>
-              <option name="id" value="b514a531-8f3d-428f-8900-83ac9c18d8fe" />
-              <option name="message" value="OK" />
-              <option name="prettyResponseType" value="JSON" />
-              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
-              <option name="size" value="560" />
-              <option name="time" value="4" />
             </responseState>
           </option>
           <option name="workspaceId" value="drafts" />
@@ -2438,6 +2262,1631 @@
               <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
               <option name="size" value="668" />
               <option name="time" value="376" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716770255136" />
+          <option name="id" value="74bb426c-2bcc-406a-96b1-12dd82fb5b29" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients?1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTUtOTgiLAogICAgIm5hbWUiOiAi0JjQstCw0L0iLAogICAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAgICJwYXRyb255bWljIjogItCQ0LHRgNCw0LzRgdC+0LLQuNGHIgogIH0sCiAgewogICAgImlkIjogMywKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05My05OCIsCiAgICAibmFtZSI6ICLQldCz0L7RgCIsCiAgICAic3VybmFtZSI6ICLQm9C40LHQtdGA0YLQuCIsCiAgICAicGF0cm9ueW1pYyI6ICLQldCz0L7RgNC10LLRi9GHIgogIH0sCiAgewogICAgImlkIjogNCwKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05Mi05OCIsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0JrQsNC50YjQuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="668" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="74bb426c-2bcc-406a-96b1-12dd82fb5b29" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="668" />
+              <option name="time" value="10" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716770304931" />
+          <option name="id" value="3befa1eb-8b7b-4c93-8aa0-ba307a6c031b" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="3b59bf94-43e1-4c39-9f9a-57cf5d279382" />
+              <option name="method" value="POST" />
+              <option name="name" value="Update authors" />
+              <option name="sortWeight" value="7000000" />
+              <option name="url" value="http://127.0.0.1:8080/updateAuthors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="202" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="3befa1eb-8b7b-4c93-8aa0-ba307a6c031b" />
+              <option name="message" value="Accepted" />
+              <option name="time" value="40" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796715873" />
+          <option name="id" value="a62582b1-d0d8-4bb6-9bac-ad279a57772d" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="a62582b1-d0d8-4bb6-9bac-ad279a57772d" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="32" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796777552" />
+          <option name="id" value="7be9a9e9-a23f-4155-8195-ec189ac3bbd9" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTUtOTgiLAogICAgIm5hbWUiOiAi0JjQstCw0L0iLAogICAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAgICJwYXRyb255bWljIjogItCQ0LHRgNCw0LzRgdC+0LLQuNGHIgogIH0sCiAgewogICAgImlkIjogMywKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05My05OCIsCiAgICAibmFtZSI6ICLQldCz0L7RgCIsCiAgICAic3VybmFtZSI6ICLQm9C40LHQtdGA0YLQuCIsCiAgICAicGF0cm9ueW1pYyI6ICLQldCz0L7RgNC10LLRi9GHIgogIH0sCiAgewogICAgImlkIjogNCwKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05Mi05OCIsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0JrQsNC50YjQuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="668" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="7be9a9e9-a23f-4155-8195-ec189ac3bbd9" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="668" />
+              <option name="time" value="56" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796804585" />
+          <option name="id" value="4603cba1-da2f-4e09-b2a8-bdd8ee91997d" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="4603cba1-da2f-4e09-b2a8-bdd8ee91997d" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="133" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796805839" />
+          <option name="id" value="858d4bc3-e2ba-4df0-a604-7d98bf5d0b7d" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="858d4bc3-e2ba-4df0-a604-7d98bf5d0b7d" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="9" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796806269" />
+          <option name="id" value="45ec8665-30be-452f-8cfc-a5c99552c676" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="45ec8665-30be-452f-8cfc-a5c99552c676" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796806390" />
+          <option name="id" value="cb48b2b7-f5d0-4f3e-93e4-7f2c3b0b603a" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="cb48b2b7-f5d0-4f3e-93e4-7f2c3b0b603a" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="2" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796810323" />
+          <option name="id" value="b7faffd5-0e4a-4368-ac56-6362a4e6f9c2" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0sCiAgewogICAgImlkIjogNiwKICAgICJuYW1lIjogImFhYWEiLAogICAgInN1cm5hbWUiOiAiYmJiYiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="560" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="b7faffd5-0e4a-4368-ac56-6362a4e6f9c2" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="size" value="560" />
+              <option name="time" value="68" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796829437" />
+          <option name="id" value="b298061c-91c1-40e3-b0f4-280319453719" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0sCiAgewogICAgImlkIjogNiwKICAgICJuYW1lIjogImFhYWEiLAogICAgInN1cm5hbWUiOiAiYmJiYiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="560" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="b298061c-91c1-40e3-b0f4-280319453719" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="size" value="560" />
+              <option name="time" value="147" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716796833552" />
+          <option name="id" value="070c7219-d366-4497-8588-d624e2b45e2f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="500" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="070c7219-d366-4497-8588-d624e2b45e2f" />
+              <option name="message" value="Internal Server Error" />
+              <option name="time" value="38" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797135098" />
+          <option name="id" value="d10b16d3-86f7-4519-8b53-9dcd5496f99e" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="QW4gZXJyb3Igb2NjdXJyZWQ6IGNsYXNzIGlvLmt0b3IuaHR0cC5jb250ZW50Lk51bGxCb2R5IGNhbm5vdCBiZSBjYXN0IHRvIGNsYXNzIG9yZy5leGFtcGxlLkF1dGhvciAoaW8ua3Rvci5odHRwLmNvbnRlbnQuTnVsbEJvZHkgYW5kIG9yZy5leGFtcGxlLkF1dGhvciBhcmUgaW4gdW5uYW1lZCBtb2R1bGUgb2YgbG9hZGVyICdhcHAnKQ==" />
+              <option name="bodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="code" value="500" />
+              <option name="contentType" value="text/plain; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="190" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="text/plain; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="d10b16d3-86f7-4519-8b53-9dcd5496f99e" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="TEXT" />
+              <option name="rawBodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="size" value="190" />
+              <option name="time" value="129" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797191077" />
+          <option name="id" value="21477b73-784d-4fc3-b41b-2dca6a7ddf06" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="QW4gZXJyb3Igb2NjdXJyZWQ6IGNsYXNzIGlvLmt0b3IuaHR0cC5jb250ZW50Lk51bGxCb2R5IGNhbm5vdCBiZSBjYXN0IHRvIGNsYXNzIG9yZy5leGFtcGxlLkF1dGhvciAoaW8ua3Rvci5odHRwLmNvbnRlbnQuTnVsbEJvZHkgYW5kIG9yZy5leGFtcGxlLkF1dGhvciBhcmUgaW4gdW5uYW1lZCBtb2R1bGUgb2YgbG9hZGVyICdhcHAnKQ==" />
+              <option name="bodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="code" value="500" />
+              <option name="contentType" value="text/plain; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="190" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="text/plain; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="21477b73-784d-4fc3-b41b-2dca6a7ddf06" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="TEXT" />
+              <option name="rawBodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="size" value="190" />
+              <option name="time" value="127" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797192276" />
+          <option name="id" value="b38b8091-9fa2-44b4-9170-022a23cd21c3" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="QW4gZXJyb3Igb2NjdXJyZWQ6IGNsYXNzIGlvLmt0b3IuaHR0cC5jb250ZW50Lk51bGxCb2R5IGNhbm5vdCBiZSBjYXN0IHRvIGNsYXNzIG9yZy5leGFtcGxlLkF1dGhvciAoaW8ua3Rvci5odHRwLmNvbnRlbnQuTnVsbEJvZHkgYW5kIG9yZy5leGFtcGxlLkF1dGhvciBhcmUgaW4gdW5uYW1lZCBtb2R1bGUgb2YgbG9hZGVyICdhcHAnKQ==" />
+              <option name="bodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="code" value="500" />
+              <option name="contentType" value="text/plain; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="190" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="text/plain; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="b38b8091-9fa2-44b4-9170-022a23cd21c3" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="TEXT" />
+              <option name="rawBodyString" value="An error occurred: class io.ktor.http.content.NullBody cannot be cast to class org.example.Author (io.ktor.http.content.NullBody and org.example.Author are in unnamed module of loader 'app')" />
+              <option name="size" value="190" />
+              <option name="time" value="7" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797668749" />
+          <option name="id" value="8a80a452-5509-4fd9-9eaf-f69712614ad1" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="ewogICJpZCI6IDEsCiAgIm5hbWUiOiAi0KfQsNC9IiwKICAic3VybmFtZSI6ICLQpdGD0LDQvdC+Igp9" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Чан&quot;,&#10;  &quot;surname&quot;: &quot;Хуано&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8a80a452-5509-4fd9-9eaf-f69712614ad1" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Чан&quot;,&#10;  &quot;surname&quot;: &quot;Хуано&quot;&#10;}" />
+              <option name="size" value="60" />
+              <option name="time" value="104" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797787320" />
+          <option name="id" value="f90d2f12-f9af-4f95-b6c9-a1e0d0e50736" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="ewogICJpZCI6IDEsCiAgIm5hbWUiOiAi0KfQsNC9IiwKICAic3VybmFtZSI6ICLQpdGD0LDQvdC+Igp9" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Чан&quot;,&#10;  &quot;surname&quot;: &quot;Хуано&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="60" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="f90d2f12-f9af-4f95-b6c9-a1e0d0e50736" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&#10;  &quot;id&quot;: 1,&#10;  &quot;name&quot;: &quot;Чан&quot;,&#10;  &quot;surname&quot;: &quot;Хуано&quot;&#10;}" />
+              <option name="size" value="60" />
+              <option name="time" value="97" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797792736" />
+          <option name="id" value="4de97b32-5878-4c73-bf8b-59e76e198e3f" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="ewogICJpZCI6IDIsCiAgIm5hbWUiOiAi0JLQu9Cw0LTQuNC80LjRgCIsCiAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKfQ==" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: 2,&#10;  &quot;name&quot;: &quot;Владимир&quot;,&#10;  &quot;surname&quot;: &quot;Абрамович&quot;,&#10;  &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="112" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="4de97b32-5878-4c73-bf8b-59e76e198e3f" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&#10;  &quot;id&quot;: 2,&#10;  &quot;name&quot;: &quot;Владимир&quot;,&#10;  &quot;surname&quot;: &quot;Абрамович&quot;,&#10;  &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;}" />
+              <option name="size" value="112" />
+              <option name="time" value="11" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797794871" />
+          <option name="id" value="c5d1576d-5765-41b1-b319-d6fe96f35095" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="ewogICJpZCI6IDIsCiAgIm5hbWUiOiAi0JLQu9Cw0LTQuNC80LjRgCIsCiAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKfQ==" />
+              <option name="bodyString" value="{&#10;  &quot;id&quot;: 2,&#10;  &quot;name&quot;: &quot;Владимир&quot;,&#10;  &quot;surname&quot;: &quot;Абрамович&quot;,&#10;  &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json; charset=UTF-8" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="112" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json; charset=UTF-8" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c5d1576d-5765-41b1-b319-d6fe96f35095" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&#10;  &quot;id&quot;: 2,&#10;  &quot;name&quot;: &quot;Владимир&quot;,&#10;  &quot;surname&quot;: &quot;Абрамович&quot;,&#10;  &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;}" />
+              <option name="size" value="112" />
+              <option name="time" value="11" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797802063" />
+          <option name="id" value="3de1d98b-36ce-499e-87ea-654307cd2d65" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/cliets/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="3de1d98b-36ce-499e-87ea-654307cd2d65" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="58" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797803006" />
+          <option name="id" value="76a69899-644f-42d4-a69f-8d1e9a03b453" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/cliets/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="76a69899-644f-42d4-a69f-8d1e9a03b453" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797810342" />
+          <option name="id" value="535b3775-0f2c-4494-a544-ba9d34e696d8" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients/2" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="535b3775-0f2c-4494-a544-ba9d34e696d8" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="8" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797816517" />
+          <option name="id" value="7158a847-4590-4a83-82c4-66469518a0fd" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="sortWeight" value="1000000" />
+              <option name="url" value=" http://127.0.0.1:8080/authors" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QviIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQktC70LDQtNC40LzQuNGAIiwKICAgICJzdXJuYW1lIjogItCQ0LHRgNCw0LzQvtCy0LjRhyIsCiAgICAicGF0cm9ueW1pYyI6ICLQl9GO0LPQsNC90L7QsiIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQktC+0LvQvtC00LjQvNC40YAiLAogICAgInN1cm5hbWUiOiAi0JzQuNC90YzQutCwIiwKICAgICJwYXRyb255bWljIjogItCV0LPQvtGA0LXQstGL0YciCiAgfSwKICB7CiAgICAiaWQiOiA0LAogICAgIm5hbWUiOiAi0JrQsNC90YLQviIsCiAgICAic3VybmFtZSI6ICLQmNGIIgogIH0sCiAgewogICAgImlkIjogNSwKICAgICJuYW1lIjogItCi0L7Qu9C60LjQtdC9IiwKICAgICJzdXJuYW1lIjogItCU0LbQvtC9INCg0L7QvdCw0LvRjNC0INCg0YPRjdC7IgogIH0sCiAgewogICAgImlkIjogNiwKICAgICJuYW1lIjogImFhYWEiLAogICAgInN1cm5hbWUiOiAiYmJiYiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="560" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="7158a847-4590-4a83-82c4-66469518a0fd" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Хуано&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Владимир&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Зюганов&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Володимир&quot;,&#10;    &quot;surname&quot;: &quot;Минька&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Канто&quot;,&#10;    &quot;surname&quot;: &quot;Иш&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Толкиен&quot;,&#10;    &quot;surname&quot;: &quot;Джон Рональд Руэл&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 6,&#10;    &quot;name&quot;: &quot;aaaa&quot;,&#10;    &quot;surname&quot;: &quot;bbbb&quot;&#10;  }&#10;]" />
+              <option name="size" value="560" />
+              <option name="time" value="40" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797822019" />
+          <option name="id" value="3cc6244d-7b17-4efb-8145-f2f08ada58e5" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="3cc6244d-7b17-4efb-8145-f2f08ada58e5" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="9" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797825994" />
+          <option name="id" value="84838cf1-4263-4bb7-b3b7-b4242d0d28ba" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTgtOTgiLAogICAgIm5hbWUiOiAi0JjRjtGD0LkiLAogICAgInN1cm5hbWUiOiAi0KXRg9Cw0L3QsyIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTUtOTgiLAogICAgIm5hbWUiOiAi0JjQstCw0L0iLAogICAgInN1cm5hbWUiOiAi0JDQsdGA0LDQvNC+0LLQuNGHIiwKICAgICJwYXRyb255bWljIjogItCQ0LHRgNCw0LzRgdC+0LLQuNGHIgogIH0sCiAgewogICAgImlkIjogMywKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05My05OCIsCiAgICAibmFtZSI6ICLQldCz0L7RgCIsCiAgICAic3VybmFtZSI6ICLQm9C40LHQtdGA0YLQuCIsCiAgICAicGF0cm9ueW1pYyI6ICLQldCz0L7RgNC10LLRi9GHIgogIH0sCiAgewogICAgImlkIjogNCwKICAgICJwaG9uZU51bWJlciI6ICIrNyg5NTMpLTg3Ny05Mi05OCIsCiAgICAibmFtZSI6ICLQp9Cw0L0iLAogICAgInN1cm5hbWUiOiAi0JrQsNC50YjQuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAicGhvbmVOdW1iZXIiOiAiKzcoOTUzKS04NzctOTEtOTgiLAogICAgIm5hbWUiOiAi0JjRg9C00LAiLAogICAgInN1cm5hbWUiOiAi0JjRgdC60LDRgNC40L7RgiIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="668" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="84838cf1-4263-4bb7-b3b7-b4242d0d28ba" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-98-98&quot;,&#10;    &quot;name&quot;: &quot;Июуй&quot;,&#10;    &quot;surname&quot;: &quot;Хуанг&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-95-98&quot;,&#10;    &quot;name&quot;: &quot;Иван&quot;,&#10;    &quot;surname&quot;: &quot;Абрамович&quot;,&#10;    &quot;patronymic&quot;: &quot;Абрамсович&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-93-98&quot;,&#10;    &quot;name&quot;: &quot;Егор&quot;,&#10;    &quot;surname&quot;: &quot;Либерти&quot;,&#10;    &quot;patronymic&quot;: &quot;Егоревыч&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-92-98&quot;,&#10;    &quot;name&quot;: &quot;Чан&quot;,&#10;    &quot;surname&quot;: &quot;Кайши&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;phoneNumber&quot;: &quot;+7(953)-877-91-98&quot;,&#10;    &quot;name&quot;: &quot;Иуда&quot;,&#10;    &quot;surname&quot;: &quot;Искариот&quot;&#10;  }&#10;]" />
+              <option name="size" value="668" />
+              <option name="time" value="38" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797829854" />
+          <option name="id" value="67ecaa6a-7b7c-4f3a-a39a-3d7d8a2a7269" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="ce8b5f28-0716-497a-88a8-e7a3fc0cae30" />
+              <option name="method" value="GET" />
+              <option name="name" value="getClients" />
+              <option name="sortWeight" value="2000000" />
+              <option name="url" value=" http://127.0.0.1:8080/clients/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="67ecaa6a-7b7c-4f3a-a39a-3d7d8a2a7269" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="10" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797853618" />
+          <option name="id" value="e5d617b6-b9e0-4502-800b-7c3428f2ac22" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQndCw0YPRh9C90LDRjyDRhNCw0L3RgtCw0YHRgtC40LrQsCIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQpNC10L3RgtC10LfQuCIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICB9LAogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQodGD0L/QtdGA0LPQtdGA0L7QuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQoNC10LvQuNCz0LjRjyIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="305" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="e5d617b6-b9e0-4502-800b-7c3428f2ac22" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="size" value="305" />
+              <option name="time" value="40" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797856559" />
+          <option name="id" value="79be3564-b995-43ca-b1bc-31f65e8625ac" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="79be3564-b995-43ca-b1bc-31f65e8625ac" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="10" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797857225" />
+          <option name="id" value="fb6a86d3-be6e-47da-bf3c-3d12252957a0" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="fb6a86d3-be6e-47da-bf3c-3d12252957a0" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797857392" />
+          <option name="id" value="b5e4d9b7-1bc2-433d-8849-78e621c00636" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="b5e4d9b7-1bc2-433d-8849-78e621c00636" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="9" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797940344" />
+          <option name="id" value="c9461b64-a281-48fc-af5e-715ae336bb01" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="c9461b64-a281-48fc-af5e-715ae336bb01" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="78" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797941050" />
+          <option name="id" value="2d9d8d99-50cd-4ac3-91f2-fa2d535d9059" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2d9d8d99-50cd-4ac3-91f2-fa2d535d9059" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797941518" />
+          <option name="id" value="11384eb4-399c-4304-8426-857e9b456b79" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="11384eb4-399c-4304-8426-857e9b456b79" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="7" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797941609" />
+          <option name="id" value="0d60bf80-1bd3-40f9-90e8-ca8e8fd2dffd" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0d60bf80-1bd3-40f9-90e8-ca8e8fd2dffd" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="3" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797961484" />
+          <option name="id" value="275d5e32-4de2-4117-833d-e100781a7c9e" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="275d5e32-4de2-4117-833d-e100781a7c9e" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="88" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797962546" />
+          <option name="id" value="ecf646be-0431-4c7a-b339-55658ebcb281" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="ecf646be-0431-4c7a-b339-55658ebcb281" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="4" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716797984406" />
+          <option name="id" value="bf6b5a60-31c2-490e-89bc-35b5ab5214ab" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQndCw0YPRh9C90LDRjyDRhNCw0L3RgtCw0YHRgtC40LrQsCIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQpNC10L3RgtC10LfQuCIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICB9LAogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQodGD0L/QtdGA0LPQtdGA0L7QuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQoNC10LvQuNCz0LjRjyIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="305" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="bf6b5a60-31c2-490e-89bc-35b5ab5214ab" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="size" value="305" />
+              <option name="time" value="55" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716798045889" />
+          <option name="id" value="dde8dbdd-1adb-403a-a99f-03f6ec77e0b4" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="WwogIHsKICAgICJpZCI6IDEsCiAgICAibmFtZSI6ICLQndCw0YPRh9C90LDRjyDRhNCw0L3RgtCw0YHRgtC40LrQsCIKICB9LAogIHsKICAgICJpZCI6IDIsCiAgICAibmFtZSI6ICLQpNC10L3RgtC10LfQuCIKICB9LAogIHsKICAgICJpZCI6IDMsCiAgICAibmFtZSI6ICLQmNGB0YLQvtGA0LjRh9C10YHQutCw0Y8g0L/RgNC+0LfQsCIKICB9LAogIHsKICAgICJpZCI6IDQsCiAgICAibmFtZSI6ICLQodGD0L/QtdGA0LPQtdGA0L7QuCIKICB9LAogIHsKICAgICJpZCI6IDUsCiAgICAibmFtZSI6ICLQoNC10LvQuNCz0LjRjyIKICB9Cl0=" />
+              <option name="bodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="code" value="200" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="305" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="dde8dbdd-1adb-403a-a99f-03f6ec77e0b4" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="[&#10;  {&#10;    &quot;id&quot;: 1,&#10;    &quot;name&quot;: &quot;Научная фантастика&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 2,&#10;    &quot;name&quot;: &quot;Фентези&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 3,&#10;    &quot;name&quot;: &quot;Историческая проза&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 4,&#10;    &quot;name&quot;: &quot;Супергерои&quot;&#10;  },&#10;  {&#10;    &quot;id&quot;: 5,&#10;    &quot;name&quot;: &quot;Религия&quot;&#10;  }&#10;]" />
+              <option name="size" value="305" />
+              <option name="time" value="113" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1716798049028" />
+          <option name="id" value="11a88db5-10f8-44e6-b185-2c28ab6ccd00" />
+          <option name="request">
+            <requestState>
+              <option name="id" value="5ec6b757-0dd7-4821-83c3-5acb1c467d3b" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get genres" />
+              <option name="sortWeight" value="3000000" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="code" value="404" />
+              <option name="contentType" value="application/octet-stream" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Length" />
+                    <option name="value" value="0" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="11a88db5-10f8-44e6-b185-2c28ab6ccd00" />
+              <option name="message" value="Not Found" />
+              <option name="time" value="30" />
             </responseState>
           </option>
           <option name="workspaceId" value="drafts" />

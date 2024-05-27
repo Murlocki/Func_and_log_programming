@@ -9,6 +9,14 @@
               <option name="id" value="647b9cd8-e7f3-46bb-972e-bb4090771c4b" />
               <option name="method" value="GET" />
               <option name="name" value="Get authors" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="disabled" value="true" />
+                    <option name="key" value="1" />
+                  </queryParamState>
+                </list>
+              </option>
               <option name="sortWeight" value="1000000" />
               <option name="url" value=" http://127.0.0.1:8080/authors" />
             </requestState>
@@ -24,7 +32,7 @@
               <option name="method" value="GET" />
               <option name="name" value="Get genres" />
               <option name="sortWeight" value="3000000" />
-              <option name="url" value=" http://127.0.0.1:8080/genres" />
+              <option name="url" value=" http://127.0.0.1:8080/genres/1" />
             </requestState>
             <requestState>
               <option name="id" value="bec0e6f9-c600-45d8-b9b0-035443ff5b23" />

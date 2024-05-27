@@ -1,4 +1,6 @@
 package org.example
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import io.ktor.server.application.*
 import io.ktor.http.*
 import io.ktor.serialization.gson.*
@@ -26,8 +28,7 @@ fun Application.module(){
     routing {
         //Запросы для получения текущего содержания коллекции
         get("/authors"){
-            call.respond(authors)
-        }
+            call.respond(authors) }
         get("/clients"){
             call.respond(clients)
         }
@@ -44,6 +45,14 @@ fun Application.module(){
         get("/recordItems"){
             call.respond(recordItems)
         }
+
+        // Запросы для получения объектов коллекции по Id
+        getById("/authors/{id}", authors) { it.id }
+        getById("/clients/{id}", clients) { it.id }
+        getById("/genres/{id}", genres) { it.id }
+        getById("/itemTypes/{id}", itemTypes) { it.id }
+        getById("/itemsInLibrary/{id}", itemsInLibrary) { it.id }
+        getById("/recordItems/{id}", recordItems) { it.id }
 
         //Пути для вывода в файл содержимого коллекции
         post("/updateAuthors") {
@@ -176,7 +185,6 @@ fun Application.module(){
             if(recordItems.size==0){
                 call.respond(HttpStatusCode.NoContent)
             }
-            val maxGenre = getMostPopularGenre()
             ExcelReport.generateReportGenre(listOf(getMostPopularGenre()),"src/main/resources/ExcelReports/mostPopulartGenre.xlsx")
             call.respond(HttpStatusCode.Accepted)
         }
@@ -195,6 +203,31 @@ fun Application.module(){
         }
     }
 }
+
+
+val gson: Gson = GsonBuilder().setPrettyPrinting().create()
+
+fun <T> Route.getById(path: String, collection: List<T>, idSelector: (T) -> Int) {
+    get(path) {
+        println("Requested path: $path")
+        val id = call.parameters["id"]?.toIntOrNull()
+        if (id == null) {
+            call.respond(HttpStatusCode.BadRequest, "Invalid ID")
+            return@get
+        }
+        val item = collection.find { idSelector(it) == id }
+        println("Requested item: $item")
+
+        if (item != null) {
+            val jsonResponse = gson.toJson(item)
+            call.respondText(jsonResponse, ContentType.Application.Json)
+        } else {
+            call.respond(HttpStatusCode.NotFound, "Item with ID $id not found")
+        }
+    }
+}
+
+
 
 fun startServer() {
     embeddedServer(Netty, port = 8080, module = Application::module).start(wait = true)
