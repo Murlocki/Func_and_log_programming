@@ -4,6 +4,7 @@ plugins {
     kotlin("plugin.serialization") version "2.0.0"
     application
     id("org.owasp.dependencycheck") version "8.0.0"
+    id("io.ktor.plugin") version "2.3.11"
 }
 
 group = "org.example"
@@ -24,6 +25,19 @@ dependencies {
 
 }
 
+application {
+    mainClass.set("org.example.MainKt")
+}
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "org.example.MainKt"
+    }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
 tasks.test {
     useJUnitPlatform()
 }
@@ -33,7 +47,6 @@ kotlin {
         jvmTarget.set(JvmTarget.JVM_21)
     }
 }
-
 tasks.named("check").configure {
     dependsOn("dependencyCheckAnalyze")
 }
